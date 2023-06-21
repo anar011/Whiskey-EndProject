@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "wgr83Q2pU1BOCFT8Gh/N5Zi2oxkOC8buQ12M6tEC1wg=",
+  "Source": "EndProject",
+  "BasePath": "_content/EndProject",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EndProject\\wwwroot",
+      "Source": "EndProject",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\EndProject.styles.css",
+      "SourceId": "EndProject",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "EndProject.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\EndProject.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EndProject.bundle.scp.css",
+      "SourceId": "EndProject",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "EndProject.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EndProject.bundle.scp.css"
+    }
+  ]
+}
