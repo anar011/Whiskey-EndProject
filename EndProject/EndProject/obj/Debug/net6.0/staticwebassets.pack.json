@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\EndProject.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\admin\\assets\\.DS_Store",
+      "PackagePath": "staticwebassets\\admin\\assets\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\admin\\assets\\.gitattributes",
+      "PackagePath": "staticwebassets\\admin\\assets\\.gitattributes"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\admin\\assets\\contact.php",
+      "PackagePath": "staticwebassets\\admin\\assets\\contact.php"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\admin\\assets\\css\\animate.css",
       "PackagePath": "staticwebassets\\admin\\assets\\css\\animate.css"
     },
@@ -1455,6 +1467,10 @@
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\admin\\assets\\modules\\zingchart-zoom.min.js",
       "PackagePath": "staticwebassets\\admin\\assets\\modules\\zingchart-zoom.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\admin\\assets\\style.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\style.css"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\Single Tennessee whiskey.webp",

@@ -1,23 +1,31 @@
 
 
+using EndProject.Data;
+using EndProject.Models;
+using EndProject.Services.Interfaces;
+using EndProject.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<AppDbContext>(option =>
+option.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 
 
 
 
+builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
 
 
 
 
-
-
-
-
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<ISliderService, SliderService>();
 
 
 
