@@ -18,17 +18,21 @@ namespace EndProject.Controllers
             _sliderService = sliderService;
         }
 
+
+
+
+
         public async Task<IActionResult> Index()
         {
-
             HomeVM model = new()
             {
-           
-                Sliders = await _sliderService.GetAllAsync(),
-       
+               
+                Sliders = await _sliderService.GetAllAsync()
+               
             };
 
-            return View();
+
+            return View(model);
         }
 
 

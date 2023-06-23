@@ -1,5 +1,5 @@
 
-
+using EndProject.Helpers;
 using EndProject.Data;
 using EndProject.Models;
 using EndProject.Services.Interfaces;
@@ -26,6 +26,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<A
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped(typeof(ICrudService<>), typeof(CrudService<>));
 
 
 

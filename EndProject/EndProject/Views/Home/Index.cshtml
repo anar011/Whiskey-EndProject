@@ -1,4 +1,5 @@
 ﻿@model HomeVM
+
 @{
     ViewData["Title"] = "Whiskey - Home";
 }
@@ -20,25 +21,29 @@
 
     <!-- Slider -->
 
+
     <section id="sliders">
         <div class="container">
             <div class="row">
                 <div class="slider">
                     <div class="swiper mySwiper ">
                         <div class="swiper-wrapper ">
-                            <div class="swiper-slide">
+                            @foreach (var slider in Model.Sliders)
+                            {
+                                <div class="swiper-slide">
 
-                                <h2>Black Bottle</h2>
-                                <h4>700 ML | SCOTLAND</h4>
-                                <span>
-                                    Vestibulum dapibus quam ut leo at sapien <br> sodales nibh ac nibh ut ante.
-                                    dignissim eratus.
-                                </span>
-                                <h3>$25.00</h3>
+                                    <h2>@slider.Name</h2>
+                                    <h4>@slider.Title</h4>
+                                  
+                                        @Html.Raw(slider.Description)
+                                   
+                                    <h3>$@slider.Price</h3>
 
-                                <img src="~/assets/img/whiskey-slider-1.webp" alt="">
-                            </div>
-                            <div class="swiper-slide">
+                                    <img src="~/assets/img/@slider.Image" alt="">
+                                </div>
+                            }
+                         
+                       @*     <div class="swiper-slide">
                                 <h2>Premium Whiskey</h2>
                                 <h4>700 ML | IRELAND</h4>
                                 <span>
@@ -69,7 +74,7 @@
                                 </span>
                                 <h3>$28.00</h3>
                                 <img src="~/assets/img/whiskey-slider4.webp" alt="">
-                            </div>
+                            </div>*@
 
                         </div>
                         <div class="swiper-button-next"></div>

@@ -15,6 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- site icon -->
+    <link rel="icon" type="image/png" href="~/assets/img/favicon.ico">
     <link rel="icon" href="~/admin/assets/fevicon.png" type="image/png" />
     <!-- bootstrap css -->
     <link rel="stylesheet" href="~/admin/assets/css/bootstrap.min.css" />
@@ -64,18 +65,23 @@
                     <h4>General</h4>
                     <ul class="list-unstyled components">
                         <li class="active">
-                            <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
+                            <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Home</span></a>
                             <ul class="collapse list-unstyled" id="dashboard">
                                 <li>
-                                    <a href="dashboard.html">> <span>Default Dashboard</span></a>
+                                    <a asp-controller="Slider" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Sliders</span></a>
                                 </li>
                                 <li>
                                     <a href="dashboard_2.html">> <span>Dashboard style 2</span></a>
                                 </li>
                             </ul>
                         </li>
+
+                
+
+
                         <li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>
                         <li>
+
                             <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Elements</span></a>
                             <ul class="collapse list-unstyled" id="element">
                                 <li><a href="general_elements.html">> <span>General Elements</span></a></li>

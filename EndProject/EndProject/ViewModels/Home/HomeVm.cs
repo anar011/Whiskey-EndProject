@@ -2,7 +2,7 @@
 
 namespace EndProject.ViewModels.Home
 {
-    public class HomeVm
+    public class HomeVM
     {
         public IEnumerable<Slider> Sliders { get; set; }
     }
