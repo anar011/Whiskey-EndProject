@@ -8,6 +8,7 @@ namespace EndProject.Areas.Admin.ViewModels.Slider
 
         [Required(ErrorMessage = "Don`t be empty")]
         public IFormFile Photo { get; set; }
+        public string Image { get; set; }
 
         [Required(ErrorMessage = "Don`t be empty")]
         public string Title { get; set; }
@@ -19,7 +20,7 @@ namespace EndProject.Areas.Admin.ViewModels.Slider
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Don`t be empty")]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
 
     }
 }
