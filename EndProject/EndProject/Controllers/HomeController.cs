@@ -43,6 +43,7 @@ namespace EndProject.Controllers
                 Sliders = await _sliderService.GetAllAsync(),
                 SpecialCollection = specialCollection
 
+
             };
 
 

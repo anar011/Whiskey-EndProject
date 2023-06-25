@@ -437,6 +437,10 @@
       "PackagePath": "staticwebassets\\admin\\assets\\js\\custom_chart.js"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\admin\\assets\\js\\customer.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\customer.js"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\admin\\assets\\js\\jquery-3.3.1.min.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\jquery-3.3.1.min.js"
     },
@@ -1599,10 +1603,6 @@
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\bowTie-main-1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\bowTie-main-1.webp"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\cd018aed-4707-4c54-a47b-680ae869d898whiskey-slider2.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\cd018aed-4707-4c54-a47b-680ae869d898whiskey-slider2.webp"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\contact-icon1.svg",

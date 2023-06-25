@@ -29,6 +29,7 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped(typeof(ICrudService<>), typeof(CrudService<>));
 builder.Services.AddScoped<ISpecialCollectionService,SpecialCollectionService>();
+builder.Services.AddScoped<ILayoutService, LayoutService>();
 
 
 

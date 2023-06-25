@@ -1,53 +1,64 @@
-﻿using EndProject.Models;
+﻿using EndProject.Data;
+using EndProject.Models;
 using EndProject.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace EndProject.Services
 {
     public class LayoutService : ILayoutService
     {
+        private readonly AppDbContext _context;
+
+        public LayoutService(AppDbContext context)
+        {
+            _context = context;
+        }
         public Setting GetById(int? id)
         {
-            throw new NotImplementedException();
+            return _context.Settings.Where(s => s.Id == id).FirstOrDefault();
         }
 
-        public Task<SectionHeader> GetSectionAsync(int? id)
+        public async Task<SectionHeader> GetSectionAsync(int? id)
         {
-            throw new NotImplementedException();
+            return await _context.SectionHeaders.FirstOrDefaultAsync(s => s.Id == id);
         }
 
-        public Task<SectionBackgroundImage> GetSectionBackgroundImageByIdAsync(int? id)
+        public async Task<SectionBackgroundImage> GetSectionBackgroundImageByIdAsync(int? id)
         {
-            throw new NotImplementedException();
+            return await _context.SectionBackgroundImages.FirstOrDefaultAsync(sb => sb.Id == id);
         }
 
-        public Task<IEnumerable<SectionBackgroundImage>> GetSectionBackgroundImageDatasAsync()
+        public async Task<IEnumerable<SectionBackgroundImage>> GetSectionBackgroundImageDatasAsync()
         {
-            throw new NotImplementedException();
+            return await _context.SectionBackgroundImages.ToListAsync();
         }
 
         public Dictionary<string, string> GetSectionBackgroundImages()
         {
-            throw new NotImplementedException();
+            return _context.SectionBackgroundImages.AsEnumerable().ToDictionary(s => s.Key, s => s.Value);
         }
 
-        public Task<IEnumerable<SectionHeader>> GetSectionsDatasAsync()
+        public async Task<IEnumerable<SectionHeader>> GetSectionsDatasAsync()
         {
-            throw new NotImplementedException();
+            return await _context.SectionHeaders.ToListAsync();
         }
 
         public Dictionary<string, string> GetSectionsHeaders()
         {
-            throw new NotImplementedException();
+            return _context.SectionHeaders.AsEnumerable().ToDictionary(s => s.Key, s => s.Value);
         }
 
-        public Task<List<Setting>> GetSettingDatas()
+        public async Task<List<Setting>> GetSettingDatas()
         {
-            throw new NotImplementedException();
+            List<Setting> settings = await _context.Settings.ToListAsync();
+
+            return settings;
         }
 
         public Dictionary<string, string> GetSettings()
         {
-            throw new NotImplementedException();
+            return _context.Settings.AsEnumerable().ToDictionary(s => s.Key, s => s.Value);
         }
+
     }
 }

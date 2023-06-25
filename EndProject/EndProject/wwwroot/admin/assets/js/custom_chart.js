@@ -124,3 +124,6 @@ function getChartJs(type) {
     }
     return config;
 }
+
+
+

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "L9/cmgQhovzGP2o15Cd4Iu30I5mTw4q0siHTiPsnX+0=",
+  "Hash": "UJjmLVfDTsP3LX+cUF8JxnbOri9VLuKKVju1OqbtzaY=",
   "Source": "EndProject",
   "BasePath": "_content/EndProject",
   "Mode": "Default",
@@ -1885,6 +1885,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\js\\custom_chart.js"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\admin\\assets\\js\\customer.js",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "admin/assets/js/customer.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\js\\customer.js"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\admin\\assets\\js\\jquery.fancybox.js",
@@ -6781,23 +6798,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\bowTie-main-1.webp"
-    },
-    {
-      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\cd018aed-4707-4c54-a47b-680ae869d898whiskey-slider2.webp",
-      "SourceId": "EndProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
-      "BasePath": "_content/EndProject",
-      "RelativePath": "assets/img/cd018aed-4707-4c54-a47b-680ae869d898whiskey-slider2.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\cd018aed-4707-4c54-a47b-680ae869d898whiskey-slider2.webp"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\contact-icon1.svg",
