@@ -1,7 +1,9 @@
-﻿using EndProject.Models;
+﻿using EndProject.Data;
+using EndProject.Models;
 using EndProject.Services.Interfaces;
 using EndProject.ViewModels.Home;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace EndProject.Controllers
@@ -11,11 +13,20 @@ namespace EndProject.Controllers
     {
 
         private readonly ISliderService _sliderService;
+        private readonly ISpecialCollectionService _specialCollectionService;
+        private readonly AppDbContext _context;
 
 
-        public HomeController(ISliderService sliderService)
+
+        public HomeController(AppDbContext context,
+                              ISliderService sliderService,
+                            ISpecialCollectionService specialCollectionService
+                                                               )
         {
             _sliderService = sliderService;
+            _specialCollectionService = specialCollectionService;
+            _context = context;
+         
         }
 
 
@@ -24,11 +35,14 @@ namespace EndProject.Controllers
 
         public async Task<IActionResult> Index()
         {
+            SpecialCollection specialCollection = await _context.SpecialCollections.FirstOrDefaultAsync();
+
             HomeVM model = new()
             {
                
-                Sliders = await _sliderService.GetAllAsync()
-               
+                Sliders = await _sliderService.GetAllAsync(),
+                SpecialCollection = specialCollection
+
             };
 
 

@@ -82,9 +82,7 @@ namespace EndProject.Areas.Admin.Controllers
             }
         }
 
-
-
-
+        
 
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
@@ -95,14 +93,13 @@ namespace EndProject.Areas.Admin.Controllers
                 Slider dbSlider = await _sliderService.GetByIdAsync((int)id);
                 if (dbSlider is null) return NotFound();
 
-
                 SliderUpdateVM model = new()
                 {
                     Image = dbSlider.Image,
                     Name = dbSlider.Name,
                     Title = dbSlider.Title,
                     Description = dbSlider.Description,
-                    Price = dbSlider.Price
+                    Price = dbSlider.Price            
                 };
                 return View(model);
             }
@@ -112,6 +109,7 @@ namespace EndProject.Areas.Admin.Controllers
                 return View();
             }
         }
+
 
 
         [HttpPost]
@@ -129,7 +127,6 @@ namespace EndProject.Areas.Admin.Controllers
                     Image = dbSlider.Image
                 };
 
-                if (!ModelState.IsValid) return View(sliderUpdateVM);
 
                 if (model.Photo is not null)
                 {
@@ -156,6 +153,7 @@ namespace EndProject.Areas.Admin.Controllers
                     };
                 }
 
+
                 dbSlider.Name = model.Name;
                 dbSlider.Title = model.Title;
                 dbSlider.Description = model.Description;
@@ -172,5 +170,47 @@ namespace EndProject.Areas.Admin.Controllers
 
 
 
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            try
+            {
+                if (id is null) return BadRequest();
+                Slider dbSlider = await _sliderService.GetByIdAsync((int)id);
+                if (dbSlider is null) return NotFound();
+
+                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img", dbSlider.Image);
+                FileHelper.DeleteFile(path);
+
+                _crudService.Delete(dbSlider);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View();
+            }
+        }
+
+
+
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
+
+            if (id == null) return BadRequest();
+            Slider dbSlider = await _sliderService.GetByIdAsync((int)id);
+
+            if (dbSlider is null) return NotFound();
+
+            return View(dbSlider);
+        }
+
+
     }
+
 }

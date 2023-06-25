@@ -1473,8 +1473,12 @@
       "PackagePath": "staticwebassets\\admin\\assets\\style.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\5ad01fd9-cc39-4781-bc66-cfc324a88170whiskey-slider3.webp",
-      "PackagePath": "staticwebassets\\assets\\img\\5ad01fd9-cc39-4781-bc66-cfc324a88170whiskey-slider3.webp"
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\724ea90b-797a-493d-a16a-77d84075e02dwhiskey-slider4.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\724ea90b-797a-493d-a16a-77d84075e02dwhiskey-slider4.webp"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\9fbce16b-181b-4a57-8373-a046d11258bfwhiskey-slider3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\9fbce16b-181b-4a57-8373-a046d11258bfwhiskey-slider3.webp"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\Single Tennessee whiskey.webp",
@@ -1595,6 +1599,10 @@
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\bowTie-main-1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\bowTie-main-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\cd018aed-4707-4c54-a47b-680ae869d898whiskey-slider2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\cd018aed-4707-4c54-a47b-680ae869d898whiskey-slider2.webp"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\contact-icon1.svg",

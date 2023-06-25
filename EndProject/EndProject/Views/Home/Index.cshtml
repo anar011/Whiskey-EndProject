@@ -153,12 +153,12 @@
                     <div class="col-lg-6 col-sm-12 col-md-12">
                         <div class="special-prices">
                             <div class="special-price">
+                               
                                 <h1>
-                                    Special collection <br>
-                                    at a special price
+                                   @Html.Raw(Model.SpecialCollection.Title)
                                 </h1>
                                 <br><br>
-                                <h4>Hurry up! Offer expires in:</h4>
+                                <h4>@Model.SpecialCollection.Description</h4>
                                 <br>
 
                             </div>
@@ -190,7 +190,7 @@
                     </div>
                     <div class="col-lg-6 col-sm-12  col-md-12">
                         <div class="whiskey-men ">
-                            <img src="~/assets/img/whiskey-men.webp" alt="">
+                            <img src="~/assets/img/@Model.SpecialCollection.Image" alt="">
                         </div>
                     </div>
 

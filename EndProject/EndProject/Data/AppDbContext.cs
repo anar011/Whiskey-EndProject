@@ -12,6 +12,15 @@ namespace EndProject.Data
 
     
         public DbSet<Slider> Sliders { get;set; }
+        public DbSet<SpecialCollection> SpecialCollections { get; set; }
+        public DbSet<SectionBackgroundImage> SectionBackgroundImages { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<SectionHeader> SectionHeaders { get; set; }
+
+
+
+
+
 
 
 

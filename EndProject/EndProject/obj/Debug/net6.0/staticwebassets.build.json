@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XAwcqI7rEzpELqa3Z6pw0RYmrfCQBgTG2qzaJDeidtA=",
+  "Hash": "L9/cmgQhovzGP2o15Cd4Iu30I5mTw4q0siHTiPsnX+0=",
   "Source": "EndProject",
   "BasePath": "_content/EndProject",
   "Mode": "Default",
@@ -6290,12 +6290,12 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\style.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\5ad01fd9-cc39-4781-bc66-cfc324a88170whiskey-slider3.webp",
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\724ea90b-797a-493d-a16a-77d84075e02dwhiskey-slider4.webp",
       "SourceId": "EndProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
       "BasePath": "_content/EndProject",
-      "RelativePath": "assets/img/5ad01fd9-cc39-4781-bc66-cfc324a88170whiskey-slider3.webp",
+      "RelativePath": "assets/img/724ea90b-797a-493d-a16a-77d84075e02dwhiskey-slider4.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -6304,7 +6304,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\5ad01fd9-cc39-4781-bc66-cfc324a88170whiskey-slider3.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\724ea90b-797a-493d-a16a-77d84075e02dwhiskey-slider4.webp"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\9fbce16b-181b-4a57-8373-a046d11258bfwhiskey-slider3.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/9fbce16b-181b-4a57-8373-a046d11258bfwhiskey-slider3.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\9fbce16b-181b-4a57-8373-a046d11258bfwhiskey-slider3.webp"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\about-icon1.svg",
@@ -6764,6 +6781,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\bowTie-main-1.webp"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\cd018aed-4707-4c54-a47b-680ae869d898whiskey-slider2.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/cd018aed-4707-4c54-a47b-680ae869d898whiskey-slider2.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\cd018aed-4707-4c54-a47b-680ae869d898whiskey-slider2.webp"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\contact-icon1.svg",
