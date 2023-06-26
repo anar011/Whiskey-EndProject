@@ -11,7 +11,7 @@ namespace EndProject.Controllers
 
     public class HomeController : Controller
     {
-
+        private readonly IHomeAdvertisingService _homeAdvertisingService;
         private readonly ISliderService _sliderService;
         private readonly ISpecialCollectionService _specialCollectionService;
         private readonly AppDbContext _context;
@@ -20,13 +20,15 @@ namespace EndProject.Controllers
 
         public HomeController(AppDbContext context,
                               ISliderService sliderService,
-                            ISpecialCollectionService specialCollectionService
-                                                               )
+                            ISpecialCollectionService specialCollectionService,
+                            IHomeAdvertisingService homeAdvertisingService)
+
+                                                               
         {
             _sliderService = sliderService;
             _specialCollectionService = specialCollectionService;
             _context = context;
-         
+            _homeAdvertisingService = homeAdvertisingService;
         }
 
 
@@ -41,7 +43,9 @@ namespace EndProject.Controllers
             {
                
                 Sliders = await _sliderService.GetAllAsync(),
-                SpecialCollection = specialCollection
+                SpecialCollection = specialCollection,
+                HomeAddvertisings = await _homeAdvertisingService.GetAllAsync(),
+      
 
 
             };

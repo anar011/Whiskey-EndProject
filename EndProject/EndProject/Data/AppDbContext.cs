@@ -17,6 +17,8 @@ namespace EndProject.Data
         public DbSet<Setting> Settings { get; set; }
         public DbSet<SectionHeader> SectionHeaders { get; set; }
 
+        public DbSet<HomeAddvertising> HomeAddvertisings { get; set; }
+
 
 
 

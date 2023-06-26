@@ -7,6 +7,7 @@ namespace EndProject.ViewModels.Home
         public IEnumerable<Slider> Sliders { get; set; }
         public SpecialCollection SpecialCollection { get; set; }
 
+        public IEnumerable<HomeAddvertising> HomeAddvertisings { get; set; }
 
     }
 }

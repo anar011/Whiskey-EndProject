@@ -613,20 +613,24 @@
                     </div>
 
                     <div class="advertising-icons row mt-5">
-                        <div class="col-lg-4 col-sm-12 col-md-4">
-                            <div class="shipping">
-                                <img src="~/assets/img/home-advertising-icon1.svg" alt="">
-                            </div>
-                            <div class="shipping-name mt-4">
-                                <h4>Shipping in 24 hours</h4>
-                            </div>
+                        @foreach (var item in Model.HomeAddvertisings)
+                        {
+                            <div class="col-lg-4 col-sm-12 col-md-4">
+                                <div class="shipping">
+                                    <img src="~/assets/img/@item.Image" alt="">
+                                </div>
+                                <div class="shipping-name mt-4">
+                                    <h4>@item.Title</h4>
+                                </div>
 
-                            <div class="shipping-description mt-4">
-                                <span>Donec eget tellus. Maecenas elit consequat tempus malesuada non, dolor.</span>
-                            </div>
+                                <div class="shipping-description mt-4">
+                                    <span>@item.Description</span>
+                                </div>
 
-                        </div>
-                        <div class="col-lg-4 col-sm-12 col-md-4">
+                            </div>
+                        }
+                       
+                        @*<div class="col-lg-4 col-sm-12 col-md-4">
                             <div class="shipping">
                                 <img src="~/assets/img/home-advertising-icon2.svg" alt="">
                             </div>
@@ -655,7 +659,7 @@
                             </div>
 
                         </div>
-
+*@
                     </div>
 
 

@@ -68,7 +68,7 @@ namespace EndProject.Areas.Admin.Controllers
                 }
                 else
                 {
-                    Setting newSectionBg = new()
+                    Setting newSetting = new()
                     {
                         Value = dbSetting.Value
                     };
