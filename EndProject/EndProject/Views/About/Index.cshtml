@@ -1,4 +1,5 @@
-﻿
+﻿@model AboutVM
+
 @{
     ViewData["Title"] = "Whiskey - About";
 }
@@ -14,7 +15,7 @@
                 </div>
 
                 <div class="main-up-contact-signature mt-lg-3 mt-sm-1 mt-md-5">
-                    <img src="~/assets/main-line2.svg" alt="">
+                    <img src="~/assets/img/main-line2.svg" alt="">
                 </div>
 
                 <div class="main-up-contact-descriptions">
@@ -33,14 +34,14 @@
 
     <section id="background-img">
         <div>
-            <img src="~/assets/main-back-img2.svg" alt="">
+            <img src="~/assets/img/main-back-img2.svg" alt="">
         </div>
     </section>
 
 
     <section id="main-middle-up">
         <div class="main-middle-back-img">
-            <img src="~/assets/about-main-men1.webp" alt="">
+            <img src="~/assets/img/about-main-men1.webp" alt="">
 
         </div>
 
@@ -48,7 +49,7 @@
 
             <div class="col-lg-5 col-sm-12 col-md-6">
                 <div class="main-middle-logo">
-                    <img src="~/assets/about-main-logo.svg" alt="">
+                    <img src="~/assets/img/about-main-logo.svg" alt="">
 
 
                 </div>
@@ -59,7 +60,7 @@
                         <br> <br> <br> <br>
                         <h1>Scelerisque et maecenas sagittis pharetra nunc diam.</h1>
                         <br> <br>
-                        <img src="~/assets/main-line2.svg" alt="">
+                        <img src="~/assets/img/main-line2.svg" alt="">
                 </div>
 
 
@@ -74,32 +75,25 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-12 col-md-12">
                     <div class="middle-about-us-img">
-                        <img src="~/assets/aboutus-men1.webp" alt="">
+                        <img src="~/assets/img/@Html.Raw(Model.AboutUs.Image)" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-12 col-md-12">
                     <div class="middle-about-us mt-5">
-                        <h1>About us</h1>
+                        <h1>@Html.Raw(Model.AboutUs.Title)</h1>
                     </div>
                     <div class="middle-about-img mt-5">
-                        <img src="~/assets/main-line2.svg" alt="">
+                        <img src="~/assets/img/main-line2.svg" alt="">
                     </div>
 
                     <div class="middle-about-description mt-5">
                         <p class="mt-5">
-                            Convallis taciti netus aptent himenaeos proin at posuere eget tempus
-                            sollicitudin fringilla dictum duis etiam enim quisque pulvinar elementum semper
-                            imperdiet cursus praesent elementum dictum cursus amet ornare sagittis congue sed
-                            habitasse quis volutpat velit posuere bibendum dictum etiam facilisis convallis donec
-                            nisl vivamus cursus eget sapien dictum lectus ligula.
-
-                            Pharetra vestibulum vestibulum donec vitae ullamcorper elit est sit maecenas vulputate
-                            nisl turpis imperdiet urna malesuada lorem .
+                            @Html.Raw(Model.AboutUs.Description)
                         </p>
                     </div>
 
                     <div class="middle-about-signature mt-5">
-                        <img class="mt-5" src="~/assets/main-signature1.svg" alt="">
+                        <img class="mt-5" src="~/assets/img/main-signature1.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -114,7 +108,7 @@
                     <h1>Scelerisque et maecenas sagittis <br> pharetra nunc diam</h1>
                 </div>
                 <div class="scelerisque-logo mt-5">
-                    <img src="~/assets/main-line2.svg" alt="">
+                    <img src="~/assets/img/main-line2.svg" alt="">
                 </div>
 
                 <div class="main-down-time-bewhiskey d-flex mt-5">
@@ -229,7 +223,7 @@
 
     <section id="background-image-about">
         <div class="background-img-aboutt mt-5 ">
-            <img src="~/assets/main-back-img1.svg" alt="">
+            <img src="~/assets/img/main-back-img1.svg" alt="">
         </div>
     </section>
 
@@ -239,7 +233,7 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-12 col-md-6">
                     <div class="main-down-contact-logo mt-5">
-                        <img src="~/assets/main-logo1.svg" alt="">
+                        <img src="~/assets/img/main-logo1.svg" alt="">
 
                     </div>
 
@@ -250,7 +244,7 @@
                     </div>
 
                     <div class="main-down-contact-line mt-4">
-                        <img src="~/assets/main-line2.svg" alt="">
+                        <img src="~/assets/img/main-line2.svg" alt="">
 
                     </div>
 
@@ -289,7 +283,7 @@
 
     <section id="background-img">
         <div>
-            <img src="~/assets/main-back-img2.svg" alt="">
+            <img src="~/assets/img/main-back-img2.svg" alt="">
         </div>
     </section>
 
@@ -298,67 +292,33 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-sm-12 col-md-4 mt-5">
-                    <div class="main-step-icons mt-5">
-                        <img src="~/assets/about-icon1.svg" alt="">
-                    </div>
-                    <div class="main-step-number mt-4">
-                        <button>1</button>
+               @foreach (var item in Model.AboutAdvertisings)
+                {
+                    <div class="col-lg-4 col-sm-12 col-md-4 mt-5">
+                        <div class="main-step-icons mt-5">
+                            <img src="~/assets/img/@item.Image" alt="">
+                        </div>
+                        <div class="main-step-number mt-4">
+                            <button>@item.Number</button>
 
-                    </div>
-                    <div class="main-step-title mt-2">
-                        <h2>Step 1</h2>
+                        </div>
+                        <div class="main-step-title mt-2">
+                            <h2>@item.Title</h2>
 
-                    </div>
-                    <div class="main-step-desc mt-5">
-                        <span>
-                            Vitae adipiscing turpis. Aenean ligula nibh, molestie id viverra a, dapibus at
-                            dolor.
-                        </span>
+                        </div>
+                        <div class="main-step-desc mt-5">
+                            <span>
+                           @item.Description
+                            </span>
 
-                    </div>
+                        </div>
 
-
-                </div>
-                <div class="col-lg-4 col-sm-12 col-md-4 mt-5">
-                    <div class="main-step-icons mt-5">
-                        <img src="~/assets/about-icon2.svg" alt="">
-                    </div>
-                    <div class="main-step-number mt-4">
-                        <button>2</button>
-
-                    </div>
-                    <div class="main-step-title mt-2">
-                        <h2>Step 2</h2>
-
-                    </div>
-                    <div class="main-step-desc mt-5">
-                        <span>Aliquam ut arcu. Donec eleifend et, erat. Sed non sem rutrum, urna mattis.</span>
 
                     </div>
 
-
-                </div>
-                <div class="col-lg-4 col-sm-12 col-md-4 mt-5">
-                    <div class="main-step-icons mt-5">
-                        <img src="~/assets/about-icon3.svg" alt="">
-                    </div>
-                    <div class="main-step-number mt-4">
-                        <button>3</button>
-
-                    </div>
-                    <div class="main-step-title mt-2">
-                        <h2>Step 3</h2>
-
-                    </div>
-                    <div class="main-step-desc mt-5">
-                        <span>Varius egestas, dui ut lacus vestibulum mauris sit amet, accumsan luctus.</span>
-                        <br><br><br> <br>
-
-                    </div>
-
-
-                </div>
+                }
+             
+ 
 
             </div>
         </div>
@@ -370,7 +330,7 @@
 
     <section id="background-img-step">
         <div class="background-img-step">
-            <img src="~/assets/main-back-img2.svg" alt="">
+            <img src="~/assets/img/main-back-img2.svg" alt="">
 
         </div>
 
@@ -381,13 +341,13 @@
 
     <section id="main-footer">
         <div class="main-footer-line ">
-            <img src="~/assets/about-line1.svg" alt="">
+            <img src="~/assets/img/about-line1.svg" alt="">
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="main-footer-icons">
-                    <img src="~/assets/whiskey2-about-icon4.svg" alt="">
+                    <img src="~/assets/img/whiskey2-about-icon4.svg" alt="">
                 </div>
                 <div class="main-footer-icon-desc">
 
@@ -396,19 +356,19 @@
                         vitae ac
                         adipiscing purus.
                     </p>
-                    <img src="~/assets/whiskey2-sep2.svg" alt="">
+                    <img src="~/assets/img/whiskey2-sep2.svg" alt="">
 
                 </div>
 
                 <div class="footer-bibendum-img mt-5 row">
                     <div class="col-lg-6 col-sm-12 col-md-6">
                         <div class="footer-bibendum-logo mt-lg-5">
-                            <img src="~/assets/main-logo1.svg" alt="">
+                            <img src="~/assets/img/main-logo1.svg" alt="">
                         </div>
                         <div class="footer-bibendum-title mt-3">
                             <h2>Bibendum quam et egestas leo olestie.</h2>
                             <br>
-                            <img src="~/assets/whiskey2-icon3.svg" alt="">
+                            <img src="~/assets/img/whiskey2-icon3.svg" alt="">
                         </div>
 
                         <div class="footer-bibendum-desc mt-5">
@@ -422,7 +382,7 @@
                     </div>
                     <div class="col-lg-6 col-sm-12 col-md-6">
                         <div class="bibendum-img mt-5">
-                            <img src="~/assets/whiskey2-about-pic7.webp" alt="">
+                            <img src="~/assets/img/whiskey2-about-pic7.webp" alt="">
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ namespace EndProject.Data
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-    
+
         public DbSet<Slider> Sliders { get;set; }
         public DbSet<SpecialCollection> SpecialCollections { get; set; }
         public DbSet<SectionBackgroundImage> SectionBackgroundImages { get; set; }
@@ -18,6 +18,9 @@ namespace EndProject.Data
         public DbSet<SectionHeader> SectionHeaders { get; set; }
 
         public DbSet<HomeAddvertising> HomeAddvertisings { get; set; }
+        public DbSet<AboutUs> AboutUs { get; set; }
+        public DbSet<AboutAdvertising> AboutAdvertisings { get; set; }
+
 
 
 

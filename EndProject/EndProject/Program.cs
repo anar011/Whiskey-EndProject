@@ -31,7 +31,8 @@ builder.Services.AddScoped(typeof(ICrudService<>), typeof(CrudService<>));
 builder.Services.AddScoped<ISpecialCollectionService,SpecialCollectionService>();
 builder.Services.AddScoped<ILayoutService, LayoutService>();
 builder.Services.AddScoped<IHomeAdvertisingService, HomeAdvertisingService>();
-
+builder.Services.AddScoped<IAboutUsService, AboutUsService>();
+builder.Services.AddScoped<IAboutAdvertisingService, AboutAdvertisingService>();
 
 
 

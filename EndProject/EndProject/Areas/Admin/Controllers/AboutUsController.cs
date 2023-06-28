@@ -1,4 +1,5 @@
-﻿using EndProject.Areas.Admin.ViewModels.Slider;
+﻿using EndProject.Areas.Admin.ViewModels.AboutUs;
+using EndProject.Areas.Admin.ViewModels.Slider;
 using EndProject.Areas.Admin.ViewModels.SpecialCollection;
 using EndProject.Helpers;
 using EndProject.Models;
@@ -8,36 +9,43 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EndProject.Areas.Admin.Controllers
 {
-
-    [Area("Admin")]
-    public class SpecialCollectionController : Controller
+     [Area("Admin")]
+    public class AboutUsController : Controller
     {
-        private readonly IWebHostEnvironment _env;
-        private readonly ISpecialCollectionService _specialCollectionService;
-        private readonly ICrudService<SpecialCollection> _crudService;
+        private readonly IWebHostEnvironment _env;       
+        private readonly ICrudService<AboutUs> _crudService;
+        private readonly IAboutUsService _aboutUsService;
 
 
-        public SpecialCollectionController(IWebHostEnvironment env,
-                                ISpecialCollectionService specialCollectionService,
-                                ICrudService<SpecialCollection> crudService)
+        public AboutUsController(IWebHostEnvironment env,
+                                 ICrudService<AboutUs> crudService,
+                                 IAboutUsService aboutUsService)
         {
             _env = env;
-            _specialCollectionService = specialCollectionService;
+            _aboutUsService = aboutUsService;
             _crudService = crudService;
+
         }
 
-
-
-
-
-        public async Task< IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
-            IEnumerable<SpecialCollection> dbspecialCollections = await _specialCollectionService.GetAllAsync();
-            return View(dbspecialCollections);
+            IEnumerable<AboutUs> dbaboutUs = await _aboutUsService.GetAllAsync();
+            return View(dbaboutUs);
+            
         }
 
 
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
 
+            if (id == null) return BadRequest();
+            AboutUs dbAbouUs = await _aboutUsService.GetByIdAsync((int)id);
+
+            if (dbAbouUs is null) return NotFound();
+
+            return View(dbAbouUs);
+        }
 
 
 
@@ -48,10 +56,9 @@ namespace EndProject.Areas.Admin.Controllers
         }
 
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(SpecialCollectionCreateVM model)
+        public async Task<IActionResult> Create(AboutUsCreateVM model)
         {
             try
             {
@@ -67,17 +74,17 @@ namespace EndProject.Areas.Admin.Controllers
                     ModelState.AddModelError("Photo", "Image size must be max 200kb");
                     return View();
                 }
-             
 
-                SpecialCollection specialCollection = new()
+
+                AboutUs aboutUs = new()
                 {
                     Image = model.Photo.CreateFile(_env, "assets/img"),
                     Title = model.Title,
                     Description = model.Description,
-                   
+
                 };
 
-                await _crudService.CreateAsync(specialCollection);
+                await _crudService.CreateAsync(aboutUs);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
@@ -89,17 +96,9 @@ namespace EndProject.Areas.Admin.Controllers
 
 
 
-        [HttpGet]
-        public async Task<IActionResult> Detail(int? id)
-        {
 
-            if (id == null) return BadRequest();
-            SpecialCollection dbSpecialCollection = await _specialCollectionService.GetByIdAsync((int)id);
 
-            if (dbSpecialCollection is null) return NotFound();
 
-            return View(dbSpecialCollection);
-        }
 
 
 
@@ -109,15 +108,15 @@ namespace EndProject.Areas.Admin.Controllers
             try
             {
                 if (id is null) return BadRequest();
-                SpecialCollection dbSpecialCollection = await _specialCollectionService.GetByIdAsync((int)id);
-                if (dbSpecialCollection is null) return NotFound();
+                AboutUs dbAbouUs = await _aboutUsService.GetByIdAsync((int)id);
+                if (dbAbouUs is null) return NotFound();
 
-                SliderUpdateVM model = new()
+                AboutUsUpdateVM model = new()
                 {
-                    Image = dbSpecialCollection.Image,                 
-                    Title = dbSpecialCollection.Title,
-                    Description = dbSpecialCollection.Description,
-                 
+                    Image = dbAbouUs.Image,
+                    Title = dbAbouUs.Title,
+                    Description = dbAbouUs.Description,
+
                 };
                 return View(model);
             }
@@ -133,17 +132,17 @@ namespace EndProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, SpecialCollectionUpdateVM model)
+        public async Task<IActionResult> Edit(int? id, AboutUsUpdateVM model)
         {
             try
             {
                 if (id is null) return BadRequest();
-                SpecialCollection dbSpecialCollection = await _specialCollectionService.GetByIdAsync((int)id);
-                if (dbSpecialCollection is null) return NotFound();
+                AboutUs dbAboutUs = await _aboutUsService.GetByIdAsync((int)id);
+                if (dbAboutUs is null) return NotFound();
 
-                SpecialCollectionUpdateVM specialCollectionUpdateVM = new()
+                AboutUsUpdateVM aboutUsUpdateVM = new()
                 {
-                    Image = dbSpecialCollection.Image
+                    Image = dbAboutUs.Image
                 };
 
 
@@ -152,30 +151,30 @@ namespace EndProject.Areas.Admin.Controllers
                     if (!model.Photo.CheckFileType("image/"))
                     {
                         ModelState.AddModelError("Photo", "File type must be image");
-                        return View(specialCollectionUpdateVM);
+                        return View(aboutUsUpdateVM);
                     }
                     if (!model.Photo.CheckFileSize(200))
                     {
                         ModelState.AddModelError("Photo", "Image size must be max 200kb");
-                        return View(specialCollectionUpdateVM);
+                        return View(aboutUsUpdateVM);
                     }
-                    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img", specialCollectionUpdateVM.Image);
+                    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img", aboutUsUpdateVM.Image);
                     FileHelper.DeleteFile(path);
 
-                    dbSpecialCollection.Image = model.Photo.CreateFile(_env, "assets/img");
+                    dbAboutUs.Image = model.Photo.CreateFile(_env, "assets/img");
                 }
                 else
                 {
-                    SpecialCollection newSpecialCollection = new()
+                    AboutUs newAboutUs = new()
                     {
-                        Image = dbSpecialCollection.Image
+                        Image = dbAboutUs.Image
                     };
                 }
 
 
 
-                dbSpecialCollection.Title = model.Title;
-                dbSpecialCollection.Description = model.Description;
+                dbAboutUs.Title = model.Title;
+                dbAboutUs.Description = model.Description;
                 await _crudService.SaveAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -188,19 +187,20 @@ namespace EndProject.Areas.Admin.Controllers
 
 
 
+
         [HttpPost]
         public async Task<IActionResult> Delete(int? id)
         {
             try
             {
                 if (id is null) return BadRequest();
-                SpecialCollection dbspecialCollection = await _specialCollectionService.GetByIdAsync((int)id);
-                if (dbspecialCollection is null) return NotFound();
+                AboutUs dbAboutUs = await _aboutUsService.GetByIdAsync((int)id);
+                if (dbAboutUs is null) return NotFound();
 
-                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img", dbspecialCollection.Image);
+                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img", dbAboutUs.Image);
                 FileHelper.DeleteFile(path);
 
-                _crudService.Delete(dbspecialCollection);
+                _crudService.Delete(dbAboutUs);
                 return Ok();
             }
             catch (Exception ex)
@@ -209,6 +209,8 @@ namespace EndProject.Areas.Admin.Controllers
                 return View();
             }
         }
+
+
 
 
 
