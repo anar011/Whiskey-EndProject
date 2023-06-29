@@ -33,6 +33,7 @@ builder.Services.AddScoped<ILayoutService, LayoutService>();
 builder.Services.AddScoped<IHomeAdvertisingService, HomeAdvertisingService>();
 builder.Services.AddScoped<IAboutUsService, AboutUsService>();
 builder.Services.AddScoped<IAboutAdvertisingService, AboutAdvertisingService>();
+builder.Services.AddScoped<IAboutMainFooterService, AboutMainFooterService>();
 
 
 

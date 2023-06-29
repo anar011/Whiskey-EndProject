@@ -6,6 +6,7 @@ namespace EndProject.ViewModels.About
     {
         public AboutUs AboutUs { get; set; }
         public IEnumerable<AboutAdvertising> AboutAdvertisings { get; set; }
+        public AboutMainFooter AboutMainFooter { get; set; }
 
     }
 }

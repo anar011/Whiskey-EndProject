@@ -20,6 +20,7 @@ namespace EndProject.Data
         public DbSet<HomeAddvertising> HomeAddvertisings { get; set; }
         public DbSet<AboutUs> AboutUs { get; set; }
         public DbSet<AboutAdvertising> AboutAdvertisings { get; set; }
+        public DbSet<AboutMainFooter> AboutMainFooters { get; set; }
 
 
 
