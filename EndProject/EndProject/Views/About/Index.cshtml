@@ -366,23 +366,21 @@
                             <img src="~/assets/img/main-logo1.svg" alt="">
                         </div>
                         <div class="footer-bibendum-title mt-3">
-                            <h2>Bibendum quam et egestas leo olestie.</h2>
+                            <h2>@Model.AboutMainFooter.Title</h2>
                             <br>
                             <img src="~/assets/img/whiskey2-icon3.svg" alt="">
                         </div>
 
                         <div class="footer-bibendum-desc mt-5">
                             <p>
-                                Tristique donec aliquam morbi massa amet, massa malesuada turpis venenatis. Maecenas
-                                viverra volutpat donec nunc eu at. Suscipit morbi tellus, elit ultricies pretium est
-                                diam habitant duis.
+                              @Model.AboutMainFooter.Description
                             </p>
                         </div>
 
                     </div>
                     <div class="col-lg-6 col-sm-12 col-md-6">
                         <div class="bibendum-img mt-5">
-                            <img src="~/assets/img/whiskey2-about-pic7.webp" alt="">
+                            <img src="~/assets/img/@Model.AboutMainFooter.Image" alt="">
                         </div>
                     </div>
                 </div>
