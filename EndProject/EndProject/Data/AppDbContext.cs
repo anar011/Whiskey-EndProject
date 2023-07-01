@@ -21,6 +21,11 @@ namespace EndProject.Data
         public DbSet<AboutUs> AboutUs { get; set; }
         public DbSet<AboutAdvertising> AboutAdvertisings { get; set; }
         public DbSet<AboutMainFooter> AboutMainFooters { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<BlogInfo> BlogInfos { get; set; }
+        public DbSet<BlogElement> BlogElements { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<BlogElementList> BlogElementLists { get; set; }
 
 
 
