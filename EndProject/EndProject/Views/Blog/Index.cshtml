@@ -1,4 +1,5 @@
 ﻿@model BlogVM
+
 @{
     ViewData["Title"] = "Whiskey - Blog";
 }
@@ -42,23 +43,28 @@
         <div class="container">
             <div class="row">
                 <div class="blog row mt-5">
-                    <div class="col-lg-4 col-sm-12 col-md-6  homes-blogs-hover mt-4">
 
-                        <div class="card home-blog" style="width: 24rem;">
-                            <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html"><i class="fa-solid fa-circle-plus"></i></a>
-                            <img src="~/assets/img/home-blog1.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <span><i class="fa-regular fa-user"></i></span>
-                                <span>admin on</span>
-                                <span><i class="fa-regular fa-clock"></i> December 30, 2021</span>
-                                <br> <br>
-                                <span>In arcu quis wisi donec vitae libero maecenas blandit</span>
-                                <br>
-                                <br>
+                    @foreach (var blog in Model.Blogs)
+                    {
+                        <div class="col-lg-4 col-sm-12 col-md-6  homes-blogs-hover mt-4">
+
+                            <div class="card home-blog" style="width: 24rem;">
+                                <a asp-controller="Blog" asp-action="BlogDetail" asp-route-id="@blog.Id"><i class="fa-solid fa-circle-plus"></i></a>
+                                <img src="~/assets/img/@blog.Image" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <span><i class="fa-regular fa-user"></i></span>
+                                    <span>admin on</span>
+                                    <span><i class="fa-regular fa-clock"></i> December 30, 2021</span>
+                                    <br> <br>
+                                    <span>@blog.Name</span>
+                                    <br>
+                                    <br>
+                                </div>
                             </div>
-                        </div>
 
-                    </div>
+                        </div>
+                    }
+              @*
                     <div class="col-lg-4 col-sm-12 col-md-6 homes-blogs-hover mt-4">
 
                         <div class="card home-blog" style="width: 24rem;">
@@ -236,7 +242,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div>*@
                 </div>
 
                 <div class="paginations mt-5">

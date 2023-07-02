@@ -1,8 +1,10 @@
 ﻿using EndProject.Areas.Admin.ViewModels.Slider;
+using EndProject.Data;
 using EndProject.Helpers;
 using EndProject.Models;
 using EndProject.Services;
 using EndProject.Services.Interfaces;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,16 +14,18 @@ namespace EndProject.Areas.Admin.Controllers
     [Area("Admin")]
     public class SliderController : Controller
     {
-
+        private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _env;
         private readonly ISliderService _sliderService;
         private readonly ICrudService<Slider> _crudService;
 
 
-        public SliderController(IWebHostEnvironment env,
+        public SliderController(AppDbContext context,
+                                IWebHostEnvironment env,
                                 ISliderService sliderService,
                                 ICrudService<Slider> crudService)
         {
+            _context = context;
             _env = env;
             _sliderService = sliderService;
             _crudService = crudService;
@@ -184,7 +188,7 @@ namespace EndProject.Areas.Admin.Controllers
                 FileHelper.DeleteFile(path);
 
                 _crudService.Delete(dbSlider);
-                return Ok();
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {

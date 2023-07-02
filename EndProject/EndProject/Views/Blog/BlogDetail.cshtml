@@ -1,5 +1,11 @@
 ﻿@model BlogDetailVM
 
+@inject ILayoutService layout
+
+@{
+    ViewData["Title"] = "Whiskey - BlogDetail";
+}
+
 
 <main>
     <section id="main-up">
@@ -10,7 +16,7 @@
                 </div>
 
                 <div class="main-up-contact-signature mt-3">
-                    <img src="./assets/img/main-line2.svg" alt="">
+                    <img src="~/assets/img/main-line2.svg" alt="">
                 </div>
 
                 <div class="main-up-contact-descriptions">
@@ -29,21 +35,21 @@
 
     <section id="background-img">
         <div>
-            <img src="./assets/img/main-back-img2.svg" alt="">
+            <img src="~/assets/img/main-back-img2.svg" alt="">
         </div>
     </section>
 
     <section id="main-middle-up">
         <div class="main-middle-up-img">
-            <img src="./assets/img/blogdetail-1.webp" alt="">
+            <img src="~/assets/img/blogdetail-1.webp" alt="">
         </div>
 
         <div class="main-middle-up-img-logo">
-            <img src="./assets/img/main-logo1.svg" alt="">
+            <img src="~/assets/img/main-logo1.svg" alt="">
             <br> <br>
             <h1>Sed faucibus, justo sem, <br> accumsan odio magna ante</h1>
             <br> <br>
-            <img class="responce-log" src="./assets/img/main-line2.svg" alt="">
+            <img class="responce-log" src="~/assets/img/main-line2.svg" alt="">
 
         </div>
 
@@ -54,7 +60,7 @@
 
     <section id="background-blogdetail-imgs">
         <div class="background-blogdetail-img">
-            <img src="./assets/img/blogdetail-backline1.svg" alt="">
+            <img src="~/assets/img/blogdetail-backline1.svg" alt="">
         </div>
     </section>
 
@@ -64,7 +70,7 @@
                 <div class="main-middle-up-bibendum d-lg-flex d-md-flex  mt-5">
                     <div class="col-lg-6 col-sm-12 col-md-6">
                         <div class="main-middle-up-bibendum-logo mt-5">
-                            <img src="./assets/img/main-logo1.svg" alt="">
+                            <img src="~/assets/img/main-logo1.svg" alt="">
 
                         </div>
                         <div class="main-middle-up-bibendum-title mt-2">
@@ -72,22 +78,29 @@
                         </div>
 
                         <div class="main-middle-up-bibendum-line mt-3">
-                            <img src="./assets/img/main-line2.svg" alt="">
+                            <img src="~/assets/img/main-line2.svg" alt="">
+
+                        </div>
+                        <div class="main-middle-blog-img mt-5">
+                            <img src="~/assets/img/home-blog1.webp" alt="">
 
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-12 col-md-6">
                         <div class="main-middle-up-bibendum-desc mt-5">
                             <h5>
-                                Mi quam fermentum purus sit. Est semper tristique vitae, donec lorem interdum
+                                @Model.Blog.Title
+                            
+                                @*Mi quam fermentum purus sit. Est semper tristique vitae, donec lorem interdum
                                 sagittis quis. Gravida pharetra convallis nunc, at tempus morbi sapien aliquam
-                                proin.
+                                proin.*@
                             </h5>
 
                             <br>
 
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, malesuada mattis
+                                @Model.Blog.Description
+                           @*     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, malesuada mattis
                                 dolor, nec mus. Gravida lacus in mollis tempus. Nibh eu magna euismod cras.
 
                                 Diam elementum dignissim id faucibus et libero blandit bibendum ac. Mi amet risus
@@ -107,7 +120,7 @@
                                 sit sed hendrerit sed dictumst bibendum. Velit sollicitudin elementum non id mauris.
                                 Mi quam fermentum purus sit. Est semper tristique vitae, donec lorem interdum
                                 sagittis quis. Gravida pharetra convallis nunc, at tempus morbi sapien aliquam
-                                proin.
+                                proin.*@
                             </p>
 
 
@@ -125,7 +138,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="main-pharetra-img mt-5">
-                    <img class="mt-5" src="./assets/img/\/whiskey2-about-icon4.svg" alt="">
+                    <img class="mt-5" src="~/assets/img/\/whiskey2-about-icon4.svg" alt="">
                 </div>
                 <div class="main-pharetra-title mt-3">
                     <h2>
@@ -136,7 +149,7 @@
                 </div>
 
                 <div class="middle-pharetra-img mt-4">
-                    <img src="./assets/img/whiskey2-sep3.svg" alt="">
+                    <img src="~/assets/img/whiskey2-sep3.svg" alt="">
                 </div>
 
 
@@ -151,7 +164,7 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-12 col-md-6 mt-5">
                     <div class="main-middle-down-urna-logo mt-5">
-                        <img src="./assets/img/main-logo1.svg" alt="">
+                        <img src="~/assets/img/main-logo1.svg" alt="">
 
                     </div>
                     <div class="main-middle-down-urna-title mt-2">
@@ -159,7 +172,7 @@
                     </div>
 
                     <div class="middle-down-urna-line mt-3">
-                        <img src="./assets/img/main-line2.svg" alt="">
+                        <img src="~/assets/img/main-line2.svg" alt="">
 
                     </div>
                 </div>
@@ -213,7 +226,7 @@
 
     <section id="background-footer-img">
         <div class="background-footer-img mt-5">
-            <img src="./assets/img/main-back-img1.svg" alt="">
+            <img src="~/assets/img/main-back-img1.svg" alt="">
         </div>
     </section>
 
@@ -226,7 +239,7 @@
 
     <section id="background-footer-images">
         <div class="background-footer-images">
-            <img src="./assets/img/main-back-img1.svg" alt="">
+            <img src="~/assets/img/main-back-img1.svg" alt="">
         </div>
     </section>
 
@@ -235,7 +248,7 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-12 col-md-6 mt-5">
                     <div class="main-footer-urna-logo mt-5">
-                        <img src="./assets/img/main-logo1.svg" alt="">
+                        <img src="~/assets/img/main-logo1.svg" alt="">
 
                     </div>
                     <div class="main-footer-urna-title mt-2">
@@ -243,7 +256,7 @@
                     </div>
 
                     <div class="main-footer-line mt-3">
-                        <img src="./assets/img/main-line2.svg" alt="">
+                        <img src="~/assets/img/main-line2.svg" alt="">
 
                     </div>
 
@@ -316,7 +329,7 @@
 
     <section id="background-name-robert-img">
         <div class="background-name-robert-img-responce mt-5">
-            <img src="./assets/img/main-back-img1.svg" alt="">
+            <img src="~/assets/img/main-back-img1.svg" alt="">
         </div>
     </section>
 
@@ -327,7 +340,7 @@
             <div class="row">
                 <div class="col-lg-2 col-sm-2 col-md-2 mt-4">
                     <div class="img-robert ">
-                        <img src="./assets/img/blog-detail-robert.png" alt="">
+                        <img src="~/assets/img/blog-detail-robert.png" alt="">
 
                     </div>
 
@@ -352,7 +365,7 @@
 
     <section id="background-name-robert-img">
         <div class="background-name-robert-img-two">
-            <img src="./assets/img/main-back-img2.svg" alt="">
+            <img src="~/assets/img/main-back-img2.svg" alt="">
         </div>
     </section>
 
@@ -361,7 +374,7 @@
         <div class="container">
             <div class="row">
                 <div class="home-blog-logo mt-5">
-                    <img src="./assets/img/main-logo1.svg" alt="">
+                    <img src="~/assets/img/main-logo1.svg" alt="">
 
                 </div>
 
@@ -370,14 +383,14 @@
                 </div>
 
                 <div class="home-blog-line">
-                    <img src="./assets/img/main-line2.svg" alt="">
+                    <img src="~/assets/img/main-line2.svg" alt="">
                 </div>
 
                 <div class="home-blogs d-lg-flex d-md-flex mt-5">
                     <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
                         <div class="card home-blog" style="width: 25rem;">
                             <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html"><i class="fa-solid fa-circle-plus"></i></a>
-                            <img src="./assets/img/home-blog1.webp" class="card-img-top" alt="...">
+                            <img src="~/assets/img/home-blog1.webp" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <span><i class="fa-regular fa-user"></i></span>
                                 <span>admin on</span>
@@ -394,7 +407,7 @@
 
                         <div class="card home-blog" style="width: 25rem;">
                             <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html"><i class="fa-solid fa-circle-plus"></i></a>
-                            <img src="./assets/img/home-blog2.webp" class="card-img-top" alt="...">
+                            <img src="~/assets/img/home-blog2.webp" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <span class="card-text"><i class="fa-regular fa-user"></i></span>
                                 <span class="card-text">admin on</span>
@@ -411,7 +424,7 @@
 
                         <div class="card home-blog" style="width: 25rem;">
                             <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html"><i class="fa-solid fa-circle-plus"></i></a>
-                            <img src="./assets/img/home-blog3.webp" class="card-img-top" alt="...">
+                            <img src="~/assets/img/home-blog3.webp" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <span class="card-text"><i class="fa-regular fa-user"></i></span>
                                 <span class="card-text">admin on</span>
@@ -429,7 +442,7 @@
 
     <section id="background-name-robert-img">
         <div class="background-name-robert-img-three mt-5">
-            <img src="./assets/img/main-back-img1.svg" alt="">
+            <img src="~/assets/img/main-back-img1.svg" alt="">
         </div>
     </section>
 

@@ -613,6 +613,17 @@ main #main-middle-bbibendum .main-middle-up-bibendum .main-middle-up-bibendum-ti
 main #main-middle-bbibendum .main-middle-up-bibendum .main-middle-up-bibendum-title h3 {
   color: #ca8f65;
 }
+
+ main #main-middle-bbibendum .main-middle-up-bibendum .main-middle-blog-img {
+        width: 100%;
+ }
+
+main #main-middle-bbibendum .main-middle-up-bibendum .main-middle-blog-img img {
+            width: 50%;
+
+}
+
+
 main #main-middle-bbibendum .main-middle-up-bibendum-desc {
   width: 100%;
   height: auto;
