@@ -822,11 +822,15 @@ main #background-img1 .back-img {
 main #background-img1 .back-img img {
   width: 100%;
 }
+
+
 main #main-products .main-product {
-  width: 100%;
-  height: auto;
-  background-color: #2a2a2a;
+    width: 100%;
+    height: auto;
+    background-color: #2a2a2a;
 }
+
+
 main #main-products .main-product .product-priviews {
   width: 62%;
   height: auto;

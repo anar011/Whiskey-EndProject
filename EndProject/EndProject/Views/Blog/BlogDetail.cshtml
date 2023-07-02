@@ -47,7 +47,7 @@
         <div class="main-middle-up-img-logo">
             <img src="~/assets/img/main-logo1.svg" alt="">
             <br> <br>
-            <h1>Sed faucibus, justo sem, <br> accumsan odio magna ante</h1>
+            <h1>@Model.Blog.Name</h1>
             <br> <br>
             <img class="responce-log" src="~/assets/img/main-line2.svg" alt="">
 
@@ -82,7 +82,7 @@
 
                         </div>
                         <div class="main-middle-blog-img mt-5">
-                            <img src="~/assets/img/home-blog1.webp" alt="">
+                            <img src="~/assets/img/@Model.Blog.Image" alt="">
 
                         </div>
                     </div>
@@ -90,37 +90,14 @@
                         <div class="main-middle-up-bibendum-desc mt-5">
                             <h5>
                                 @Model.Blog.Title
-                            
-                                @*Mi quam fermentum purus sit. Est semper tristique vitae, donec lorem interdum
-                                sagittis quis. Gravida pharetra convallis nunc, at tempus morbi sapien aliquam
-                                proin.*@
+                                                        
                             </h5>
 
                             <br>
 
                             <p>
                                 @Model.Blog.Description
-                           @*     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, malesuada mattis
-                                dolor, nec mus. Gravida lacus in mollis tempus. Nibh eu magna euismod cras.
-
-                                Diam elementum dignissim id faucibus et libero blandit bibendum ac. Mi amet risus
-                                varius et mauris. Scelerisque mauris cursus tellus pulvinar. Sed nulla vestibulum
-                                sit sed hendrerit sed dictumst bibendum. Velit sollicitudin elementum non id mauris.
-                                Mi quam fermentum purus sit. Est semper tristique vitae, donec lorem interdum
-                                sagittis quis. Gravida pharetra convallis nunc, at tempus morbi sapien aliquam
-                                proin. Neque enim tortor enim mauris, integer elementum, ut. Vitae viverra molestie
-                                vel quis eros egestas ullamcorper vitae. Id sed sagittis donec id massa, dapibus
-                                tristique non.
-
-                                Hendrerit eu cras aenean eget ultricies sed tristique lobortis. Id nullam mattis sit
-                                iaculis senectus ut odio eu mattis. Velit feugiat at arcu leo et hac pulvinar.
-
-                                Diam elementum dignissim id faucibus et libero blandit bibendum ac. Mi amet risus
-                                varius et mauris. Scelerisque mauris cursus tellus pulvinar. Sed nulla vestibulum
-                                sit sed hendrerit sed dictumst bibendum. Velit sollicitudin elementum non id mauris.
-                                Mi quam fermentum purus sit. Est semper tristique vitae, donec lorem interdum
-                                sagittis quis. Gravida pharetra convallis nunc, at tempus morbi sapien aliquam
-                                proin.*@
+                                              
                             </p>
 
 
@@ -142,8 +119,7 @@
                 </div>
                 <div class="main-pharetra-title mt-3">
                     <h2>
-                        Pharetra viverra arcu feugiat habitasse quisque in odio in odio. Iaculis integer et egestas
-                        vitae ac adipiscing purus.
+                        @layout.GetSettings()["blog-dt-pharetra"]
                     </h2>
 
                 </div>
@@ -168,7 +144,7 @@
 
                     </div>
                     <div class="main-middle-down-urna-title mt-2">
-                        <h3>A urna iaculis mauris morbi. Commodo sit blandit adipiscing tellus.</h3>
+                        <h3>@Model.BlogElement.Name</h3>
                     </div>
 
                     <div class="middle-down-urna-line mt-3">
@@ -180,19 +156,18 @@
                 <div class="col-lg-6 col-sm-12 col-md-6 mt-5">
                     <div class="main-middle-down-urna-desc mt-5">
                         <h5>
-                            Diam elementum dignissim id faucibus et libero blandit bibendum ac. Mi amet risus varius
-                            et mauris. Scelerisque mauris cursus tellus pulvinar.
+                            @Model.BlogElement.Title
                         </h5>
                     </div>
 
                     <div class="main-middle-down-urna-desc-two mt-4">
                         <p>
-                            Diam elementum dignissim id faucibus et libero blandit bibendum ac. Mi amet risus varius
-                            et mauris.
+                            @Model.BlogElement.Description
                         </p>
                     </div>
 
                     <div class="main-middle-down-urna-icons">
+
                         <div class="main-middle-down-urna-icon d-flex">
                             <div class="col-1"> <i class="fa-solid fa-square-check"></i></div>
                             <div class="col-11">
@@ -252,7 +227,7 @@
 
                     </div>
                     <div class="main-footer-urna-title mt-2">
-                        <h3>A urna iaculis mauris morbi. Commodo sit blandit adipiscing tellus.</h3>
+                        <h3>@Model.BlogInfo.Title</h3>
                     </div>
 
                     <div class="main-footer-line mt-3">
@@ -262,8 +237,7 @@
 
                     <div class="main-footer-urna-desc mt-5">
                         <h5>
-                            Sodales commodo augue neque proin justo ante hac molestie dictumst suspendisse sed etiam
-                            ut accumsan senectus.
+                            @Model.BlogInfo.Description
                         </h5>
 
                         <br>
@@ -340,7 +314,7 @@
             <div class="row">
                 <div class="col-lg-2 col-sm-2 col-md-2 mt-4">
                     <div class="img-robert ">
-                        <img src="~/assets/img/blog-detail-robert.png" alt="">
+                        <img src="~/assets/img/@Model.Author.Image" alt="">
 
                     </div>
 
@@ -348,13 +322,12 @@
                 </div>
                 <div class="col-lg-10 col-sm-10 col-md-10 mt-5">
                     <div class="name-robert">
-                        <h4>Robert Fox</h4>
+                        <h4>@Model.Author.Name</h4>
                     </div>
 
                     <div class="main-desc">
                         <p>
-                            Cursus venenatis arcu in quis ac. Faucibus cras arcu consequat sed eget lorem. Diam sagittis arcu vitae gravida. Molestie ut amet in tincidunt at elit ac, dignissim sagittis. Ac risus, lectus dolor sit condimentum euismod morbi arcu morbi. Ornare odio in diam scelerisque eget suspendisse.
-
+                            @Model.Author.Description
                         </p>
                     </div>
                 </div>
@@ -379,7 +352,7 @@
                 </div>
 
                 <div class="home-blog-name">
-                    <h1>See also</h1>
+                    <h1>@layout.GetSettings()["SeeAlso"]</h1>
                 </div>
 
                 <div class="home-blog-line">
@@ -387,6 +360,28 @@
                 </div>
 
                 <div class="home-blogs d-lg-flex d-md-flex mt-5">
+    @*                @foreach (var item in Model.Blogs)
+                    {
+                        <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
+                            <div class="card home-blog" style="width: 25rem;">
+                                <a asp-controller="Blog" asp-action="BlogDetail" asp-route-id="@item.Id"><i class="fa-solid fa-circle-plus"></i></a>
+                                <img src="~/assets/img/@item.Image" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <span><i class="fa-regular fa-user"></i></span>
+                                    <span>admin on</span>
+                                    <span><i class="fa-regular fa-clock"></i> December 30, 2021</span>
+                                    <br> <br>
+                                    <span>@item.Name</span>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+
+                        </div>
+                    }*@
+
+
+
                     <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
                         <div class="card home-blog" style="width: 25rem;">
                             <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html"><i class="fa-solid fa-circle-plus"></i></a>
@@ -419,7 +414,6 @@
                         </div>
 
                     </div>
-
                     <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
 
                         <div class="card home-blog" style="width: 25rem;">
