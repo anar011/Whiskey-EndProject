@@ -3,6 +3,7 @@ using EndProject.Models;
 using EndProject.Services.Interfaces;
 using EndProject.ViewModels.Product;
 using EndProject.ViewModels.Shop;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
@@ -142,6 +143,27 @@ namespace EndProject.Controllers
                 ViewBag.error = ex.Message;
                 return View();
             }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public async Task<IActionResult> PostComment(ProductDetailVM model, int? id, string userId)
+        {
+            if (id is null || userId == null) return BadRequest();
+            if (!ModelState.IsValid) return RedirectToAction(nameof(ProductDetail), new { id });
+
+            ProductComment productComment = new()
+            {
+                Name = model.ProductCommentVM.Name,
+                Email = model.ProductCommentVM.Email,
+                Subject = model.ProductCommentVM.Subject,
+                Message = model.ProductCommentVM.Message,
+                AppUserId = userId,
+                ProductId = (int)id
+            };
+            await _crudService.CreateAsync(productComment);
+            return RedirectToAction(nameof(ProductDetail), new { id });
         }
 
 
