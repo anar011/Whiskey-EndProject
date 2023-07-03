@@ -1,5 +1,7 @@
 ﻿@model BlogVM
 
+@inject ILayoutService layout
+
 @{
     ViewData["Title"] = "Whiskey - Blog";
 }
@@ -44,7 +46,9 @@
             <div class="row">
                 <div class="blog row mt-5">
 
-                    @foreach (var blog in Model.Blogs)
+                    <partial name="_BlogListPartial" model="Model.PaginateDatas.Datas" />
+
+                  @*  @foreach (var blog in Model.Blogs)
                     {
                         <div class="col-lg-4 col-sm-12 col-md-6  homes-blogs-hover mt-4">
 
@@ -63,7 +67,7 @@
                             </div>
 
                         </div>
-                    }
+                    }*@
               @*
                     <div class="col-lg-4 col-sm-12 col-md-6 homes-blogs-hover mt-4">
 

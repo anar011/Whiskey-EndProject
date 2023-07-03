@@ -23,7 +23,7 @@ namespace EndProject.Controllers
             _layoutService = layoutService;
             _context = context;
         }
-        public async Task<IActionResult> Index(int page = 1, int take = 2)
+        public async Task<IActionResult> Index(int page = 1, int take = 9)
         {
             var blogs = await _blogService.GetAllAsync();
             List<Blog> datas = await _blogService.GetPaginatedDatasAsync(page, take);

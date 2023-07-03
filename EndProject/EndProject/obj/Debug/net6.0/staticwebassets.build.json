@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UJjmLVfDTsP3LX+cUF8JxnbOri9VLuKKVju1OqbtzaY=",
+  "Hash": "rlhfSXYRNrN04O6kjm7qrzFdJtlgJTGFKLCSdt+GOGA=",
   "Source": "EndProject",
   "BasePath": "_content/EndProject",
   "Mode": "Default",
@@ -6322,6 +6322,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\724ea90b-797a-493d-a16a-77d84075e02dwhiskey-slider4.webp"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\8d9d29b2-6343-49a5-8df8-27a108b75c70home-blog2.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/8d9d29b2-6343-49a5-8df8-27a108b75c70home-blog2.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\8d9d29b2-6343-49a5-8df8-27a108b75c70home-blog2.webp"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\9fbce16b-181b-4a57-8373-a046d11258bfwhiskey-slider3.webp",

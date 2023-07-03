@@ -9,8 +9,7 @@ namespace EndProject.ViewComponents
     {
         private readonly ILayoutService _layoutService;
 
-        public HeaderViewComponent(ILayoutService layoutService
-                        )
+        public HeaderViewComponent(ILayoutService layoutService)
         {
             _layoutService = layoutService;
          
