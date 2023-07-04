@@ -163,12 +163,6 @@
                 </div>
 
 
-
-
-
-
-
-
             </div>
         </div>
     </section>
@@ -267,52 +261,48 @@
                     </div>
 
                     <!-- //End Product Modal // -->
+
+
                     <!-- // Begin PRODUCT// -->
 
                     <div class="products-whiskeys mt-5 row">
+                        @foreach (var product in Model.Products)
+                        {
+                            <div class="col-lg-4 col-sm-12 col-md-6">
+                                <div class="whiskeys">
+                                    <div class="whiskey-icons ">
+                                        <a asp-controller="Product" asp-action="ProductDetail" asp-route-id="@product.Id">
+                                            
+                                            <i class="fa-solid fa-paperclip"></i>
+                                        </a>
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                        <a href=""><i class="fa-solid fa-square-plus"></i></a>
+                                    </div>
 
-                        <div class="col-lg-4 col-sm-12 col-md-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html">
-                                        <i class="fa-solid fa-paperclip"></i>
-                                    </a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
+
+                                    <div class="whiskey">
+                                        <a asp-controller="Product" asp-action="ProductDetail" asp-route-id="@product.Id"><img src="~/assets/img/@product.Image" alt=""></a>
+                                    </div>
+                                    <div class="whiskey-name">
+                                        <a href="">@product.Name</a>
+
+                                        <br>
+                                        <span><span>$</span>45.00-100.00</span>
+                                     @*   <span>-</span>
+                                        <span>$100.00</span>*@
+
+
+
+                                    </div>
+
+
                                 </div>
-
-
-                                <div class="whiskey">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><img src="~/assets/img/bourbon-blend1.webp" alt=""></a>
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Bourbon Blend</a>
-
-                                    <br>
-                                    <span>$45.00</span>
-                                    <span>-</span>
-                                    <span>$100.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
 
 
                             </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-12 col-md-6">
+                        }
+                       
+                    @*    <div class="col-lg-4 col-sm-12 col-md-6">
                             <div class="whiskeys">
                                 <div class="whiskey-icons ">
                                     <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
@@ -623,7 +613,7 @@
 
 
 
-                        </div>
+                        </div>*@
 
 
                     </div>
