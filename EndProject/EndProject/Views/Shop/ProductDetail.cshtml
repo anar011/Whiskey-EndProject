@@ -1,5 +1,9 @@
 ﻿@model ProductDetailVM
 
+@*@section Css{
+    <link rel="stylesheet" href="~/assets/scss/product-detail.css">
+}*@
+
 <main>
 
     <!-- Products name -->
@@ -35,7 +39,7 @@
                 <div class="main-detail-product row mt-5">
                     <div class="col-lg-6 col-sm-12 mt-5">
                         <div class="main-detail-products-img">
-                            <img src="./assets/img/bourbon-blend1.webp" alt="">
+                            <img src="~/assets/img/@Model.Image" alt="">
 
                         </div>
 
@@ -43,33 +47,34 @@
                     <div class="col-lg-6 col-sm-12 mt-5">
                         <div class="priviews-informs">
                             <div class="whiskey-name row">
-                                <h1>Bourbon Blend</h1>
+                                <h1>@Model.ProductName</h1>
 
                             </div>
                             <div class="priviewWhiskey-price">
-                                <h4>$35.00 – $60.00</h4>
+                                <h4>$@Model.ProductCapacities.Last().Price – $@Model.ProductCapacities.First().Price</h4>
                             </div>
 
                             <div class="whiskey-info">
                                 <span>
-                                    Phasellus ornare magna quis neque ut venenatis consequat. Morbi facilisis
-                                    nunc, ac erat velit odio fermentum wisi, mollis lobortis. Maecenas in
-                                    posuere dui. Morbi urna quis arcu.
+                                    @Model.Description
                                 </span>
                             </div>
 
                             <div class="whiskey-capacity mt-4">
                                 <span>Capacity</span>
-                                <button><a href="">1l</a></button>
-                                <button><a href="">700ml</a></button>
-                                <button><a href="">500ml</a></button>
+                                        @foreach (var item in Model.ProductCapacities)
+                                {
+                                    <button><a>@item.Capacity.Name @(item.Capacity.Name=="1" ? "L" : "Ml")</a></button>
+                                }
 
                             </div>
 
                             <div class="whiskey-price">
-                                <span class="d-none">$<span>60.00</span></span>
-                                <span class="d-none">$<span>45.00</span></span>
-                                <span class="d-none">$<span>35.00</span></span>
+                            @foreach (var item in Model.ProductCapacities)
+                                {
+                                    <span class="d-none">$<span>@item.Price</span></span>
+
+                                }
                             </div>
 
                             <div class="whiskey-button-cart d-flex">
@@ -128,7 +133,7 @@
 
     <section id="background-img">
         <div>
-            <img src="./assets/img/main-back-img2.svg" alt="">
+            <img src="~/assets/img/main-back-img2.svg" alt="">
         </div>
     </section>
 
@@ -139,7 +144,7 @@
     <section id="main-traditions">
         <div class="main-tradition">
             <div class="main-logo">
-                <img src="./assets/img/main-logo1.svg" alt="">
+                <img src="~/assets/img/main-logo1.svg" alt="">
 
                 <h1>
                     100 years of <br>
@@ -148,7 +153,7 @@
             </div>
 
             <div class="main-line mt-3">
-                <img src="./assets/img/main-line2.svg" alt="">
+                <img src="~/assets/img/main-line2.svg" alt="">
             </div>
 
             <div class="tradition-description mt-4">
@@ -160,7 +165,7 @@
             </div>
 
             <div class="main-signature mt-5">
-                <img src="./assets/img/main-signature1.svg" alt="">
+                <img src="~/assets/img/main-signature1.svg" alt="">
             </div>
 
 
@@ -175,7 +180,7 @@
             <div class="d-lg-flex">
                 <div class="col-lg-6 col-sm-12 mt-5">
                     <div class="main-middle-img mt-5">
-                        <img src="./assets/img/whiskey2-details-pic1.webp" alt="">
+                        <img src="~/assets/img/whiskey2-details-pic1.webp" alt="">
                     </div>
 
                 </div>
@@ -188,7 +193,7 @@
                         </div>
 
                         <div class="main-middle-logo mt-5">
-                            <img src="./assets/img/main-line2.svg" alt="">
+                            <img src="~/assets/img/main-line2.svg" alt="">
                         </div>
 
                         <div class="main-middle-desc mt-5">
@@ -219,7 +224,7 @@
                         </div>
 
                         <div class="main-middle-logo mt-5">
-                            <img src="./assets/img/main-line2.svg" alt="">
+                            <img src="~/assets/img/main-line2.svg" alt="">
                         </div>
 
                         <div class="main-middle-desc mt-5">
@@ -237,7 +242,7 @@
 
                 <div class="col-lg-6 col-sm-12 mt-5">
                     <div class="main-middle-img mt-5">
-                        <img src="./assets/img/whiskey2-details-pic2.webp" alt="">
+                        <img src="~/assets/img/whiskey2-details-pic2.webp" alt="">
                     </div>
 
                 </div>
@@ -255,7 +260,7 @@
                     <div class="advertising-icons d-lg-flex mt-5">
                         <div class="col-lg-4 col-sm-12">
                             <div class="shipping">
-                                <img src="./assets/img/home-advertising-icon1.svg" alt="">
+                                <img src="~/assets/img/home-advertising-icon1.svg" alt="">
                             </div>
                             <div class="shipping-name mt-4">
                                 <h4>Shipping in 24 hours</h4>
@@ -268,7 +273,7 @@
                         </div>
                         <div class="col-lg-4 col-sm-12">
                             <div class="shipping">
-                                <img src="./assets/img/home-advertising-icon2.svg" alt="">
+                                <img src="~/assets/img/home-advertising-icon2.svg" alt="">
                             </div>
                             <div class="shipping-name mt-4">
                                 <h4>128 available products</h4>
@@ -281,7 +286,7 @@
                         </div>
                         <div class="col-lg-4 col-sm-12">
                             <div class="shipping">
-                                <img src="./assets/img/home-advertising-icon3.svg" alt="">
+                                <img src="~/assets/img/home-advertising-icon3.svg" alt="">
                             </div>
                             <div class="shipping-name mt-4">
                                 <h4>11 years on the market</h4>
@@ -315,7 +320,7 @@
                     <div class="product-priviews-detail d-flex d-none">
                         <div class="col-6">
                             <div class="priviews-img">
-                                <img src="./assets/img/bourbon-blend1.webp" alt="">
+                                <img src="~/assets/img/bourbon-blend1.webp" alt="">
                             </div>
 
                         </div>
@@ -419,7 +424,7 @@
 
 
                                 <div class="whiskey">
-                                    <img src="./assets/img/bourbon-blend1.webp" alt="">
+                                    <img src="~/assets/img/bourbon-blend1.webp" alt="">
                                 </div>
                                 <div class="whiskey-name">
                                     <a href="">Bourbon Blend</a>
@@ -460,7 +465,7 @@
 
 
                                 <div class="whiskey">
-                                    <img src="./assets/img/fireHardened-bourbon1.webp" alt="">
+                                    <img src="~/assets/img/fireHardened-bourbon1.webp" alt="">
                                 </div>
                                 <div class="whiskey-name">
                                     <a href="">Fire Hardened Bourbon</a>
@@ -501,7 +506,7 @@
 
 
                                 <div class="whiskey">
-                                    <img src="./assets/img/premium-whiskey.webp" alt="">
+                                    <img src="~/assets/img/premium-whiskey.webp" alt="">
                                 </div>
                                 <div class="whiskey-name">
                                     <a href="">Premium Whiskey</a>
@@ -548,7 +553,7 @@
 
     <section id="background-img-comments">
         <div class="back-img-comment  mt-5">
-            <img src="./assets/img/main-back-img1.svg" alt="">
+            <img src="~/assets/img/main-back-img1.svg" alt="">
 
         </div>
     </section>
@@ -588,7 +593,7 @@
 
     <section id="background-img">
         <div>
-            <img src="./assets/img/main-back-img2.svg" alt="">
+            <img src="~/assets/img/main-back-img2.svg" alt="">
         </div>
     </section>
 
@@ -628,7 +633,7 @@
 
     <section id="background-img-three">
         <div class="back-img back-imgs mt-5">
-            <img src="./assets/img/main-back-img1.svg" alt="">
+            <img src="~/assets/img/main-back-img1.svg" alt="">
 
         </div>
     </section>
@@ -640,3 +645,7 @@
 
 
 </main>
+
+@section Scripts{
+    <script src="~/assets/js/product-detail.js"></script>
+}

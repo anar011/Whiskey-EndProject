@@ -1,0 +1,100 @@
+﻿@model RegisterVM
+
+
+<main>
+    <section id="main-up">
+        <div class="container">
+            <div class="row">
+                <div class="main-up-contact-name">
+                    <h1>Register</h1>
+                </div>
+
+                <div class="main-up-contact-titles">
+                    <div class="main-up-contact-title">
+                        <a asp-controller="Home" asp-action="Index"><span>HOME</span></a>
+                        <hr>
+                        <span>></span>
+                        <span>Register</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <form method="post" asp-action="Register">
+        <section id="main-down">
+            <div class="container">
+                <div class="row">
+                    <div class="main-down mt-5">
+                        <div class="main-down-desc">
+                            <h2>Register</h2>
+
+
+                        </div>
+
+                        <div class="main-down-email mt-5">
+                            <input type="text" asp-for="FirstName" placeholder="First Name*">
+                            <span class="text-danger" asp-validation-for="FirstName"></span>
+                        </div>
+
+                        <div class="main-down-email mt-5">
+                            <input type="text" asp-for="LastName" placeholder="Last Name*">
+                            <span class="text-danger" asp-validation-for="LastName"></span>
+                        </div>
+
+                        <div class="main-down-email mt-5">
+                            <input type="text" asp-for="Email" placeholder="Email*">
+                            <span class="text-danger" asp-validation-for="Email"></span>
+                        </div>
+
+
+                        <div class="main-down-email mt-5">
+                            <input type="password" asp-for="Password" placeholder="Password*">
+                            <span class="text-danger" asp-validation-for="Password"></span>
+                        </div>
+
+
+
+
+
+                        <div class="main-down-email mt-5">
+                            <input type="password" asp-for="ConfirmPassword" placeholder="Confirm Password*">
+                            <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                        </div>
+
+
+
+                        <div class="main-down-email-reset mt-3">
+                            <button type="submit">Register</button>
+                        </div>
+
+                        <div class="main-down-email-register mt-3">
+                            <a asp-controller="Account" asp-action="Login"><p>Login</p></a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </form>
+
+
+    <section id="background-img-three">
+        <div class="back-img back-imgs mt-5">
+            <img src="~/assets/img/main-back-img1.svg" alt="">
+
+        </div>
+    </section>
+</main>
+
+
+@section Scripts{
+    <script src="~/assets/js/register.js"></script>
+}

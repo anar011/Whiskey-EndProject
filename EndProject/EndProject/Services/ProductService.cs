@@ -25,7 +25,6 @@ namespace EndProject.Services
                 model.Add(new ProductVM
                 {
                     Id = item.Id,
-                    Price = item.Price,
                     Name = item.Name,
                    Image = item.Image,
                    
@@ -143,7 +142,6 @@ namespace EndProject.Services
                 model.Add(new ProductVM
                 {
                     Id = item.Id,
-                    Price = item.Price,
                     Name = item.Name,
                     Image = item.Image,
              

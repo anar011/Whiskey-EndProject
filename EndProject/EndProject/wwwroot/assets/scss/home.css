@@ -824,14 +824,14 @@ main #background-img1 .back-img img {
 }
 
 
-main #main-products .main-product {
+main #main-productss .main-product {
     width: 100%;
     height: auto;
     background-color: #2a2a2a;
 }
 
 
-main #main-products .main-product .product-priviews {
+main #main-productss .main-product .product-priviews {
   width: 62%;
   height: auto;
   background-color: #303030;
@@ -841,195 +841,195 @@ main #main-products .main-product .product-priviews {
   z-index: 99;
   top: -26%;
 }
-main #main-products .main-product .product-priviews .priviews-img {
+main #main-productss .main-product .product-priviews .priviews-img {
   width: 100%;
   height: 100%;
 }
-main #main-products .main-product .product-priviews .priviews-img img {
+main #main-productss .main-product .product-priviews .priviews-img img {
   width: 100%;
   height: 100%;
 }
-main #main-products .main-product .product-priviews .priviews-informs {
+main #main-productss .main-product .product-priviews .priviews-informs {
   width: 100%;
   height: 100%;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-name {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-name {
   width: 100%;
   height: 14%;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-name h1 {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-name h1 {
   color: #ca8f65;
   text-align: left;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-name span {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-name span {
   position: relative;
   left: 38%;
   transition: all 0.3s ease-in-out;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-name span i {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-name span i {
   color: #f9eeee;
   cursor: pointer;
 }
-main #main-products .main-product .product-priviews .priviews-informs .priviewWhiskey-price {
+main #main-productss .main-product .product-priviews .priviews-informs .priviewWhiskey-price {
   width: 100%;
   height: 10%;
 }
-main #main-products .main-product .product-priviews .priviews-informs .priviewWhiskey-price h4 {
+main #main-productss .main-product .product-priviews .priviews-informs .priviewWhiskey-price h4 {
   color: #ca8f65;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-info {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-info {
   width: 89%;
   height: 20%;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-info span {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-info span {
   color: #8e8e8e;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-capacity {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-capacity {
   width: 100%;
   height: 10%;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-capacity span {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-capacity span {
   color: #f9eeee;
   font-size: 22px;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-capacity button {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-capacity button {
   width: 10%;
   height: 50%;
   border: none;
   background-color: #303030;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-capacity button:hover {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-capacity button:hover {
   background-color: #8e8e8e;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-capacity button a {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-capacity button a {
   text-decoration: none;
   color: #6c6969;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-price {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-price {
   width: 100%;
   height: 10%;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-price span {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-price span {
   font-size: 25px;
   font-weight: 650;
   color: #ca8f65;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart {
   width: 100%;
   height: 8%;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-buttons {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-buttons {
   width: 100%;
   height: 100%;
   border: 1px;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-buttons button {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-buttons button {
   width: 30%;
   height: 100%;
   background-color: #303030;
   border: none;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-buttons button:hover {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-buttons button:hover {
   background-color: #444444;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-buttons button a i {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-buttons button a i {
   color: white;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-buttons input {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-buttons input {
   width: 30%;
   height: 100%;
   border: none;
   background-color: #303030;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-addcart {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-addcart {
   width: 100%;
   height: 100%;
   background-color: #ca8f65;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-addcart button {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-addcart button {
   width: 100%;
   height: 100%;
   border: none;
   background-color: #ca8f65;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-addcart button:hover {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-addcart button:hover {
   background-color: #ebebeb;
   transition: 1s;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-addcart button a {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-addcart button a {
   text-decoration: none;
   color: black;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-iconheart {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-iconheart {
   width: 100%;
   height: 60%;
   margin-top: 6%;
   margin-left: 8%;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-iconheart a {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-iconheart a {
   text-decoration: none;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-iconheart a i {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-iconheart a i {
   color: #ca8f65;
   font-size: 25px;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-iconheart a i:hover {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-button-cart .whiskey-iconheart a i:hover {
   color: #f9eeee;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-categories {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-categories {
   width: 100%;
   height: 10%;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-categories span {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-categories span {
   color: #f1e9e4;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-categories a {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-categories a {
   text-decoration: none;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-categories a span {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-categories a span {
   color: #ca8f65;
 }
-main #main-products .main-product .product-priviews .priviews-informs .whiskey-categories a span:hover {
+main #main-productss .main-product .product-priviews .priviews-informs .whiskey-categories a span:hover {
   color: white;
 }
-main #main-products .main-product .recommented-logo {
+main #main-productss .main-product .recommented-logo {
   width: 100%;
   height: 130px;
   text-align: center;
 }
-main #main-products .main-product .recommented-logo img {
+main #main-productss .main-product .recommented-logo img {
   position: relative;
   top: 23%;
 }
-main #main-products .main-product .recommented-products {
+main #main-productss .main-product .recommented-products {
   width: 100%;
   height: 120px;
   text-align: center;
 }
-main #main-products .main-product .recommented-products h1 {
+main #main-productss .main-product .recommented-products h1 {
   font-weight: 600;
   color: #ca8f65;
 }
-main #main-products .main-product .recommented-line {
+main #main-productss .main-product .recommented-line {
   width: 100%;
   height: 70px;
   text-align: center;
 }
-main #main-products .main-product .products-whiskeys {
+main #main-productss .main-product .products-whiskeys {
   width: 100%;
   height: auto;
 }
-main #main-products .main-product .products-whiskeys .whiskeys {
+main #main-productss .main-product .products-whiskeys .whiskeys {
   width: 100%;
   height: 500px;
 }
-main #main-products .main-product .products-whiskeys .whiskeys:hover .whiskey-icons a {
+main #main-productss .main-product .products-whiskeys .whiskeys:hover .whiskey-icons a {
   text-decoration: none;
 }
-main #main-products .main-product .products-whiskeys .whiskeys:hover .whiskey-icons a i {
+main #main-productss .main-product .products-whiskeys .whiskeys:hover .whiskey-icons a i {
   display: block;
 }
-main #main-products .main-product .products-whiskeys .whiskeys .whiskey-icons {
+main #main-productss .main-product .products-whiskeys .whiskeys .whiskey-icons {
   width: 30px;
   height: 96px;
   position: absolute;
@@ -1039,34 +1039,34 @@ main #main-products .main-product .products-whiskeys .whiskeys .whiskey-icons {
   gap: 5;
   display: grid;
 }
-main #main-products .main-product .products-whiskeys .whiskeys .whiskey-icons i {
+main #main-productss .main-product .products-whiskeys .whiskeys .whiskey-icons i {
   font-size: 20px;
   color: white;
   display: none;
 }
-main #main-products .main-product .products-whiskeys .whiskeys .whiskey-icons i:hover {
+main #main-productss .main-product .products-whiskeys .whiskeys .whiskey-icons i:hover {
   color: #ca8f65;
   transition: 0.2s;
 }
-main #main-products .main-product .products-whiskeys .whiskeys .whiskey {
+main #main-productss .main-product .products-whiskeys .whiskeys .whiskey {
   width: 100%;
   height: 80%;
 }
-main #main-products .main-product .products-whiskeys .whiskeys .whiskey img {
+main #main-productss .main-product .products-whiskeys .whiskeys .whiskey img {
   width: 100%;
   height: 100%;
 }
-main #main-products .main-product .products-whiskeys .whiskeys .whiskey-name {
+main #main-productss .main-product .products-whiskeys .whiskeys .whiskey-name {
   width: 100%;
   height: 20%;
   text-align: center;
 }
-main #main-products .main-product .products-whiskeys .whiskeys .whiskey-name a {
+main #main-productss .main-product .products-whiskeys .whiskeys .whiskey-name a {
   text-decoration: none;
   color: whitesmoke;
   font-size: 21px;
 }
-main #main-products .main-product .products-whiskeys .whiskeys .whiskey-name span {
+main #main-productss .main-product .products-whiskeys .whiskeys .whiskey-name span {
   color: #ca8f65;
 }
 main #background-img-two .back-img {

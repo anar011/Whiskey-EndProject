@@ -30,6 +30,7 @@
 
 
                 </div>
+
                 <div class="col-2">
                     <div class="header-logo ">
                         <img class="mt-4" src="~/assets/img/header-logo1.svg" alt="">
@@ -66,12 +67,28 @@
 
 
                         <div class="header-login-register d-none">
-                            <div class="header-login border">
-                                <a href="file:///C:/Users/HP/Desktop/EndProject/login.html">Login</a>
-                            </div>
-                            <div class="header-register border">
-                                <a href="file:///C:/Users/HP/Desktop/EndProject/register.html">Register</a>
-                            </div>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li>
+                                    <a class="dropdown-item" href="my-account.html">@User.Identity.Name</a>
+                                </li>
+                                <div class="border"></div>
+                                <li class="nav-item">
+                                    <form asp-controller="Account" asp-action="Logout" method="post">
+                                        <button style="border:none;color:black;margin-left:50px;background-color:white" type="submit" class="nav-link">Logout</button>
+                                    </form>
+                                </li>
+                            }
+                            else
+                            {
+                                <div class="header-login border">
+                                    <a asp-controller="Account" asp-action="Login">Login</a>
+                                </div>
+                                <div class="header-register border">
+                                    <a asp-controller="Account" asp-action="Register">Register</a>
+                                </div>
+                            }
+                            
 
 
                         </div>

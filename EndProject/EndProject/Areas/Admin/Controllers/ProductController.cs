@@ -1,11 +1,13 @@
 ﻿using EndProject.Areas.Admin.ViewModels.Product;
 using EndProject.Areas.Admin.ViewModels.Slider;
+using EndProject.Data;
 using EndProject.Helpers;
 using EndProject.Models;
 using EndProject.Services.Interfaces;
 using EndProject.ViewModels.Product;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using System.Drawing;
 using ProductDetailVM = EndProject.Areas.Admin.ViewModels.Product.ProductDetailVM;
 
@@ -15,6 +17,7 @@ namespace EndProject.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IWebHostEnvironment _env;
+        private readonly AppDbContext _context;
         private readonly IProductService _productService;
         private readonly ICapacityService _capacityService;
         private readonly ICategoryService _categoryService;
@@ -24,20 +27,21 @@ namespace EndProject.Areas.Admin.Controllers
                                ICrudService<Product> crudService,
                                IWebHostEnvironment env,
                                ICapacityService capacityService,
-                               ICategoryService categoryService)
+                               ICategoryService categoryService, AppDbContext context)
         {
             _productService = productService;
             _crudService = crudService;
             _env = env;
             _capacityService = capacityService;
             _categoryService = categoryService;
+            _context = context;
         }
 
         public async Task<IActionResult> Index(int page = 1, int take = 5)
         {
             List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, null);
             List<ProductListVM> mappedDatas = GetDatas(datas);
-
+            List<Product> productCapacities = await _context.Products.Include(m => m.ProductCapacities).ToListAsync();
             int pageCount = await GetPageCountAsync(take);
 
             Paginate<ProductListVM> paginatedDatas = new(mappedDatas, page, pageCount);
@@ -59,8 +63,7 @@ namespace EndProject.Areas.Admin.Controllers
                 ProductListVM productList = new()
                 {
                     Id = product.Id,
-                    Name = product.Name,
-                    Price = product.Price,
+                    Name = product.Name,                
                     Image = product.Image,
                   
                 };
@@ -68,6 +71,7 @@ namespace EndProject.Areas.Admin.Controllers
             }
             return mappedDatas;
         }
+
 
 
         [HttpGet]
@@ -156,7 +160,6 @@ namespace EndProject.Areas.Admin.Controllers
                 newProduct.Name = model.Name;
                 newProduct.Image = model.Photo.CreateFile(_env, "assets/img");
                 newProduct.Description = model.Description;
-                newProduct.Price = convertedPrice;
                 newProduct.StockCount = model.StockCount;
                 newProduct.SaleCount = model.SaleCount;
 
@@ -189,7 +192,6 @@ namespace EndProject.Areas.Admin.Controllers
                     Id = dbProduct.Id,
                     Name = dbProduct.Name,
                     Description = dbProduct.Description,
-                    Price = dbProduct.Price,
                     StockCount = dbProduct.StockCount,
                     SaleCount = dbProduct.SaleCount,
                     Image = dbProduct.Image,
@@ -228,7 +230,6 @@ namespace EndProject.Areas.Admin.Controllers
                     Id = dbProduct.Id,
                     Name = dbProduct.Name,
                     Description = dbProduct.Description,
-                    Price = dbProduct.Price,
                     StockCount = dbProduct.StockCount,
                     Image = dbProduct.Image,
                     CategoryIds = dbProduct.ProductCategories.Select(c => c.Category.Id).ToList(),
@@ -328,7 +329,7 @@ namespace EndProject.Areas.Admin.Controllers
 
                 dbProduct.Name = model.Name;
                 dbProduct.Description = model.Description;
-                dbProduct.Price = model.Price;
+               
                 dbProduct.StockCount = model.StockCount;
        
 

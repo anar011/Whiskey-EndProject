@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rlhfSXYRNrN04O6kjm7qrzFdJtlgJTGFKLCSdt+GOGA=",
+  "Hash": "Ar6z4JyV47X3c0gOvsnQPC0wuv81EGOJAoov/AN+qIg=",
   "Source": "EndProject",
   "BasePath": "_content/EndProject",
   "Mode": "Default",
@@ -6307,6 +6307,23 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\style.css"
     },
     {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\26ef282f-7a47-417d-9a6f-ff5b91fe3625aboutus-men1.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/26ef282f-7a47-417d-9a6f-ff5b91fe3625aboutus-men1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\26ef282f-7a47-417d-9a6f-ff5b91fe3625aboutus-men1.webp"
+    },
+    {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\724ea90b-797a-493d-a16a-77d84075e02dwhiskey-slider4.webp",
       "SourceId": "EndProject",
       "SourceType": "Discovered",
@@ -8464,6 +8481,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\scss\\wishlist.scss"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\templates\\verify.html",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/templates/verify.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\templates\\verify.html"
     }
   ]
 }

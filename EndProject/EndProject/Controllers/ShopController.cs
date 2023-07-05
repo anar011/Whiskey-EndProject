@@ -82,7 +82,7 @@ namespace EndProject.Controllers
                 {
                     Id = product.Id,
                     Name = product.Name,
-                    Price = product.Price,
+
                     Image = product.Image
                 
                 };
@@ -126,14 +126,14 @@ namespace EndProject.Controllers
                 {
                     Id = dbProduct.Id,
                     ProductName = dbProduct.Name,
-                    Price = dbProduct.Price,
                     Image = dbProduct.Image,
                     ProductCategories = dbProduct.ProductCategories,
                     Description = dbProduct.Description,
                     SectionBgs = _layoutService.GetSectionBackgroundImages(),
                     RelatedProducts = await _productService.GetRelatedProducts(),
                     ProductCommentVM = new(),
-                    ProductComments = dbProduct.ProductComments
+                    ProductComments = dbProduct.ProductComments,
+                    ProductCapacities = dbProduct.ProductCapacities,
                 };
 
                 return View(model);
