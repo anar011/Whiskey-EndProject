@@ -223,6 +223,77 @@ namespace EndProject.Migrations
                     b.ToTable("Authors");
                 });
 
+            modelBuilder.Entity("EndProject.Models.Basket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IsOrdered")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserID");
+
+                    b.ToTable("Baskets");
+                });
+
+            modelBuilder.Entity("EndProject.Models.BasketItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BasketId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductCapacityId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.HasIndex("ProductCapacityId");
+
+                    b.ToTable("BasketItems");
+                });
+
             modelBuilder.Entity("EndProject.Models.Blog", b =>
                 {
                     b.Property<int>("Id")
@@ -776,6 +847,38 @@ namespace EndProject.Migrations
                     b.ToTable("SpecialCollections");
                 });
 
+            modelBuilder.Entity("EndProject.Models.WishlistItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("WishlistItems");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -909,6 +1012,34 @@ namespace EndProject.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("EndProject.Models.Basket", b =>
+                {
+                    b.HasOne("EndProject.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserID");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("EndProject.Models.BasketItem", b =>
+                {
+                    b.HasOne("EndProject.Models.Basket", "Basket")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EndProject.Models.ProductCapacity", "ProductCapacity")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("ProductCapacityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("ProductCapacity");
+                });
+
             modelBuilder.Entity("EndProject.Models.Blog", b =>
                 {
                     b.HasOne("EndProject.Models.Author", "Author")
@@ -1008,6 +1139,23 @@ namespace EndProject.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("EndProject.Models.WishlistItem", b =>
+                {
+                    b.HasOne("EndProject.Models.AppUser", "AppUser")
+                        .WithMany("WishlistItems")
+                        .HasForeignKey("AppUserId");
+
+                    b.HasOne("EndProject.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -1059,9 +1207,19 @@ namespace EndProject.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("EndProject.Models.AppUser", b =>
+                {
+                    b.Navigation("WishlistItems");
+                });
+
             modelBuilder.Entity("EndProject.Models.Author", b =>
                 {
                     b.Navigation("Blogs");
+                });
+
+            modelBuilder.Entity("EndProject.Models.Basket", b =>
+                {
+                    b.Navigation("BasketItems");
                 });
 
             modelBuilder.Entity("EndProject.Models.Blog", b =>
@@ -1088,6 +1246,11 @@ namespace EndProject.Migrations
                     b.Navigation("ProductCategories");
 
                     b.Navigation("ProductComments");
+                });
+
+            modelBuilder.Entity("EndProject.Models.ProductCapacity", b =>
+                {
+                    b.Navigation("BasketItems");
                 });
 #pragma warning restore 612, 618
         }

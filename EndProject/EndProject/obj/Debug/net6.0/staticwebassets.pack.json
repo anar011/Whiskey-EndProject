@@ -1477,6 +1477,14 @@
       "PackagePath": "staticwebassets\\admin\\assets\\style.css"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\0d5cd48a-f1e2-4d41-850b-bb0b3bac3363home-blog2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\0d5cd48a-f1e2-4d41-850b-bb0b3bac3363home-blog2.webp"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\1b188862-8a56-4243-b9f5-a8907a8a4715home-blog3.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\1b188862-8a56-4243-b9f5-a8907a8a4715home-blog3.webp"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\26ef282f-7a47-417d-9a6f-ff5b91fe3625aboutus-men1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\26ef282f-7a47-417d-9a6f-ff5b91fe3625aboutus-men1.webp"
     },
@@ -1535,6 +1543,10 @@
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\address-location.svg",
       "PackagePath": "staticwebassets\\assets\\img\\address-location.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\b030fb63-1d6e-4c0e-9f51-b00244813520home-blog2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\b030fb63-1d6e-4c0e-9f51-b00244813520home-blog2.webp"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\background-header1.webp",

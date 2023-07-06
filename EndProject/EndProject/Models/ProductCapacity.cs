@@ -9,6 +9,11 @@ namespace EndProject.Models
         public int CapacityId { get; set; }
         public Product Product { get; set; }
         public Capacity Capacity { get; set; }
+        public List<BasketItem> BasketItems { get; set; }
+        public ProductCapacity()
+        {
+            BasketItems = new();
+        }
     }
 
 }

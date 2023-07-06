@@ -274,13 +274,13 @@
                                             
                                             <i class="fa-solid fa-paperclip"></i>
                                         </a>
-                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                        <a asp-controller="wishlist" asp-action="AddWishlist" asp-route-id="@product.Id"><i class="fa-regular fa-heart"></i></a>
                                         <a href=""><i class="fa-solid fa-square-plus"></i></a>
                                     </div>
 
 
                                     <div class="whiskey">
-                                        <a asp-controller="Product" asp-action="ProductDetail" asp-route-id="@product.Id"><img src="~/assets/img/@product.Image" alt=""></a>
+                                        <a asp-controller="shop" asp-action="ProductDetail" asp-route-id="@product.Id"><img src="~/assets/img/@product.Image" alt=""></a>
                                     </div>
                                     <div class="whiskey-name">
                                         <a href="">@product.Name</a>

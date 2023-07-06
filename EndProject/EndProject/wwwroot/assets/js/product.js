@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  "use strict"
+
   //main-slider//
 
   var swiper = new Swiper(".mySwiper", {
@@ -18,6 +18,14 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
   });
+
+    //login-register
+
+    let login = document.querySelector(".header-icons a .fa-user")
+    login.addEventListener("click", function (e) {
+        e.preventDefault()
+        document.querySelector(".header-login-register").classList.toggle("d-none")
+    });
 
 
   //Home Search
@@ -108,13 +116,7 @@ $(document).ready(function () {
 
 
 
-  //login-register
 
-  let login = document.querySelector(".header-icons a .fa-user")
-  login.addEventListener("click", function (e) {
-    e.preventDefault()
-    document.querySelector(".header-login-register").classList.toggle("d-none")
-  });
 
 
 

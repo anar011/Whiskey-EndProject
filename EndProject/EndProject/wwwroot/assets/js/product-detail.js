@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  "use strict"
+
   //main-slider//
 
   var swiper = new Swiper(".mySwiper", {

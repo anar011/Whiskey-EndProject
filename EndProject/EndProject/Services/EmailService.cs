@@ -20,7 +20,7 @@ namespace EndProject.Services
 
         public void Send(string to, string subject, string html, string from = null)
         {
-
+            var a = _emailSettings;
             // create message
 
             var email = new MimeMessage();
@@ -32,7 +32,8 @@ namespace EndProject.Services
 
             // send email
             using var smtp = new SmtpClient();
-            smtp.Connect(_emailSettings.Server, _emailSettings.Port, SecureSocketOptions.StartTls);
+            smtp.ServerCertificateValidationCallback = (s, c, h, e) => true;
+            smtp.Connect(_emailSettings.Server, _emailSettings.Port, SecureSocketOptions.Auto);
             smtp.Authenticate(_emailSettings.UserName, _emailSettings.Password);
             smtp.Send(email);
             smtp.Disconnect(true);

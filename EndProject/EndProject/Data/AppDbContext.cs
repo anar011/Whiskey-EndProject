@@ -34,6 +34,12 @@ namespace EndProject.Data
         public DbSet<ProductCapacity> ProductCapacities { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<WishlistItem> WishlistItems { get; set; }
+
+
+
 
 
 

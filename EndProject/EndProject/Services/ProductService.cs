@@ -96,6 +96,8 @@ namespace EndProject.Services
                .ThenInclude(pc => pc.Category)
                .Include(p => p.ProductCapacities)
                .ThenInclude(ps => ps.Capacity)
+               .Include(x=>x.ProductCapacities).
+               ThenInclude(x=>x.Capacity)
                .FirstOrDefaultAsync(p => p.Id == id);
         }
 

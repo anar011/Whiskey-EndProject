@@ -1,4 +1,6 @@
-﻿
+﻿@model List<WishlistItem>
+
+
 @{
     ViewData["Title"] = "Whiskey - Wishlist";
 }
@@ -15,7 +17,7 @@
 
                 <div class="main-up-contact-titles">
                     <div class="main-up-contact-title">
-                        <a href="file:///C:/Users/HP/Desktop/EndProject/home.html"><span>Home</span></a>
+                        <a asp-controller="home" asp-action="index"><span>Home</span></a>
                         <hr>
                         <span>></span>
                         <span>Wishlist</span>
@@ -37,21 +39,31 @@
 
     <section id="wishlist-products">
         <div class="container">
-            <div class="wishlist-products">
-                <table class="table">
+            <div class="wishlist-products mt-5">
+                <table class="table" style="color:white">
                     <thead>
                         <tr>
                             <th scope="col">Product</th>
                             <th scope="col">Name</th>
                             <th scope="col">Price</th>
-                            <th scope="col"><button class="btn btn-primary clear-btn">Clear All</button></th>
+                            <th scope="col"><button class="btn btn-primary clear-btn" style="background-color:#343333; border:none;" >Clear</button></th>
                         </tr>
+
                     </thead>
                     <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <th scope="col">@item.Product.Name</th>
+                                <th scope="col">@item.Product.Name</th>
+                                <th scope="col">@item.Product.ProductCapacities.First().Price</th>
+                                <th scope="col"><a asp-controller="wishlist" asp-action="RemoveFromWishList" asp-route-wishListItemId="@item.Id" class="btn btn-danger clear-btn">Clear</a></th>
+                            </tr>
+                        }
                     </tbody>
                     <tr>
                         <td>
-                            <button class="btn btn-primary btn"><a href="Shop.html">Continue shopping</a></button>
+                            <button class="btn btn-primary btn" style="background-color:#343333;"><a asp-controller="shop" asp-action="index" style="text-decoration:none; color: white;">Continue shopping</a></button>
                         </td>
                         <td></td>
                         <td></td>
@@ -100,3 +112,11 @@
 </main>
 
 
+
+
+
+
+
+@section Scripts{
+    <script src="~/assets/js/wishlist.js"></script>
+}

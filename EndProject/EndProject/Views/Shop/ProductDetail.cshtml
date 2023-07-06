@@ -45,90 +45,102 @@
 
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-5">
-                        <div class="priviews-informs">
-                            <div class="whiskey-name row">
-                                <h1>@Model.ProductName</h1>
-
-                            </div>
-                            <div class="priviewWhiskey-price">
-                                <h4>$@Model.ProductCapacities.Last().Price – $@Model.ProductCapacities.First().Price</h4>
-                            </div>
-
-                            <div class="whiskey-info">
-                                <span>
-                                    @Model.Description
-                                </span>
-                            </div>
-
-                            <div class="whiskey-capacity mt-4">
-                                <span>Capacity</span>
-                                        @foreach (var item in Model.ProductCapacities)
-                                {
-                                    <button><a>@item.Capacity.Name @(item.Capacity.Name=="1" ? "L" : "Ml")</a></button>
-                                }
-
-                            </div>
-
-                            <div class="whiskey-price">
-                            @foreach (var item in Model.ProductCapacities)
-                                {
-                                    <span class="d-none">$<span>@item.Price</span></span>
-
-                                }
-                            </div>
-
-                            <div class="whiskey-button-cart d-flex">
-                                <div class="col-lg-4 col-sm-3">
-                                    <div class="whiskey-buttons  d-flex">
-                                        <button><a href=""><i class="fa-solid fa-minus"></i></a></button>
-                                        <input type="text">
-                                        <button><a href=""><i class="fa-solid fa-plus"></i></a></button>
-
-                                    </div>
+                        <form asp-controller="Basket" asp-action="Addbaskets" asp-route-productId="@Model.Id">
+                            <div class="priviews-informs">
+                                <div class="whiskey-name row">
+                                    <h1>@Model.ProductName</h1>
 
                                 </div>
-                                <div class="col-lg-4 col-sm-5">
-                                    <div class="whiskey-addcart ">
-                                        <button><a href="">Add to cart</a></button>
-
-                                    </div>
-
-                                </div>
-                                <div class="col-lg-4 col-sm-4">
-                                    <div class="whiskey-iconheart">
-                                        <a href=""><i class="fa-regular fa-heart"></i></a>
-
-                                    </div>
+                                <div class="priviewWhiskey-price">
+                                    <h4>$@Model.ProductCapacities.Last().Price – $@Model.ProductCapacities.First().Price</h4>
                                 </div>
 
+                                <div class="whiskey-info">
+                                    <span>
+                                        @Model.Description
+                                    </span>
+                                </div>
+
+                                <div class="whiskey-capacity mt-4">
+                                    <span>Capacity</span>
+                                    @foreach (var item in Model.ProductCapacities)
+                                    {
+                                        <button type="button" onclick="checkCheckbox(@item.CapacityId)">
+                                            <a>@item.Capacity.Name @(item.Capacity.Name == "1" ? "L" : "mL")</a>
+                                        </button>
+                                    }
+
+                                    @foreach (var item in Model.ProductCapacities)
+                                    {
+                                        <input type="radio" class="d-none" id="checkbox-@item.CapacityId" name="capacityId" value="@item.CapacityId" />
+                                    }
+
+                                    <script>
+                                        function checkCheckbox(capacityId) {
+                                            var checkbox = document.getElementById("checkbox-" + capacityId);
+                                            checkbox.checked = !checkbox.checked;
+                                        }
+                                    </script>
 
 
+                                </div>
 
+                                <div class="whiskey-price">
+                                    @foreach (var item in Model.ProductCapacities)
+                                    {
+                                        <span class="d-none">$<span>@item.Price</span></span>
+
+                                    }
+                                </div>
+
+                                <div class="whiskey-button-cart mt-5 d-flex">
+                                    <div class="col-lg-4 col-sm-3">
+                                        <div class="whiskey-buttons  d-flex">
+                                            <button type="button"><a><i class="fa-solid fa-minus"></i></a></button>
+                                            <input name="quantity" type="number" value="1">
+                                            <button type="button"><a><i class="fa-solid fa-plus"></i></a></button>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4 col-sm-5">
+                                        <div class="whiskey-addcart ">
+                                            <button type="submit"><a>Add to cart</a></button>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4">
+                                        <div class="whiskey-iconheart">
+                                            <a asp-controller="wishlist" asp-action="AddWishlist" asp-route-id="@Model.Id"><i class="fa-regular fa-heart"></i></a>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="whiskey-share mt-5">
+                                    <span>Share:</span>
+                                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                    <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+
+
+                                </div>
 
                             </div>
 
-                            <div class="whiskey-share mt-5">
-                                <span>Share:</span>
-                                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-                                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-
-
-                            </div>
-
-
-
-
-
-                        </div>
+                        </form>
 
                     </div>
 
                 </div>
 
-
             </div>
+
         </div>
+
     </section>
 
     <section id="background-img">
@@ -646,6 +658,6 @@
 
 </main>
 
-@section Scripts{
+@*@section Scripts{
     <script src="~/assets/js/product-detail.js"></script>
-}
+}*@

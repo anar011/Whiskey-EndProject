@@ -41,6 +41,9 @@ namespace EndProject.Areas.Admin.Controllers
             {
                 if (!ModelState.IsValid) return View();
 
+
+
+
                 if (!model.Photo.CheckFileType("image/"))
                 {
                     ModelState.AddModelError("Photo", "File type must be image");
@@ -51,6 +54,8 @@ namespace EndProject.Areas.Admin.Controllers
                     ModelState.AddModelError("Photo", "Image size must be max 200kb");
                     return View();
                 }
+
+
 
 
 
@@ -143,5 +148,33 @@ namespace EndProject.Areas.Admin.Controllers
         }
 
 
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
+            try
+            {
+                if (id is null) return BadRequest();
+
+                Blog dbBlog = await _blogService.GetByIdAsync((int)id);
+
+                if (dbBlog is null) return NotFound();
+
+                BlogDetailVM model = new()
+                {
+                    Id = dbBlog.Id,
+                    Image = dbBlog.Image,
+                    Title = dbBlog.Title,
+                    Description = dbBlog.Description
+                };
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.error = ex.Message;
+                return View();
+
+            }
+        }
     }
 }

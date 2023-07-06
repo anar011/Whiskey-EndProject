@@ -49,30 +49,30 @@ namespace EndProject.Areas.Admin.Controllers
 
                 if (dbSetting == null) return View();
 
-                if (setting.Photo is not null)
-                {
-                    if (!setting.Photo.CheckFileType("image/"))
-                    {
-                        ModelState.AddModelError("Photo", "File type must be image");
-                        return View();
-                    }
-                    if (!setting.Photo.CheckFileSize(200))
-                    {
-                        ModelState.AddModelError("Photo", "Image size must be max 200kb");
-                        return View();
-                    }
-                    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img", dbSetting.Value);
-                    FileHelper.DeleteFile(path);
+                //if (setting.Photo is not null)
+                //{
+                //    if (!setting.Photo.CheckFileType("image/"))
+                //    {
+                //        ModelState.AddModelError("Photo", "File type must be image");
+                //        return View();
+                //    }
+                //    if (!setting.Photo.CheckFileSize(200))
+                //    {
+                //        ModelState.AddModelError("Photo", "Image size must be max 200kb");
+                //        return View();
+                //    }
+                //    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img", dbSetting.Value);
+                //    FileHelper.DeleteFile(path);
 
-                    dbSetting.Value = setting.Photo.CreateFile(_env, "assets/img");
-                }
-                else
-                {
-                    Setting newSetting = new()
-                    {
-                        Value = dbSetting.Value
-                    };
-                }
+                //    dbSetting.Value = setting.Photo.CreateFile(_env, "assets/img");
+                //}
+                //else
+                //{
+                //    Setting newSetting = new()
+                //    {
+                //        Value = dbSetting.Value
+                //    };
+                //}
                 await _crudService.SaveAsync();
                 return RedirectToAction(nameof(Index));
             }

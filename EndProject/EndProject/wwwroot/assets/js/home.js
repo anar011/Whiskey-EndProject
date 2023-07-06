@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
-  "use strict"
-  //main-slider//
+  
 
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -29,19 +28,6 @@ $(document).ready(function () {
   });
 
 
-  //bodyde searchin yox olmasi
-
-  // document.addEventListener("click", function (e) {
-  //   if (!!!e.target.closest(".header-search a i")) {
-  //       if (!$(".header-search input").classList.contains("d-none")) {
-  //           $(".header-search input").classList.add("d-none")
-  //       }
-  //   }
-  // })
-
-  // if (document.body.classList.contains('thatClass')) {
-  //   // do some stuff
-  // }
 
 
   ///Modal

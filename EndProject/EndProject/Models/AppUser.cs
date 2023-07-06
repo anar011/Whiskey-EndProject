@@ -7,6 +7,10 @@ namespace EndProject.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public bool IsRemember { get; set; }
-        
+        public List<WishlistItem> WishlistItems { get; set; }
+        public AppUser()
+        {
+            WishlistItems = new();
+        }
     }
 }
