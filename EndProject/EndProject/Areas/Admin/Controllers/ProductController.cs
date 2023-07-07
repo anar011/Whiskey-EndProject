@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Drawing;
-using ProductDetailVM = EndProject.Areas.Admin.ViewModels.Product.ProductDetailVM;
+
 
 namespace EndProject.Areas.Admin.Controllers
 {
@@ -90,12 +90,15 @@ namespace EndProject.Areas.Admin.Controllers
         {
             try
             {
-               
-               
-                ViewBag.sizes = await GetCapacitiesAsync();
+
+                 ViewBag.capacities = await GetCapacitiesAsync();
                 ViewBag.categories = await GetCategoriesAsync();
 
                 if (!ModelState.IsValid) return View(model);
+
+               
+
+              
 
                 Product newProduct = new();
     
@@ -132,7 +135,7 @@ namespace EndProject.Areas.Admin.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("SizeIds", "Don`t be empty");
+                    ModelState.AddModelError("CapacityIds", "Don`t be empty");
                     return View();
                 }
 
@@ -187,7 +190,7 @@ namespace EndProject.Areas.Admin.Controllers
                 if (dbProduct is null) return NotFound();
                 ViewBag.page = page;
 
-                ProductDetailVM model = new()
+                ViewModels.Product.ProductDetailVM model = new()
                 {
                     Id = dbProduct.Id,
                     Name = dbProduct.Name,
@@ -220,7 +223,7 @@ namespace EndProject.Areas.Admin.Controllers
 
               
            
-                ViewBag.sizes = await GetCapacitiesAsync();
+                ViewBag.capacities = await GetCapacitiesAsync();
                 ViewBag.categories = await GetCategoriesAsync();
                 ViewBag.page = page;
 
@@ -249,12 +252,12 @@ namespace EndProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, int page, ProductUpdateVM model)
+        public async Task<IActionResult> Edit(int? id, ProductUpdateVM model)
         {
             try
             {
 
-                ViewBag.sizes = await GetCapacitiesAsync();
+                ViewBag.capacities = await GetCapacitiesAsync();
                 ViewBag.categories = await GetCategoriesAsync();
 
                 if (id is null) return BadRequest();
@@ -335,7 +338,7 @@ namespace EndProject.Areas.Admin.Controllers
 
                 await _crudService.SaveAsync();
 
-                return RedirectToAction(nameof(Index), new { page });
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {

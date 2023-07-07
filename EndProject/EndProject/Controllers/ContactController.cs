@@ -21,9 +21,10 @@ namespace EndProject.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> PostComment(ContactVM model)
         {
-            if (!ModelState.IsValid) return RedirectToAction("Index", model);
+            //if (!ModelState.IsValid) return RedirectToAction("Index", model);
             Contact contact = new()
             {
                 Name = model.Name,
@@ -33,7 +34,7 @@ namespace EndProject.Controllers
             };
 
             await _crudService.CreateAsync(contact);
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
     }
 }

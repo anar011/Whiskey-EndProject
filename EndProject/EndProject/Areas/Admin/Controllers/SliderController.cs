@@ -66,6 +66,7 @@ namespace EndProject.Areas.Admin.Controllers
                     ModelState.AddModelError("Photo", "Image size must be max 200kb");
                     return View();
                 }
+
                 var convertedPrice = decimal.Parse(model.Price);
                 Slider slider = new()
                 {

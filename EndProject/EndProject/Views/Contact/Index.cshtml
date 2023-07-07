@@ -216,38 +216,93 @@
 
                             <div class="main-down-fullname-phone">
                                 <div class="main-down-fullname">
-                                    <form>
-                                        <div class="group inputs ">
-                                            <input required type="text" style="color:white;>
-                                            <span class="bar"></span>
-                                            <label>Your Name (required) *</label>
-                                            <span class="validation">Please enter a valid message</span>
-                                        </div>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <form id="contact-form" method="post" asp-action="PostComment">
+                                            <div class="group inputs ">
+                                                <input name="name"
+                                                   asp-for="Name" 
+                                                   required
+                                                   type="text" 
+                                                   value="@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).FirstName"
+                                                    style="color:white;" />
+                                                <span class="bar"></span>
+                                                <label>Your Name (required) *</label>
+                                                <span class="validation">Please enter a valid message</span>
+                                            </div>
 
-                                        <div class="group inputs">
-                                            <input required type="text" style="color:white;">
-                                            <span class="bar"></span>
-                                            <label>Your Email (required) *</label>
-                                            <span class="validation">Please enter a valid message</span>
-                                        </div>
+                                            <div class="group inputs">
+                                                <input name="email"
+                                                   asp-for="Email"
+                                                required
+                                                type="text"
+                                                   value="@userManager.Users.FirstOrDefault(u=>u.UserName==User.Identity.Name).Email"
+                                                style="color:white;">
+                                                <span class="bar"></span>
+                                                <label>Your Email (required) *</label>
+                                                <span class="validation">Please enter a valid message</span>
+                                            </div>
 
-                                        <div class="group inputs">
-                                            <input required type="text" style="color:white;">
-                                            <span class="bar"></span>
-                                            <label>Subject *</label>
-                                            <span class="validation">Please enter a valid message</span>
-                                        </div>
+                                            <div class="group inputs">
+                                                <input name="subject"
+                                                   asp-for="Subject"
+                                                    required type="text" style="color:white;">
+                                                <span class="bar"></span>
+                                                <label>Subject *</label>
+                                                <span class="validation">Please enter a valid message</span>
+                                            </div>
 
 
 
-                                        <div class="group textarea" >
-                                            <textarea required style="color:white;"></textarea>
-                                            <span class="bar"></span>
-                                            <label>Your message *</label>
-                                        </div>
+                                            <div class="group textarea">
+                                                <textarea name="message" asp-for="Message"
+                                                required style="color:white;"></textarea>
+                                                <span class="bar"></span>
+                                                <label>Your message *</label>
+                                            </div>
 
-                                        <button type="submit">Contact us</button>
-                                    </form>
+                                            <button type="submit">Contact us</button>
+                                        </form>
+
+                                    }else
+                                    {
+                                        <form id="contact-form" method="post" asp-action="PostComment">
+                                            <div class="group inputs ">
+                                                <input required
+                                                   type="text"
+                                                   asp-for="Name"
+                                                       style="color:white;" />
+                                                <span class="bar"></span>
+                                                <label>Your Name (required) *</label>
+                                                <span class="validation">Please enter a valid message</span>
+                                            </div>
+
+                                            <div class="group inputs">
+                                                <input asp-for="Email" required type="text" style="color:white;">
+                                                <span class="bar"></span>
+                                                <label>Your Email (required) *</label>
+                                                <span class="validation">Please enter a valid message</span>
+                                            </div>
+
+                                            <div class="group inputs">
+                                                <input asp-for="Subject" required type="text" style="color:white;">
+                                                <span class="bar"></span>
+                                                <label>Subject *</label>
+                                                <span class="validation">Please enter a valid message</span>
+                                            </div>
+
+
+
+                                            <div class="group textarea">
+                                                <textarea asp-for="Message" required style="color:white;"></textarea>
+                                                <span class="bar"></span>
+                                                <label>Your message *</label>
+                                            </div>
+
+                                            <button type="submit">Contact us</button>
+                                        </form>
+
+                                    }
 
                                 </div>
 

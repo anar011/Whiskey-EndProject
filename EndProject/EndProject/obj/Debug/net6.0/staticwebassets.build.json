@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uxBe71op939EQ1dSxUtQY6P2d5VZeUnvFG1CcvRngPQ=",
+  "Hash": "cKqNFG3aq8DrCV4rrJQw8AdNVHfwA/SBEgJBFfQutb0=",
   "Source": "EndProject",
   "BasePath": "_content/EndProject",
   "Mode": "Default",
@@ -6324,6 +6324,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\0d5cd48a-f1e2-4d41-850b-bb0b3bac3363home-blog2.webp"
     },
     {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\19359b45-380a-484f-acfc-295c0a9b3e8cblogdetail-1.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/19359b45-380a-484f-acfc-295c0a9b3e8cblogdetail-1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\19359b45-380a-484f-acfc-295c0a9b3e8cblogdetail-1.webp"
+    },
+    {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\1b188862-8a56-4243-b9f5-a8907a8a4715home-blog3.webp",
       "SourceId": "EndProject",
       "SourceType": "Discovered",
@@ -6341,6 +6358,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\1b188862-8a56-4243-b9f5-a8907a8a4715home-blog3.webp"
     },
     {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\2268e91c-9c1c-4988-aad8-d6afbfd1938babout-main-men1.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/2268e91c-9c1c-4988-aad8-d6afbfd1938babout-main-men1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\2268e91c-9c1c-4988-aad8-d6afbfd1938babout-main-men1.webp"
+    },
+    {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\26ef282f-7a47-417d-9a6f-ff5b91fe3625aboutus-men1.webp",
       "SourceId": "EndProject",
       "SourceType": "Discovered",
@@ -6356,6 +6390,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\26ef282f-7a47-417d-9a6f-ff5b91fe3625aboutus-men1.webp"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\602f3321-f301-4f4e-b277-8384cb8b8aa9blog7.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/602f3321-f301-4f4e-b277-8384cb8b8aa9blog7.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\602f3321-f301-4f4e-b277-8384cb8b8aa9blog7.webp"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\724ea90b-797a-493d-a16a-77d84075e02dwhiskey-slider4.webp",
@@ -6407,6 +6458,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\9fbce16b-181b-4a57-8373-a046d11258bfwhiskey-slider3.webp"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\aab3c691-333f-4770-8217-92f0194f1855aboutus-men1.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/aab3c691-333f-4770-8217-92f0194f1855aboutus-men1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\aab3c691-333f-4770-8217-92f0194f1855aboutus-men1.webp"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\about-icon1.svg",
@@ -6560,6 +6628,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\b030fb63-1d6e-4c0e-9f51-b00244813520home-blog2.webp"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\b442bd0b-0961-40d7-bf99-58ccbd02cb25blog5.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/b442bd0b-0961-40d7-bf99-58ccbd02cb25blog5.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\b442bd0b-0961-40d7-bf99-58ccbd02cb25blog5.webp"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\background-header1.webp",
