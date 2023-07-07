@@ -38,6 +38,7 @@ namespace EndProject.Data
         public DbSet<BasketItem> BasketItems { get; set; }
         public DbSet<WishlistItem> WishlistItems { get; set; }
 
+        public DbSet<Contact> Contacts { get; set; }
 
 
 

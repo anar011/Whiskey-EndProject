@@ -176,5 +176,15 @@ namespace EndProject.Areas.Admin.Controllers
 
             }
         }
+
+
+        private async Task<int> GetPageCountAsync(int take)
+        {
+            int prodCount = await _blogService.GetCountAsync();
+            return (int)Math.Ceiling((decimal)prodCount / take);
+        }
+
+
+
     }
 }
