@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cKqNFG3aq8DrCV4rrJQw8AdNVHfwA/SBEgJBFfQutb0=",
+  "Hash": "83BFA69lrPk3/SeUPNKzlJ0jbyZB1CSr4Z/DwEPD8uU=",
   "Source": "EndProject",
   "BasePath": "_content/EndProject",
   "Mode": "Default",
@@ -6645,6 +6645,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\b442bd0b-0961-40d7-bf99-58ccbd02cb25blog5.webp"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\b6dfff88-867a-4b44-b435-03531259c0bbbourbon-blend1.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/b6dfff88-867a-4b44-b435-03531259c0bbbourbon-blend1.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\b6dfff88-867a-4b44-b435-03531259c0bbbourbon-blend1.webp"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\background-header1.webp",
