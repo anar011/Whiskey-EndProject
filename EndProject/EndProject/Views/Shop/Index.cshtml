@@ -3,6 +3,7 @@
 @inject ILayoutService layout
 @{
     ViewData["Title"] = "Whiskey - Shop";
+    int sumOfProductsCountByCategory = 0;
 }
 
 
@@ -47,33 +48,22 @@
                         <div class="products-category d-flex">
                             <p>Category</p>
                         </div>
-
+                        
+                        @foreach (var item in Model.Categories)
+                        {
+                            sumOfProductsCountByCategory += (int)item.ProductCategories?.Count();
+                        }
                         <div class="products-category-all categories d-flex">
                             <span>All</span>
-                            <p>(9)</p>
-
+                            <p>(@sumOfProductsCountByCategory)</p>
                         </div>
-
-
-                        <div class="products-category-all categories d-flex">
-                            <span>Whiskey</span>
-                            <p>(6)</p>
-                        </div>
-
-                        <div class="products-category-all categories d-flex">
-                            <span>Premium Whiskey</span>
-                            <p>(1)</p>
-                        </div>
-
-                        <div class="products-category-all categories d-flex">
-                            <span>Bourbon</span>
-                            <p>(3)</p>
-                        </div>
-
-                        <div class="products-category-all categories d-flex">
-                            <span>Scotch</span>
-                            <p>(1)</p>
-                        </div>
+                        @foreach (var item in Model.Categories)
+                        {
+                            <div class="products-category-all categories d-flex">
+                                <span data-id="@item.Id">@item.Name</span>
+                                <p>(@item.ProductCategories?.Count())</p>
+                            </div>
+                        }
 
 
                     </div>
@@ -265,354 +255,13 @@
                     <!-- // Begin PRODUCT// -->
 
                     <div class="products-whiskeys mt-5 row">
-                        @foreach (var product in Model.Products)
-                        {
-                            <div class="col-lg-4 col-sm-12 col-md-6">
-                                <div class="whiskeys">
-                                    <div class="whiskey-icons ">
-                                        <a asp-controller="shop" asp-action="ProductDetail" asp-route-id="@product.Id">
-                                            
-                                            <i class="fa-solid fa-paperclip"></i>
-                                        </a>
-                                        <a asp-controller="wishlist" asp-action="AddWishlist" asp-route-id="@product.Id"><i class="fa-regular fa-heart"></i></a>
-                                        <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                    </div>
 
 
-                                    <div class="whiskey">
-                                        <a asp-controller="shop" asp-action="ProductDetail" asp-route-id="@product.Id"><img src="~/assets/img/@product.Image" alt=""></a>
-                                    </div>
-                                    <div class="whiskey-name">
-                                        <a href="">@product.Name</a>
-
-                                        <br>
-                                        <span><span>$</span>@product.ProductCapacities.Last().Price-@product.ProductCapacities.First().Price </span>
-                                     @*   <span>-</span>
-                                        <span>$100.00</span>*@
+                        <partial name="_ProductsPartial" model="Model.PaginateDatas" />
 
 
-
-                                    </div>
-
-
-                                </div>
-
-
-                            </div>
-                        }
                        
-                    @*    <div class="col-lg-4 col-sm-12 col-md-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/fireHardened-bourbon1.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Fire Hardened Bourbon</a>
-
-                                    <br>
-                                    <span>$45.00</span>
-                                    <span>-</span>
-                                    <span>$100.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-12 col-md-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/premium-whiskey.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Premium Whiskey</a>
-
-                                    <br>
-                                    <span>$45.00</span>
-                                    <span>-</span>
-                                    <span>$100.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-12 col-md-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/skotch-whiskey.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Scotch Wiskey</a>
-
-                                    <br>
-                                    <span>$45.00</span>
-                                    <span>-</span>
-                                    <span>$100.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-12 col-md-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/singleMalt-Bourbon.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Single Malt Bourbon</a>
-
-                                    <br>
-                                    <span>$15.00</span>
-                                    <span>-</span>
-                                    <span>$22.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-12 col-md-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/singleMaltOak-whiskey.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Single Malt Oak Whiskey</a>
-
-                                    <br>
-                                    <span>$22.00</span>
-                                    <span>-</span>
-                                    <span>$45.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-12 col-md-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/Single Tennessee whiskey.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Single Tennessee whiskey</a>
-
-                                    <br>
-                                    <span>$5.00</span>
-                                    <span>-</span>
-                                    <span>$85.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-12 col-md-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/Small bottle whiskey.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Small bottle whiskey</a>
-
-                                    <br>
-                                    <span>$4.00</span>
-                                    <span>-</span>
-                                    <span>$10.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-12 col-md-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/Tennessee whiskey.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Tennessee whiskey</a>
-
-                                    <br>
-                                    <span>$35.00</span>
-                                    <span>-</span>
-                                    <span>$85.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>*@
+  
 
 
                     </div>

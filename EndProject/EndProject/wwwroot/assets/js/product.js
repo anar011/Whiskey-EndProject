@@ -273,7 +273,41 @@ $(document).ready(function () {
     document.querySelector(".phone-navbars .phone-navbar-menu-icons .phone-login-register").classList.toggle("d-none")
   });
 
+    
+
+    //get products by author 
+    $(document).on("click", ".author", function (e) {
+
+        e.preventDefault();
+        let authorId = $(this).attr("data-id");
+        let parent = $(".product-list")
+        $.ajax({
+
+            url: `/shop/GetProductByAuthor?id=${authorId}`,
+            type: "Get",
+
+            success: function (res) {
+                $(parent).html(res);
+            }
+        })
+
+    })
 
 
+    //get all products by category  on click All
+    $(document).on("click", ".all-product", function (e) {
 
+        e.preventDefault();
+        let parent = $(".product-list")
+        $.ajax({
+
+            url: "shop/GetAllProduct",
+            type: "Get",
+
+            success: function (res) {
+                $(parent).html(res);
+            }
+        })
+
+    })
 });

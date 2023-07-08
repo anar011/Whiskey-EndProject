@@ -40,8 +40,6 @@ namespace EndProject.Controllers
             {
                 pageCount = await GetPageCountAsync(take, categoryId);
             }
-        
-
          
 
             Paginate<ProductVM> paginatedDatas = new(mappedDatas, page, pageCount);
@@ -82,9 +80,9 @@ namespace EndProject.Controllers
                 {
                     Id = product.Id,
                     Name = product.Name,
-
-                    Image = product.Image
-                
+                    Image = product.Image,
+                    ProductCapacities = product.ProductCapacities.ToList()
+                    
                 };
                 mappedDatas.Add(productList);
             }

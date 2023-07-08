@@ -107,6 +107,7 @@ namespace EndProject.Services
             {
                 return await _context.ProductCategories
                 .Include(p => p.Product)
+                 .ThenInclude(p => p.ProductCapacities)
                 .Where(pc => pc.Category.Id == categoryId)
                 .Select(p => p.Product)
                 .Skip((page * take) - take)
@@ -116,7 +117,7 @@ namespace EndProject.Services
 
             else
             {
-                return await _context.Products
+                var prod = await _context.Products
                .Include(p => p.ProductCategories)
                .ThenInclude(pc => pc.Category)
                .Include(p => p.ProductCapacities)
@@ -124,6 +125,7 @@ namespace EndProject.Services
                .Skip((page * take) - take)
                .Take(take)
                .ToListAsync();
+                return prod;
             }
 
         }

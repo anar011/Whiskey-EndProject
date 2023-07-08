@@ -28,19 +28,24 @@ namespace EndProject.Areas.Admin.Controllers
                                IWebHostEnvironment env,
                                ICapacityService capacityService,
                                ICategoryService categoryService, AppDbContext context)
+
         {
+
             _productService = productService;
             _crudService = crudService;
             _env = env;
             _capacityService = capacityService;
             _categoryService = categoryService;
             _context = context;
+
         }
 
         public async Task<IActionResult> Index(int page = 1, int take = 5)
         {
             List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, null);
+          
             List<ProductListVM> mappedDatas = GetDatas(datas);
+            
             List<Product> productCapacities = await _context.Products.Include(m => m.ProductCapacities).ToListAsync();
             int pageCount = await GetPageCountAsync(take);
 
@@ -65,7 +70,7 @@ namespace EndProject.Areas.Admin.Controllers
                     Id = product.Id,
                     Name = product.Name,                
                     Image = product.Image,
-                  
+                    ProductCapacities = product.ProductCapacities.ToList(),
                 };
                 mappedDatas.Add(productList);
             }
@@ -125,9 +130,12 @@ namespace EndProject.Areas.Admin.Controllers
                 {
                     foreach (var item in model.CapacityIds)
                     {
+                        var convertedPrice = decimal.Parse(model.Price);
                         ProductCapacity productCapacity = new()
                         {
-                            CapacityId = item
+                            CapacityId = item,
+                            Price = convertedPrice
+                            
                         };
                         productCapacities.Add(productCapacity);
                     }
@@ -157,7 +165,6 @@ namespace EndProject.Areas.Admin.Controllers
                     return View();
                 }
 
-                var convertedPrice = decimal.Parse(model.Price);
                 Random random = new();
 
                 newProduct.Name = model.Name;
@@ -190,6 +197,8 @@ namespace EndProject.Areas.Admin.Controllers
                 if (dbProduct is null) return NotFound();
                 ViewBag.page = page;
 
+
+           
                 ViewModels.Product.ProductDetailVM model = new()
                 {
                     Id = dbProduct.Id,
@@ -200,7 +209,8 @@ namespace EndProject.Areas.Admin.Controllers
                     Image = dbProduct.Image,
                     CategoryNames = dbProduct.ProductCategories,
                     CapacityNames = dbProduct.ProductCapacities,
-               
+                    
+
                 };
                 return View(model);
             }
@@ -210,6 +220,8 @@ namespace EndProject.Areas.Admin.Controllers
                 return View();
             }
         }
+
+
 
 
         [HttpGet]
@@ -269,6 +281,9 @@ namespace EndProject.Areas.Admin.Controllers
                 ProductUpdateVM productUpdateVM = new()
                 {
                     Image = dbProduct.Image
+
+
+
                 };
 
 
@@ -306,9 +321,11 @@ namespace EndProject.Areas.Admin.Controllers
 
                     foreach (var item in model.CapacityIds)
                     {
+                        var convertedPrice = decimal.Parse(model.Price);
                         ProductCapacity productCapacity = new()
                         {
-                            CapacityId = item
+                            CapacityId = item,
+                            Price= convertedPrice
                         };
                         productCapacities.Add(productCapacity);
                     }
@@ -386,6 +403,21 @@ namespace EndProject.Areas.Admin.Controllers
         }
 
 
+
+        public async Task<IActionResult> GetAllProduct(int? id)
+        {
+            List<Product> products = await _productService.GetFullDataAsync();
+
+            return PartialView("_ProductsPartial", products);
+        }
+
+
+        public async Task<IActionResult> GetProductByAuthor(int? id)
+        {
+            List<Product> products = await _context.ProductCategories.Include(m => m.Category).Include(m => m.Product).Where(m => m.CategoryId == id).Select(m => m.Product).ToListAsync();
+
+            return PartialView("_ProductsPartial", products);
+        }
 
 
     }
