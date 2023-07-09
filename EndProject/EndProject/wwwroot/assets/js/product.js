@@ -310,4 +310,16 @@ $(document).ready(function () {
         })
 
     })
+
+
+    //MAIN SEARCH
+
+    $(document).on("submit", ".hm-searchbox", function (e) {
+        e.preventDefault();
+        let value = $(".input-search").val();
+        let url = `/shop/MainSearch?searchText=${value}`;
+
+        window.location.assign(url);
+
+    })
 });
