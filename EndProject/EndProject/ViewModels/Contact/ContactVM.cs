@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using EndProject.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace EndProject.ViewModels.Contact
 {
@@ -12,5 +13,8 @@ namespace EndProject.ViewModels.Contact
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         public string Message { get; set; }
+
+        public IEnumerable<ContactInfo> ContactInfos { get; set; }
+
     }
 }

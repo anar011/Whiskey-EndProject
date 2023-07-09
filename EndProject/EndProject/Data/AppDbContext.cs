@@ -40,6 +40,8 @@ namespace EndProject.Data
 
         public DbSet<Contact> Contacts { get; set; }
 
+        public DbSet<ContactInfo> ContactInfos { get; set; }
+
 
 
 

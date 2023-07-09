@@ -1,4 +1,5 @@
-﻿using EndProject.Helpers;
+﻿using EndProject.Data;
+using EndProject.Helpers;
 using EndProject.Models;
 using EndProject.Services.Interfaces;
 using EndProject.ViewModels.Product;
@@ -6,6 +7,7 @@ using EndProject.ViewModels.Shop;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EndProject.Controllers
 {
@@ -15,18 +17,20 @@ namespace EndProject.Controllers
         private readonly ICategoryService _categoryService;
         private readonly ICrudService<ProductComment> _crudService;
         private readonly ILayoutService _layoutService;
+        private readonly AppDbContext _context;
 
 
         public ShopController(IProductService productService,
                       ICategoryService categoryService,
                       ILayoutService layoutService,
-                      ICrudService<ProductComment> crudService)
+                      ICrudService<ProductComment> crudService,
+                      AppDbContext context)
         {
             _productService = productService;
             _categoryService = categoryService;
             _layoutService = layoutService;
             _crudService = crudService;
-  
+            _context = context;
         }
         public async Task<IActionResult> Index(int page = 1, int take = 6, int? categoryId = null)
         {
@@ -90,7 +94,7 @@ namespace EndProject.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 6)
+        public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 95)
         {
             if (id is null) return BadRequest();
             ViewBag.catId = id;
@@ -164,6 +168,13 @@ namespace EndProject.Controllers
             return RedirectToAction(nameof(ProductDetail), new { id });
         }
 
+
+        public async Task<IActionResult> GetProductByAuthor(int? id)
+        {
+            List<Product> products = await _context.ProductCategories.Include(m => m.Category).Include(m => m.Product).Where(m => m.CategoryId == id).Select(m => m.Product).ToListAsync();
+
+            return PartialView("_ProductsPartial", products);
+        }
 
     }
 }

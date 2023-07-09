@@ -55,6 +55,8 @@ builder.Services.AddScoped<IAboutAdvertisingService, AboutAdvertisingService>();
 builder.Services.AddScoped<IAboutMainFooterService, AboutMainFooterService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<ICapacityService, CapacityService>();
+builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IContactInfoService, ContactInfoService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IEmailService, EmailService>();

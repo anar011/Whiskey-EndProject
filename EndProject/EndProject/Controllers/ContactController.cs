@@ -1,6 +1,8 @@
 ﻿using EndProject.Models;
+using EndProject.Services;
 using EndProject.Services.Interfaces;
 using EndProject.ViewModels.Contact;
+using EndProject.ViewModels.Home;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EndProject.Controllers
@@ -8,15 +10,33 @@ namespace EndProject.Controllers
     public class ContactController : Controller
     {
         private readonly ICrudService<Contact> _crudService;
+        private readonly IContactService _contactService;
+        private readonly IContactInfoService _contacInfotService;
 
-        public ContactController(ICrudService<Contact> crudService)
+
+        public ContactController(ICrudService<Contact> crudService,
+                                 IContactService contactService,
+                                 IContactInfoService contactInfoService
+                                 )
         {
             _crudService = crudService;
+            _contactService = contactService;
+            _contacInfotService = contactInfoService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+
+            ContactVM model = new()
+            {
+
+                 ContactInfos = await _contacInfotService.GetAllAsync(),
+      
+
+
+
+            };
+            return View(model);
         }
 
 
@@ -31,7 +51,10 @@ namespace EndProject.Controllers
                 Email = model.Email,
                 Subject = model.Subject,
                 Message = model.Message,
+              
             };
+        
+
 
             await _crudService.CreateAsync(contact);
             return RedirectToAction(nameof(Index));

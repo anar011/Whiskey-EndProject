@@ -3,7 +3,8 @@
 @inject ILayoutService layout
 @{
     ViewData["Title"] = "Whiskey - Shop";
-    int sumOfProductsCountByCategory = 0;
+    int sumCategoryProducts = 0;
+    int sumCategoryProductss = 0;
 }
 
 
@@ -51,16 +52,16 @@
                         
                         @foreach (var item in Model.Categories)
                         {
-                            sumOfProductsCountByCategory += (int)item.ProductCategories?.Count();
+                            sumCategoryProductss += (int)item.ProductCategories?.Count();
                         }
                         <div class="products-category-all categories d-flex">
-                            <span>All</span>
-                            <p>(@sumOfProductsCountByCategory)</p>
+                            <span class="all-product">All</span>
+                            <p>(@sumCategoryProductss)</p>
                         </div>
                         @foreach (var item in Model.Categories)
                         {
-                            <div class="products-category-all categories d-flex">
-                                <span data-id="@item.Id">@item.Name</span>
+                            <div class="products-category-all categories d-flex product-category">
+                                <span class="category" data-id="@item.Id">@item.Name</span>
                                 <p>(@item.ProductCategories?.Count())</p>
                             </div>
                         }
@@ -254,7 +255,7 @@
 
                     <!-- // Begin PRODUCT// -->
 
-                    <div class="products-whiskeys mt-5 row">
+                    <div class="products-whiskeys mt-5 row product-list">
 
 
                         <partial name="_ProductsPartial" model="Model.PaginateDatas" />

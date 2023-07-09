@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "harwqU0wKm1M/v1vhEqzkwUMYgePYhA4xpaDVKIo0TY=",
+  "Hash": "RK7PP5bPZzVE81wX47LjwCLkjrZwzScpJ0/PHhlqpLQ=",
   "Source": "EndProject",
   "BasePath": "_content/EndProject",
   "Mode": "Default",
@@ -6441,6 +6441,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\724ea90b-797a-493d-a16a-77d84075e02dwhiskey-slider4.webp"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\8c0efaf7-e73c-422b-a0fe-4eb632cfc3e3Small bottle whiskey.webp",
+      "SourceId": "EndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\",
+      "BasePath": "_content/EndProject",
+      "RelativePath": "assets/img/8c0efaf7-e73c-422b-a0fe-4eb632cfc3e3Small bottle whiskey.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\8c0efaf7-e73c-422b-a0fe-4eb632cfc3e3Small bottle whiskey.webp"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\8d9d29b2-6343-49a5-8df8-27a108b75c70home-blog2.webp",

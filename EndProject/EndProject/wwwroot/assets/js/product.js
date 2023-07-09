@@ -276,14 +276,14 @@ $(document).ready(function () {
     
 
     //get products by author 
-    $(document).on("click", ".author", function (e) {
+    $(document).on("click", ".category", function (e) {
 
         e.preventDefault();
-        let authorId = $(this).attr("data-id");
+        let itemId = $(this).attr("data-id");
         let parent = $(".product-list")
         $.ajax({
 
-            url: `/shop/GetProductByAuthor?id=${authorId}`,
+            url: `/shop/GetProductByAuthor?id=${itemId}`,
             type: "Get",
 
             success: function (res) {

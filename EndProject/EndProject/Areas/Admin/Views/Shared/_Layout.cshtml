@@ -1,4 +1,4 @@
-﻿
+﻿d
 
 <!DOCTYPE html>
 <html lang="en">
@@ -149,17 +149,22 @@
                                     <i class="fa fa-paper-plane red_color"></i> <span>Contact</span>
                                 </a>
                             </li>
+
+                           
+
+
+
+
+
                             <li class="active">
-                                <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Additional Pages</span></a>
+                                <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Contact</span></a>
                                 <ul class="collapse list-unstyled" id="additional_page">
+                                  
                                     <li>
-                                        <a href="profile.html">> <span>Profile</span></a>
+                                        <a asp-controller="Contact" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Contact</span></a>
                                     </li>
                                     <li>
-                                        <a href="project.html">> <span>Projects</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="login.html">> <span>Login</span></a>
+                                        <a asp-controller="ContactInfo" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">ContactInfo</span></a>
                                     </li>
                                     <li>
                                         <a href="404_error.html">> <span>404 Error</span></a>

@@ -145,63 +145,30 @@
                             <h3>Maecenas elit facilisi consequat proin convallis gravida. Augue sed euismod.</h3>
 
                         </div>
-                        <div class="main-down-nul-integ-males mt-5">
-                            <div class="main-down-nullam d-flex">
-                                <div class="main-down-nul-img col-lg-2 col-sm-6 col-md-">
-                                    <img src="~/assets/img/contact-icon1.svg" alt="">
-                                </div>
-                                <div class="col-lg-10 col-sm-4 col-md-11">
-                                    <div class="main-down-nul-img-title mt-2">
-                                        <h5>Integer aliquam</h5>
+                        @foreach (var item in Model.ContactInfos)
+                        {
+                            <div class="main-down-nul-integ-males mt-5">
+                                <div class="main-down-nullam d-flex">
+                                    <div class="main-down-nul-img col-lg-2 col-sm-6 col-md-">
+                                        <img src="~/assets/img/@item.Image" alt="">
                                     </div>
-                                    <div class="main-down-nul-img-desc mt-3">
-                                        <p>Bibendum nulla erat vel nulla. Morbi vitae lectus vel ipsum dolor auctor vel, eros.</p>
+                                    <div class="col-lg-10 col-sm-4 col-md-11">
+                                        <div class="main-down-nul-img-title mt-2">
+                                            <h5>@item.Title</h5>
+                                        </div>
+                                        <div class="main-down-nul-img-desc mt-3">
+                                            <p>@item.Description</p>
+                                        </div>
+
                                     </div>
 
                                 </div>
-
+                                <div></div>
+                                <div></div>
                             </div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="main-down-nul-integ-males mt-5">
-                            <div class="main-down-nullam d-flex">
-                                <div class="main-down-nul-img col-lg-2 col-sm-6 col-md-1">
-                                    <img src="~/assets/img/contact-icon2.svg" alt="">
-                                </div>
-                                <div class="col-lg-10 col-sm-6 col-md-11">
-                                    <div class="main-down-nul-img-title mt-2">
-                                        <h5>Nullam aliquet</h5>
-                                    </div>
-                                    <div class="main-down-nul-img-desc mt-3">
-                                        <p>Vestibulum tempus facilisis, quam at sapien. Morbi justo. Aliquam tempus eros bitubit</p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="main-down-nul-integ-males mt-5">
-                            <div class="main-down-nullam d-flex">
-                                <div class="main-down-nul-img col-lg-2 col-sm-6 col-md-1">
-                                    <img src="~/assets/img/contact-icon3.svg" alt="">
-                                </div>
-                                <div class="col-lg-10 col-sm-6 col-md-11">
-                                    <div class="main-down-nul-img-title mt-2">
-                                        <h5>Malesuada fames</h5>
-                                    </div>
-                                    <div class="main-down-nul-img-desc mt-3">
-                                        <p>Nisl phasellus tempus imperdiet diam enim ut vitae velit a augue ac posuere nisl urna dap.</p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div></div>
-                            <div></div>
-                        </div>
+                        }
+                       
+       
                     </div>
 
                     <div class="col-lg-6 col-sm-12 col-md-6 mt-5">

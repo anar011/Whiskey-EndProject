@@ -1,4 +1,6 @@
-﻿using EndProject.Models;
+﻿using EndProject.Helpers;
+using EndProject.Models;
+using EndProject.ViewModels.Product;
 
 namespace EndProject.ViewModels.Home
 {
@@ -7,6 +9,7 @@ namespace EndProject.ViewModels.Home
         public IEnumerable<Slider> Sliders { get; set; }
         public SpecialCollection SpecialCollection { get; set; }
         public IEnumerable<HomeAddvertising> HomeAddvertisings { get; set; }
+        public Paginate<ProductVM> PaginateDatas { get; set; }
 
 
     }
