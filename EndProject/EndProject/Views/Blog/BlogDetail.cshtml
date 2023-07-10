@@ -360,7 +360,8 @@
                 </div>
 
                 <div class="home-blogs d-lg-flex d-md-flex mt-5">
-    @*                @foreach (var item in Model.Blogs)
+
+                    @foreach (var item in Model.Blogs.Take(3))
                     {
                         <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
                             <div class="card home-blog" style="width: 25rem;">
@@ -378,58 +379,11 @@
                             </div>
 
                         </div>
-                    }*@
+
+                    }
 
 
 
-                    <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
-                        <div class="card home-blog" style="width: 25rem;">
-                            <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html"><i class="fa-solid fa-circle-plus"></i></a>
-                            <img src="~/assets/img/home-blog1.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <span><i class="fa-regular fa-user"></i></span>
-                                <span>admin on</span>
-                                <span><i class="fa-regular fa-clock"></i> December 30, 2021</span>
-                                <br> <br>
-                                <span>In arcu quis wisi donec vitae libero maecenas blandit</span>
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
-
-                        <div class="card home-blog" style="width: 25rem;">
-                            <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html"><i class="fa-solid fa-circle-plus"></i></a>
-                            <img src="~/assets/img/home-blog2.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <span class="card-text"><i class="fa-regular fa-user"></i></span>
-                                <span class="card-text">admin on</span>
-                                <span><i class="fa-regular fa-clock"></i> December 30, 2021</span>
-                                <br> <br>
-                                <span>Orci luctus nibh, ut leo sit amet, consectetuer ut, neque</span>
-                                <br><br>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
-
-                        <div class="card home-blog" style="width: 25rem;">
-                            <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html"><i class="fa-solid fa-circle-plus"></i></a>
-                            <img src="~/assets/img/home-blog3.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <span class="card-text"><i class="fa-regular fa-user"></i></span>
-                                <span class="card-text">admin on</span>
-                                <span><i class="fa-regular fa-clock"></i> December 30, 2021</span>
-                                <br> <br>
-                                <span>Praesent ac turpis semper felis sollicitudin mi vel eros</span>
-                                <br><br>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </div>
     </section>

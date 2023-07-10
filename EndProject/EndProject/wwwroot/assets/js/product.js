@@ -275,51 +275,51 @@ $(document).ready(function () {
 
     
 
-    //get products by author 
-    $(document).on("click", ".category", function (e) {
+    ////get products by author
+    //$(document).on("click", ".category", function (e) {
 
-        e.preventDefault();
-        let itemId = $(this).attr("data-id");
-        let parent = $(".product-list")
-        $.ajax({
+    //    e.preventDefault();
+    //    let itemId = $(this).attr("data-id");
+    //    let parent = $(".product-list")
+    //    $.ajax({
 
-            url: `/shop/GetProductByAuthor?id=${itemId}`,
-            type: "Get",
+    //        url: `/shop/GetProductByAuthor?id=${itemId}`,
+    //        type: "Get",
 
-            success: function (res) {
-                $(parent).html(res);
-            }
-        })
+    //        success: function (res) {
+    //            $(parent).html(res);
+    //        }
+    //    })
 
-    })
-
-
-    //get all products by category  on click All
-    $(document).on("click", ".all-product", function (e) {
-
-        e.preventDefault();
-        let parent = $(".product-list")
-        $.ajax({
-
-            url: "shop/GetAllProduct",
-            type: "Get",
-
-            success: function (res) {
-                $(parent).html(res);
-            }
-        })
-
-    })
+    //})
 
 
-    //MAIN SEARCH
+    ////get all products by category  on click All
+    //$(document).on("click", ".all-product", function (e) {
 
-    $(document).on("submit", ".hm-searchbox", function (e) {
-        e.preventDefault();
-        let value = $(".input-search").val();
-        let url = `/shop/MainSearch?searchText=${value}`;
+    //    e.preventDefault();
+    //    let parent = $(".product-list")
+    //    $.ajax({
 
-        window.location.assign(url);
+    //        url: "shop/GetAllProduct",
+    //        type: "Get",
 
-    })
+    //        success: function (res) {
+    //            $(parent).html(res);
+    //        }
+    //    })
+
+    //})
+
+
+    ////MAIN SEARCH
+
+    //$(document).on("submit", ".hm-searchbox", function (e) {
+    //    e.preventDefault();
+    //    let value = $(".input-search").val();
+    //    let url = `/shop/MainSearch?searchText=${value}`;
+
+    //    window.location.assign(url);
+
+    //})
 });

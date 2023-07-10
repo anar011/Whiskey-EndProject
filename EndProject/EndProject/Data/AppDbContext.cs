@@ -41,6 +41,9 @@ namespace EndProject.Data
         public DbSet<Contact> Contacts { get; set; }
 
         public DbSet<ContactInfo> ContactInfos { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+
 
 
 

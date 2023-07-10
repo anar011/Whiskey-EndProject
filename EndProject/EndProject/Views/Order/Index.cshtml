@@ -1,0 +1,184 @@
+﻿@using EndProject.ViewModels;
+@inject EndProject.Services.LayoutService layoutService
+@{
+    List<Product> products = layoutService.GetProducts();
+    List<BasketItemVM> baskets = layoutService.GetBasketItem();
+    List<BasketItem> basket = layoutService.GetBasketItems();
+}
+@model OrderVm
+<main>
+    <section id="main-up">
+        <div class="container">
+            <div class="row">
+                <div class="main-up-contact-name">
+                    <h1>Order</h1>
+                </div>
+
+                <div class="main-up-contact-titles">
+                    <div class="main-up-contact-title">
+                        <a href="file:///C:/Users/HP/Desktop/EndProject/home.html"><span>Home</span></a>
+                        <hr>
+                        <span>></span>
+                        <span>Order</span>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="background-img">
+        <div class="background-img-one">
+            <img src="~/assets/img/main-back-img2.svg" alt="">
+        </div>
+    </section>
+
+
+    <section id="main-down">
+        <div class="container">
+            <div class="row">
+                <div class="main-down mt-5">
+                    <div class="main-down-desc">
+                        <h2>Order</h2>
+
+
+                    </div>
+                <form asp-controller="Order" asp-action="index" method="post">
+                    
+                    <div class="main-down-email mt-5">
+                        <input asp-for="Fullname" placeholder="Name" required>
+                    </div>
+
+                    <div class="main-down-email mt-5">
+                            <input asp-for="Email" placeholder="Email" required>
+                    </div>
+                        <div class="main-down-email mt-5">
+                            <input asp-for="Number" placeholder="phoneNumber" required>
+                        </div>
+
+
+                    <div class="main-down-email mt-5">
+                            <input asp-for="Address" placeholder="Adress" required>
+                    </div>
+
+                    <div class="main-down-email  textareas mt-5">
+                            <textarea asp-for="Message" style="with:30%" required></textarea>
+                        <span class="bar"></span>
+                    </div>
+                        <div class="main-down-email-reset mt-3">
+                            <button>Submit</button>
+                        </div>
+                        @foreach (var item in Model.BasketItems)
+                        {
+                            <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].ProductCapacity" value="@item.ProductCapacity" />
+                            <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].Quantity" value="@item.Quantity" />
+                            <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].Price" value="@item.Price" />
+
+                        }
+                </form>
+
+
+
+
+            
+
+                    <div class="main-down-email-register mt-3">
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="cart">
+        <div class="container">
+            <div class="basket-products mt-5">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Action</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        @foreach (BasketItemVM item in baskets)
+                        {
+                            Product product = products.FirstOrDefault(p => p.Id == item.ProductId);
+                            BasketItem basketitem = basket.FirstOrDefault(p => p.ProductCapacityId == item.ProductCapacityId);
+                            <tr>
+                                <td>
+                                    <img src="~/assets/img/@product.Image" />
+                                </td>
+                                <td>@product.Name</td>
+                                <td>@item.Price</td>
+                                <td>@item.Quantity</td>
+                                <td>@(item.Quantity * item.Price)</td>
+                                <td>
+                                    <a asp-controller="basket" asp-action="RemoveBasketItem" asp-route-basketItemId="@basketitem.Id" class="btn btn-danger">
+                                        del
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+               
+                        <tr>
+
+                                <td>
+                                    <button class="btn btn-primary shop"><a asp-controller="shop" asp-action="Index">Continue shopping</a></button>
+                                </td>
+
+                        </tr>
+                        
+                    </tbody>
+                 
+                </table>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <section id="background-img">
+        <div class="background-img-two mt-5">
+            <img src="~/assets/img/main-back-img1.svg" alt="">
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+@section Scripts{
+
+    <script src="~/assets/js/order.js"></script>
+
+}

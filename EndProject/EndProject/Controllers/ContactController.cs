@@ -44,7 +44,7 @@ namespace EndProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> PostComment(ContactVM model)
         {
-            //if (!ModelState.IsValid) return RedirectToAction("Index", model);
+            if (!ModelState.IsValid) return RedirectToAction("Index", model);
             Contact contact = new()
             {
                 Name = model.Name,

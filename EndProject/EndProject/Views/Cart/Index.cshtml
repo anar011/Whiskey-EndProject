@@ -1,4 +1,15 @@
-﻿
+﻿@using EndProject.ViewModels;
+@inject EndProject.Services.LayoutService layoutService
+
+
+
+
+@{
+    List<BasketItemVM> baskets = layoutService.GetBasketItem();
+    List<BasketItem> basket = layoutService.GetBasketItems();
+    List<Product> products = layoutService.GetProducts();
+}
+
 @{
     ViewData["Title"] = "Whiskey - Cart";
 }
@@ -15,7 +26,7 @@
 
                 <div class="main-up-contact-titles">
                     <div class="main-up-contact-title">
-                        <a href="file:///C:/Users/HP/Desktop/EndProject/home.html"><span>Home</span></a>
+                        <a><span>Home</span></a>
                         <hr>
                         <span>></span>
                         <span>Cart</span>
@@ -52,15 +63,36 @@
 
                     </thead>
                     <tbody>
+                            @foreach (BasketItemVM item in baskets)
+                        {
+                            Product product = products.FirstOrDefault(p => p.Id == item.ProductId);
+                            BasketItem basketitem = basket.FirstOrDefault(p => p.ProductCapacityId == item.ProductCapacityId);
+                            <tr>
+                                <td>
+                                    <img src="~/assets/img/@product.Image" />
+                                </td>
+                                <td>@product.Name</td>
+                                <td>@item.Price</td>
+                                <td>@item.Quantity</td>
+                                <td>@(item.Quantity * item.Price)</td>
+                                <td>
+                                    <a asp-controller="basket" asp-action="RemoveBasketItem" asp-route-basketItemId="@basketitem.Id" class="btn btn-danger">
+                                        del
+                                    </a>
+                                    </td>
+                            </tr>
+                        }
                     </tbody>
                     <tr>
                         <td>
                             <button class="btn btn-primary shop"><a href="Shop.html">Continue shopping</a></button>
                         </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    
                         <td><span>Grand total:</span></td>
+
+                        <td>
+                            <button style="margin-top:-16px;" class="btn btn-primary shop"><a asp-controller="Order" asp-action="Index">Check box</a></button>
+                        </td>
                     </tr>
                 </table>
             </div>

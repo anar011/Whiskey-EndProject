@@ -98,12 +98,28 @@
 
                                 <div class="whiskey-button-cart mt-5 d-flex">
                                     <div class="col-lg-4 col-sm-3">
-                                        <div class="whiskey-buttons  d-flex">
-                                            <button type="button"><a><i class="fa-solid fa-minus"></i></a></button>
-                                            <input name="quantity" type="number" value="1">
-                                            <button type="button"><a><i class="fa-solid fa-plus"></i></a></button>
-
+                                        <div class="whiskey-buttons d-flex">
+                                            <button id="minusButton" type="button"><a><i class="fa-solid fa-minus"></i></a></button>
+                                            <input style="color:white;" id="quantityInput" name="quantity" type="number" value="1" readonly>
+                                            <button id="plusButton" type="button"><a><i class="fa-solid fa-plus"></i></a></button>
                                         </div>
+
+                                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                        <script>
+                                            $(document).ready(function() {
+                                                $('#minusButton').click(function() {
+                                                    var quantity = parseInt($('#quantityInput').val());
+                                                    if (quantity > 1) {
+                                                        $('#quantityInput').val(quantity - 1);
+                                                    }
+                                                });
+
+                                                $('#plusButton').click(function() {
+                                                    var quantity = parseInt($('#quantityInput').val());
+                                                    $('#quantityInput').val(quantity + 1);
+                                                });
+                                            });
+                                        </script>
 
                                     </div>
                                     <div class="col-lg-4 col-sm-5">

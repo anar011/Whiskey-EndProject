@@ -412,12 +412,12 @@ namespace EndProject.Areas.Admin.Controllers
         }
 
 
-        public async Task<IActionResult> GetProductByAuthor(int? id)
-        {
-            List<Product> products = await _context.ProductCategories.Include(m => m.Category).Include(m => m.Product).Where(m => m.CategoryId == id).Select(m => m.Product).ToListAsync();
+        //public async Task<IActionResult> GetProductByAuthor(int? id)
+        //{
+        //    List<Product> products = await _context.ProductCategories.Include(m => m.Category).Include(m => m.Product).Where(m => m.CategoryId == id).Select(m => m.Product).ToListAsync();
 
-            return PartialView("_ProductsPartial", products);
-        }
+        //    return PartialView("_ProductsPartial", products);
+        //}
 
 
     }

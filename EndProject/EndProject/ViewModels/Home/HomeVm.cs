@@ -10,6 +10,7 @@ namespace EndProject.ViewModels.Home
         public SpecialCollection SpecialCollection { get; set; }
         public IEnumerable<HomeAddvertising> HomeAddvertisings { get; set; }
         public Paginate<ProductVM> PaginateDatas { get; set; }
+        public IEnumerable<Models.Product> Products { get; set; }
 
 
     }

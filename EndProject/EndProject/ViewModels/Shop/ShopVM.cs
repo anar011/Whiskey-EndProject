@@ -9,6 +9,7 @@ namespace EndProject.ViewModels.Shop
     {
         public IEnumerable<Models.Product> Products { get; set; }
         public IEnumerable<Category> Categories { get; set; }
+        public IEnumerable<Capacity> Capacities { get; set; }
 
         public Paginate<ProductVM> PaginateDatas { get; set; }
 

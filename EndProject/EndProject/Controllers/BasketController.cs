@@ -74,7 +74,7 @@ namespace EndProject.Controllers
             }
             userActiveBasket.TotalPrice = userActiveBasket.BasketItems.Sum(p => p.Quantity * p.Price);
             await _context.SaveChangesAsync();
-            return RedirectToAction("index", "home");
+            return Redirect(Request.Headers["Referer"].ToString());
         }
 
         public async Task<IActionResult> RemoveBasketItem(int basketItemId)
@@ -100,7 +100,8 @@ namespace EndProject.Controllers
                     await _context.SaveChangesAsync();
                 }
             }
-            return RedirectToAction("index", "home");
+            return Redirect(Request.Headers["Referer"].ToString());
+
         }
     }
 }

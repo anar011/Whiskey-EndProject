@@ -198,8 +198,45 @@
                     <!-- //PRODUCT// -->
 
                     <div class="products-whiskeys row">
+                     
+                  @*      @foreach (var product in Model.Products.Take(6))
+                        {
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="whiskeys">
+                                    <div class="whiskey-icons ">
+                                        <a asp-controller="shop" asp-action="ProductDetail" asp-route-id="@product.Id">
 
-                      
+                                            <i class="fa-solid fa-paperclip"></i>
+                                        </a>
+
+                                        <a asp-controller="wishlist" asp-action="AddWishlist" asp-route-id="@product.Id"><i class="fa-regular fa-heart"></i></a>
+
+                                        <a href=""><i class="fa-solid fa-square-plus"></i></a>
+                                    </div>
+
+
+                                    <div class="whiskey">
+                                        <a asp-controller="shop" asp-action="ProductDetail" asp-route-id="@product.Id"><img src="~/assets/img/@product.Image" alt=""></a>
+                                    </div>
+                                    <div class="whiskey-name">
+                                        <a href="">@product.Name</a>
+
+                                        <br>
+                                        <span><span>$</span>@product.ProductCapacities.Last().Price-@product.ProductCapacities.First().Price </span>
+
+
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                            </div>
+                        }
+*@
+                       
 
                         <div class="col-lg-4 col-sm-6">
                             <div class="whiskeys">
@@ -211,10 +248,10 @@
 
 
                                 <div class="whiskey">
-                                    <img src="~/assets/img/bourbon-blend1.webp" alt="">
+                                    <img src="~/assets/img/fireHardened-bourbon1.webp" alt="">
                                 </div>
                                 <div class="whiskey-name">
-                                    <a href="">Bourbon Blend</a>
+                                    <a href="">Fire Hardened Bourbon</a>
 
                                     <br>
                                     <span>$45.00</span>

@@ -1865,6 +1865,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\my-account.js"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\js\\order.js",
+      "PackagePath": "staticwebassets\\assets\\js\\order.js"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\js\\product-detail.js",
       "PackagePath": "staticwebassets\\assets\\js\\product-detail.js"
     },
@@ -1987,6 +1991,18 @@
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\scss\\my-account.scss",
       "PackagePath": "staticwebassets\\assets\\scss\\my-account.scss"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\scss\\order.css",
+      "PackagePath": "staticwebassets\\assets\\scss\\order.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\scss\\order.css.map",
+      "PackagePath": "staticwebassets\\assets\\scss\\order.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\scss\\order.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\order.scss"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\scss\\product-detail.css",

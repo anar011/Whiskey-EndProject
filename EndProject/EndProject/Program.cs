@@ -43,7 +43,7 @@ builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("Emai
 
 
 
-
+builder.Services.AddScoped<LayoutService>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped(typeof(ICrudService<>), typeof(CrudService<>));

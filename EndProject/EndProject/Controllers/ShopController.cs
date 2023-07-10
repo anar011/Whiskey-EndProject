@@ -169,24 +169,24 @@ namespace EndProject.Controllers
         }
 
 
-        public async Task<IActionResult> GetProductByAuthor(int? id)
-        {
-            List<Product> products = await _context.ProductCategories.Include(m => m.Category).Include(m => m.Product).Where(m => m.CategoryId == id).Select(m => m.Product).ToListAsync();
+        //public async Task<IActionResult> GetProductByAuthor(int? id)
+        //{
+        //    List<Product> products = await _context.ProductCategories.Include(m => m.Category).Include(m => m.Product).Where(m => m.CategoryId == id).Select(m => m.Product).ToListAsync();
 
-            return PartialView("_ProductsPartial", products);
-        }
+        //    return PartialView("_ProductsPartial", products);
+        //}
 
 
-        public async Task<IActionResult> MainSearch(string searchText)
-        {
-            var products = await _context.Products
-                                .Include(m => m.ProductCategories)?
-                                .OrderByDescending(m => m.Id)
-                                .Where(m => !m.SoftDelete && m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
-                                .ToListAsync();
+        //public async Task<IActionResult> MainSearch(string searchText)
+        //{
+        //    var products = await _context.Products
+        //                        .Include(m => m.ProductCategories)?
+        //                        .OrderByDescending(m => m.Id)
+        //                        .Where(m => !m.SoftDelete && m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
+        //                        .ToListAsync();
 
-            return View(products);
-        }
+        //    return View(products);
+        //}
 
     }
 }

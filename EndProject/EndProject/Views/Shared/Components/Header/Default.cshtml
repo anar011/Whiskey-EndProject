@@ -1,4 +1,12 @@
-﻿@model LayoutVM
+﻿@inject EndProject.Services.LayoutService layoutService
+
+
+@{
+    var baskets = layoutService.GetBasketItem();
+    var basket = layoutService.GetBasketItems();
+}
+
+@model LayoutVM
 
 
 <header>
@@ -40,9 +48,9 @@
 
                 <div class="col-3">
                     <div class="header-search">
-                        <form action="#" class="hm-searchbox">
+                   
                             <input class="mt-5 d-none input-search" placeholder="Search" type="text">
-                        </form>
+         
                         
                         <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
@@ -61,10 +69,20 @@
                             <i class="fa-regular fa-heart"></i>
                             <b>0</b>
                         </a>
-                        <a href="file:///C:/Users/HP/Desktop/EndProject/cart.html">
+                        <a asp-controller="cart" asp-action="index">
                             <i class="fa-solid fa-bag-shopping"></i>
-                            <span>0</span>
-                            <span>$0.00</span>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <span>@(baskets is null ? "0" : baskets.Count)</span>
+                                <span>$@basket.Sum(e=>e.Price*e.Quantity)</span>
+                            }
+                            else
+                            {
+                                <span>0</span>
+                                <span>$0.00</span>
+                            }
+
+                 
 
                         </a>
 
