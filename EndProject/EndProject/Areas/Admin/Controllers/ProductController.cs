@@ -223,7 +223,6 @@ namespace EndProject.Areas.Admin.Controllers
 
 
 
-
         [HttpGet]
         public async Task<IActionResult> Edit(int? id, int page)
         {
@@ -247,6 +246,7 @@ namespace EndProject.Areas.Admin.Controllers
                     Description = dbProduct.Description,
                     StockCount = dbProduct.StockCount,
                     Image = dbProduct.Image,
+                    Price = dbProduct.ProductCapacities.Where(p=>p.ProductId == dbProduct.Id).FirstOrDefault().Price,
                     CategoryIds = dbProduct.ProductCategories.Select(c => c.Category.Id).ToList(),
                     CapacityIds = dbProduct.ProductCapacities.Select(s => s.Capacity.Id).ToList(),
                    
@@ -281,9 +281,6 @@ namespace EndProject.Areas.Admin.Controllers
                 ProductUpdateVM productUpdateVM = new()
                 {
                     Image = dbProduct.Image
-
-
-
                 };
 
 
@@ -321,11 +318,10 @@ namespace EndProject.Areas.Admin.Controllers
 
                     foreach (var item in model.CapacityIds)
                     {
-                        var convertedPrice = decimal.Parse(model.Price);
                         ProductCapacity productCapacity = new()
                         {
                             CapacityId = item,
-                            Price= convertedPrice
+                            Price= model.Price
                         };
                         productCapacities.Add(productCapacity);
                     }

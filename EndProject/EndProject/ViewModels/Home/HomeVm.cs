@@ -11,7 +11,9 @@ namespace EndProject.ViewModels.Home
         public IEnumerable<HomeAddvertising> HomeAddvertisings { get; set; }
         public Paginate<ProductVM> PaginateDatas { get; set; }
         public IEnumerable<Models.Product> Products { get; set; }
+        public IEnumerable<Models.Blog> Blogs { get; set; }
 
+   
 
     }
 }

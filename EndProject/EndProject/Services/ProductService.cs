@@ -168,5 +168,16 @@ namespace EndProject.Services
             return await _context.Products
             .ToListAsync();
         }
+
+
+        public async Task<Product> GetDatasModalProductByIdAsyc(int? id)
+        {
+            var data = await _context.Products          
+            .Include(m => m.ProductCapacities)
+            .ThenInclude (m=>m.Price)
+            .FirstOrDefaultAsync(m => m.Id == id);
+            return data;
+        }
+
     }
 }

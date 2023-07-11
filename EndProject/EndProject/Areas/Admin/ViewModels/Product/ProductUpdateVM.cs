@@ -17,7 +17,7 @@ namespace EndProject.Areas.Admin.ViewModels.Product
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Don`t be empty")]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
 
         [Required(ErrorMessage = "Don`t be empty")]
         public int SaleCount { get; set; }

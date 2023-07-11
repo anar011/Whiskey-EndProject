@@ -20,5 +20,6 @@ namespace EndProject.Services.Interfaces
         Task<List<ProductComment>> GetComments();
         Task<ProductComment> GetCommentByIdWithProduct(int? id);
         Task<ProductComment> GetCommentById(int? id);
+        Task<Product> GetDatasModalProductByIdAsyc(int? id);
     }
 }

@@ -1,0 +1,60 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Edit";
+    List<Product> products = ViewBag.Products;
+}
+
+
+<div style="
+    display: flex;
+    justify-content: center;
+    margin:10px;
+">
+    <div class="card" style="display: flex;width: 18rem;justify-content: center;padding:20px;">
+        <div class="card-body">
+            <h5 class="card-title">@Model.AppUser.FirstName @Model.AppUser.LastName</h5>
+            <p class="card-text">Email:@Model.AppUser.Email</p>
+            <p class="card-text">Number:@Model.Number</p>
+            <p class="card-text">Address:@Model.Address</p>
+            <p class="card-text">Date:@Model.Date.ToString("dd.MMMM.yyyy HH:mm")</p>
+            <ul style="list-style-type:none">
+
+                @foreach (OrderItem item in Model.OrderItems)
+                {
+                    Product product = products.FirstOrDefault(x => x.Id == item.ProductId);
+                    <li>
+                        <div class="image" style="width:100px;height:100px;">
+                            <img style="width:100%;object-fit:contain" src="~/assets/img/@product.Image" />
+                        </div>
+                    </li>
+                    <li>
+                        @item.Name
+                    </li>
+                    <li>
+                        @item.Price<span>₼</span>
+                    </li>
+
+                }
+
+           
+
+                    <button class="btn btn-warning">
+                        @Model.Status
+                    </button>
+
+             
+         
+            </ul>
+
+
+            <p class="card-text">TotalPrice: @Model.TotalPrice <span>₼</span></p>
+        </div>
+    </div>
+</div>
+<div style="display: flex;justify-content: center;">
+    <div>
+        <a style="display:flex;justify-content:center;align-items:center;width:289px" class="btn btn-success" asp-controller="Order" asp-action="Accept" asp-route-id="@Model.Id">Accept</a>
+        <a style="display:flex;justify-content:center;align-items:center;width:289px" class="btn btn-danger" asp-controller="Order" asp-action="Reject" asp-route-id="@Model.Id">Reject</a>
+    </div>
+</div>
+

@@ -1,4 +1,6 @@
-﻿namespace EndProject.Models
+﻿using EndProject.Helpers.Enums;
+
+namespace EndProject.Models
 {
     public class OrderItem :BaseEntity
     {
@@ -14,5 +16,6 @@
         public Order Order { get; set; }
 
         public AppUser AppUser { get; set; }
+        
     }
 }

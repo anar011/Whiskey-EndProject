@@ -199,8 +199,8 @@
 
                     <div class="products-whiskeys row">
                      
-                  @*      @foreach (var product in Model.Products.Take(6))
-                        {
+                      @foreach (var product in Model.Products.Take(6))
+                      {
                             <div class="col-lg-4 col-sm-6">
                                 <div class="whiskeys">
                                     <div class="whiskey-icons ">
@@ -210,19 +210,26 @@
                                         </a>
 
                                         <a asp-controller="wishlist" asp-action="AddWishlist" asp-route-id="@product.Id"><i class="fa-regular fa-heart"></i></a>
+                                        <button style="border:none; background-color: transparent; type="submit">
+                                            <a class="add-to-eye-btn" data-id="@product.Id">
+                                                <i class="fa-solid fa-square-plus"></i>
+                                            </a>
+                                        </button>
+                                       
 
-                                        <a href=""><i class="fa-solid fa-square-plus"></i></a>
                                     </div>
 
 
                                     <div class="whiskey">
-                                        <a asp-controller="shop" asp-action="ProductDetail" asp-route-id="@product.Id"><img src="~/assets/img/@product.Image" alt=""></a>
+                                        <a asp-controller="shop" asp-action="ProductDetail" asp-route-id="@product.Id">
+                                            <img src="~/assets/img/@product.Image" alt="">
+                                            </a>
                                     </div>
                                     <div class="whiskey-name">
                                         <a href="">@product.Name</a>
 
                                         <br>
-                                        <span><span>$</span>@product.ProductCapacities.Last().Price-@product.ProductCapacities.First().Price </span>
+                                      @*  <span><span>$</span>@product.ProductCapacities.Last().Price-@product.ProductCapacities.First().Price </span>*@
 
 
 
@@ -234,244 +241,11 @@
 
 
                             </div>
-                        }
-*@
+                      }
+
                        
 
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/fireHardened-bourbon1.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Fire Hardened Bourbon</a>
-
-                                    <br>
-                                    <span>$45.00</span>
-                                    <span>-</span>
-                                    <span>$100.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/fireHardened-bourbon1.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Fire Hardened Bourbon</a>
-
-                                    <br>
-                                    <span>$45.00</span>
-                                    <span>-</span>
-                                    <span>$100.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/premium-whiskey.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Premium Whiskey</a>
-
-                                    <br>
-                                    <span>$45.00</span>
-                                    <span>-</span>
-                                    <span>$100.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/skotch-whiskey.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Scotch Wiskey</a>
-
-                                    <br>
-                                    <span>$45.00</span>
-                                    <span>-</span>
-                                    <span>$100.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/singleMalt-Bourbon.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Single Malt Bourbon</a>
-
-                                    <br>
-                                    <span>$15.00</span>
-                                    <span>-</span>
-                                    <span>$22.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="whiskeys">
-                                <div class="whiskey-icons ">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product-detail.html"><i class="fa-solid fa-paperclip"></i></a>
-                                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                                </div>
-
-
-                                <div class="whiskey">
-                                    <img src="~/assets/img/singleMaltOak-whiskey.webp" alt="">
-                                </div>
-                                <div class="whiskey-name">
-                                    <a href="">Single Malt Oak Whiskey</a>
-
-                                    <br>
-                                    <span>$22.00</span>
-                                    <span>-</span>
-                                    <span>$45.00</span>
-
-
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
+       
 
 
 
@@ -525,7 +299,7 @@
                                 <div class="whiskey-button-cart d-flex">
                                     <div class="col-4">
                                         <div class="whiskey-buttons  d-flex">
-                                            <button><a href=""><i class="fa-solid fa-minus"></i></a></button>
+                                            <button"><a href=""><i class="fa-solid fa-minus"></i></a></button>
                                             <input type="text">
                                             <button><a href=""><i class="fa-solid fa-plus"></i></a></button>
 
@@ -697,62 +471,28 @@
                 </div>
 
                 <div class="home-blogs row mt-5">
-                    <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
+                    @foreach (var blog in Model.Blogs.Take(3))
+                    {
+                        <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
 
-                        <div class="card home-blog" style="width: 24rem;">
-                            <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html">
-                                <i class="fa-solid fa-circle-plus"></i>
-                            </a>
-                            <img src="~/assets/img/home-blog1.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <span><i class="fa-regular fa-user"></i></span>
-                                <span>admin on</span>
-                                <span><i class="fa-regular fa-clock"></i> December 30, 2021</span>
-                                <br> <br>
-                                <span>In arcu quis wisi donec vitae libero maecenas blandit</span>
-                                <br>
-                                <br>
+                            <div class="card home-blog" style="width: 24rem;">
+                                <a asp-controller="Blog" asp-action="BlogDetail" asp-route-id="@blog.Id"><i class="fa-solid fa-circle-plus"></i></a>
+                                <img src="~/assets/img/@blog.Image" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <span><i class="fa-regular fa-user"></i></span>
+                                    <span>admin on</span>
+                                    <span><i class="fa-regular fa-clock"></i> December 30, 2021</span>
+                                    <br> <br>
+                                    <span>@blog.Name</span>
+                                    <br>
+                                    <br>
+                                </div>
                             </div>
+
                         </div>
+                    }
+                  
 
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
-
-                        <div class="card home-blog" style="width: 24rem;">
-                            <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html">
-                                <i class="fa-solid fa-circle-plus"></i>
-                            </a>
-                            <img src="~/assets/img/home-blog2.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <span class="card-text"><i class="fa-regular fa-user"></i></span>
-                                <span class="card-text">admin on</span>
-                                <span><i class="fa-regular fa-clock"></i> December 30, 2021</span>
-                                <br> <br>
-                                <span>Orci luctus nibh, ut leo sit amet, consectetuer ut, neque</span>
-                                <br><br>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4 col-sm-12 col-md-4 homes-blogs-hover">
-
-                        <div class="card home-blog" style="width: 24rem;">
-                            <a href="file:///C:/Users/HP/Desktop/EndProject/blog-detail.html">
-                                <i class="fa-solid fa-circle-plus"></i>
-                            </a>
-                            <img src="~/assets/img/home-blog3.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <span class="card-text"><i class="fa-regular fa-user"></i></span>
-                                <span class="card-text">admin on</span>
-                                <span><i class="fa-regular fa-clock"></i> December 30, 2021</span>
-                                <br> <br>
-                                <span>Praesent ac turpis semper felis sollicitudin mi vel eros</span>
-                                <br><br>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </div>
     </section>

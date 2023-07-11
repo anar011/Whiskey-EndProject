@@ -1,11 +1,13 @@
 ﻿using EndProject.Data;
 using EndProject.Helpers;
+using EndProject.Helpers.Enums;
 using EndProject.Models;
 using EndProject.Services.Interfaces;
 using EndProject.ViewModels.Product;
 using EndProject.ViewModels.Shop;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,19 +20,23 @@ namespace EndProject.Controllers
         private readonly ICrudService<ProductComment> _crudService;
         private readonly ILayoutService _layoutService;
         private readonly AppDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
+     
 
 
         public ShopController(IProductService productService,
                       ICategoryService categoryService,
                       ILayoutService layoutService,
                       ICrudService<ProductComment> crudService,
-                      AppDbContext context)
+                      AppDbContext context,
+                      UserManager<AppUser> userManager)
         {
             _productService = productService;
             _categoryService = categoryService;
             _layoutService = layoutService;
             _crudService = crudService;
             _context = context;
+            _userManager = userManager;
         }
         public async Task<IActionResult> Index(int page = 1, int take = 6, int? categoryId = null)
         {
@@ -169,24 +175,7 @@ namespace EndProject.Controllers
         }
 
 
-        //public async Task<IActionResult> GetProductByAuthor(int? id)
-        //{
-        //    List<Product> products = await _context.ProductCategories.Include(m => m.Category).Include(m => m.Product).Where(m => m.CategoryId == id).Select(m => m.Product).ToListAsync();
-
-        //    return PartialView("_ProductsPartial", products);
-        //}
-
-
-        //public async Task<IActionResult> MainSearch(string searchText)
-        //{
-        //    var products = await _context.Products
-        //                        .Include(m => m.ProductCategories)?
-        //                        .OrderByDescending(m => m.Id)
-        //                        .Where(m => !m.SoftDelete && m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
-        //                        .ToListAsync();
-
-        //    return View(products);
-        //}
+     
 
     }
 }

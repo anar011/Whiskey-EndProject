@@ -17,6 +17,6 @@ namespace EndProject.Models
 
         public AppUser AppUser { get; set; }
 
-        public List<OrderItem>? OrderItems { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
     }
 }

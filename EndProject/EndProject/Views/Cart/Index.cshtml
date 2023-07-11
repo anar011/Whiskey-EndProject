@@ -26,7 +26,7 @@
 
                 <div class="main-up-contact-titles">
                     <div class="main-up-contact-title">
-                        <a><span>Home</span></a>
+                        <a asp-controller="Home" asp-action="Index"><span>Home</span></a>
                         <hr>
                         <span>></span>
                         <span>Cart</span>
@@ -85,7 +85,7 @@
                     </tbody>
                     <tr>
                         <td>
-                            <button class="btn btn-primary shop"><a href="Shop.html">Continue shopping</a></button>
+                            <button class="btn btn-primary shop"><a asp-controller="Shop" asp-action="Index">Continue shopping</a></button>
                         </td>
                     
                         <td><span>Grand total:</span></td>

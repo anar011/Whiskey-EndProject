@@ -40,6 +40,16 @@ $(document).ready(function () {
       document.querySelector("#overlay").style.display = "block"
       document.body.style.overflow = "hidden";
 
+
+
+        let prodImg = this.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.firstElementChild.getAttribute("src");
+        let prodName = this.parentNode.parentNode.parentNode.nextElementSibling.nextElementSibling.firstElementChild.innerText;
+        console.log(prodName)
+
+
+        document.querySelector(".product-priviews .priviews-img img").setAttribute("src", prodImg);
+        document.querySelector(".product-priviews .whiskey-name h1").innerText = prodName;
+
     })
   });
 
@@ -186,3 +196,27 @@ $(document).ready(function () {
 
 
 });
+
+
+//$(function () {
+
+//    $(document).on("click", ".add-to-eye-btn", function (e) {
+//        let id = $(this).attr("data-id");
+//        let desc = $(".product-priviews .whiskey-info span")
+//        let category = $(".product-modal .pro-category .category-name .type-name ")
+//        let brand = $(".product-modal .pro-category .vendor-name .type-name ")
+//        let sku = $(".product-modal .pro-category .sku-name .type-name ")
+
+//        $.ajax({
+//            type: "Get",
+//            url: /Home/GetDataProductModal / ${ id },
+//            success: function (res) {
+//                desc.text(res.description)
+//                category.text(res.categoryName)
+//                brand.text(res.brandName)
+//                sku.text(res.sku)
+//            }
+//        })
+//    return false;
+
+////})
