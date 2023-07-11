@@ -71,7 +71,7 @@
 
                         <a asp-controller="wishlist" asp-action="Index">
                             <i class="fa-regular fa-heart"></i>
-                            <b>0</b>
+                            
                         </a>
                         <a asp-controller="cart" asp-action="index">
                             <i class="fa-solid fa-bag-shopping"></i>
@@ -150,31 +150,27 @@
 
                             <ul>
                                 <li>
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/home.html">
-                                        <span>HOME</span>
-                                    </a>
+                                    <a asp-controller="Home" asp-action="Index"><span>HOME</span></a>
                                 </li>
                                 <hr>
 
                                 <li>
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/about.html">
-                                        <span>ABOUT</span>
-                                    </a>
+                                    <a asp-controller="About" asp-action="Index"><span>ABOUT</span></a>
                                 </li>
                                 <hr>
 
                                 <li>
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product.html"><span>Shop</span></a>
+                                    <a asp-controller="Shop" asp-action="Index"><span>SHOP</span></a>
                                 </li>
                                 <hr>
 
                                 <li>
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/blog.html"><span>BLOG</span></a>
+                                    <a asp-controller="Blog" asp-action="Index"><span>BLOG</span></a>
                                 </li>
                                 <hr>
 
                                 <li>
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/contact.html"><span>CONTACT</span></a>
+                                    <a asp-controller="Contact" asp-action="Index"><span>CONTACT</span></a>
                                 </li>
 
 
@@ -209,29 +205,60 @@
 
                             </a>
 
-                            <a href="file:///C:/Users/HP/Desktop/EndProject/wishlist.html">
+                            <a asp-controller="wishlist" asp-action="Index">
                                 <i class="fa-regular fa-heart"></i>
-                                <span>0</span>
+                                
                             </a>
 
-                            <a href="file:///C:/Users/HP/Desktop/EndProject/cart.html">
+                            <a asp-controller="cart" asp-action="index">
                                 <i class="fa-solid fa-bag-shopping"></i>
-                                <span>0</span>
-                                <span>$0.00</span>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <span>@(baskets is null ? "0" : baskets.Count)</span>
+                                    <span>$@basket.Sum(e=>e.Price*e.Quantity)</span>
+                                }
+                                else
+                                {
+                                    <span>0</span>
+                                    <span>$0.00</span>
+                                }
+
+
 
                             </a>
 
 
                             <div class="header-login-register d-none mt-2 ">
-                                <div class="header-login border">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/login.html">Login</a>
-                                </div>
-                                <div class="header-register border">
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/register.html">Register</a>
-                                </div>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="my-account.html">@User.Identity.Name</a>
+                                    </li>
+                                    <div class="border"></div>
+                                    <li class="nav-item">
+                                        <form asp-controller="Account" asp-action="Logout" method="post">
+                                            <button style="border:none;color:black;background-color:white; width:100%;" type="submit" class="nav-link">Logout</button>
+                                        </form>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <div class="header-login border">
+                                        <a asp-controller="Account" asp-action="Login">Login</a>
+                                    </div>
+                                    <div class="header-register border">
+                                        <a asp-controller="Account" asp-action="Register">Register</a>
+                                    </div>
+                                }
 
 
                             </div>
+
+                      
+
+
+
+
 
 
 
@@ -351,31 +378,27 @@
 
                             <ul>
                                 <li>
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/home.html">
-                                        <span>HOME</span>
-                                    </a>
+                                    <a asp-controller="Home" asp-action="Index"><span>HOME</span></a>
                                 </li>
                                 <hr>
 
                                 <li>
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/about.html">
-                                        <span>ABOUT</span>
-                                    </a>
+                                    <a asp-controller="About" asp-action="Index"><span>ABOUT</span></a>
                                 </li>
                                 <hr>
 
                                 <li>
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/product.html"><span>Shop</span></a>
+                                    <a asp-controller="Shop" asp-action="Index"><span>SHOP</span></a>
                                 </li>
                                 <hr>
 
                                 <li>
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/blog.html"><span>BLOG</span></a>
+                                    <a asp-controller="Blog" asp-action="Index"><span>BLOG</span></a>
                                 </li>
                                 <hr>
 
                                 <li>
-                                    <a href="file:///C:/Users/HP/Desktop/EndProject/contact.html"><span>CONTACT</span></a>
+                                    <a asp-controller="Contact" asp-action="Index"><span>CONTACT</span></a>
                                 </li>
 
 
