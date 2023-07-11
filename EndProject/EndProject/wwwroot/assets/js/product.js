@@ -60,7 +60,22 @@ $(document).ready(function () {
       e.preventDefault();
       document.querySelector(".product-priviews-detail").classList.remove("d-none")
       document.querySelector("#overlay").style.display = "block"
-      document.body.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+
+
+
+
+        let prodImg = this.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.firstElementChild.getAttribute("src");
+        let prodName = this.parentNode.parentNode.parentNode.nextElementSibling.nextElementSibling.firstElementChild.innerText;
+        console.log(prodName)
+
+
+        document.querySelector(".product-priviews .priviews-img img").setAttribute("src", prodImg);
+        document.querySelector(".product-priviews .whiskey-name h1").innerText = prodName;
+
+
+
+
 
     })
   });
