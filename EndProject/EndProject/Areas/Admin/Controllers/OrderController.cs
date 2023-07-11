@@ -2,21 +2,27 @@
 using EndProject.Helpers.Enums;
 using EndProject.Models;
 using EndProject.Services;
+using EndProject.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace EndProject.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "SuperAdmin, Admin")]
+
     [Area("Admin")]
 
     public class OrderController : Controller
     {
         private readonly AppDbContext _context;
-        private readonly EmailService _emailService;
+        private readonly IEmailService _emailService;
 
-        public OrderController(AppDbContext context)
+        public OrderController(AppDbContext context, IEmailService emailService)
         {
             _context = context;
+            _emailService= emailService;
         }
         public IActionResult Index()
         {
@@ -27,7 +33,7 @@ namespace EndProject.Areas.Admin.Controllers
         {
             Order order = _context.Orders.Include(o => o.OrderItems).Include(o => o.AppUser).FirstOrDefault(o => o.Id == id);
             ViewBag.Products = _context.Products.ToList();
-            if (order == null) return Redirect("~/Error/Error");
+            if (order == null) return NotFound(); ;
 
             return View(order);
         }
@@ -36,34 +42,37 @@ namespace EndProject.Areas.Admin.Controllers
 
 
             Order order = _context.Orders.Include(x => x.AppUser).FirstOrDefault(o => o.Id == id);
-            if (order == null) return Redirect("~/Error/Error");
+            if (order == null)  return NotFound();
 
             order.Status = Status.Accepted;
 
             _context.SaveChanges();
-            //string recipientEmail = order.AppUser.Email;
-            //string subject = "Your order has been accepted";
-            //string body = "Your order has been accepted. Thank you! The total amount to be paid is " + order.TotalPrice + "₼";
+            string recipientEmail = order.AppUser.Email;
+            string subject = "Your order has been accepted";
+            string body = "Your order has been accepted. Thank you! The total amount to be paid is " + order.TotalPrice + "₼";
 
 
-            //_emailService.SendEmail(recipientEmail, subject, body);
+            _emailService.Send(recipientEmail, subject, body);
+
             return RedirectToAction("Index", "Order");
 
         }
         public IActionResult Reject(int id)
         {
             Order order = _context.Orders.Include(x => x.AppUser).FirstOrDefault(o => o.Id == id);
-            if (order == null) return Redirect("~/Error/Error");
+            if (order == null) return NotFound();
 
             order.Status = Status.Rejected;
 
             _context.SaveChanges();
-            //string recipientEmail = order.AppUser.Email;
-            //string subject = "Your order has been rejected";
-            //string body = "Your order has been rejected. Unfortunately, the products you ordered are currently out of stock.Thank you for your understanding.";
+            string recipientEmail = order.AppUser.Email;
+            string subject = "Your order has been rejected";
+            string body = "The order was canceled because the product you selected is out of stock";
 
 
-            //_emailService.SendEmail(recipientEmail, subject, body);
+            _emailService.Send(recipientEmail, subject, body);
+
+
             return RedirectToAction("Index", "Order");
 
         }

@@ -1,0 +1,806 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: #343333;
+}
+
+@media (max-width: 850px) {
+  #main-up .main-up-contact-descriptions .main-up-contact-description {
+    width: 100% !important;
+  }
+  #background-img .background-img-one {
+    width: 100% !important;
+    height: auto;
+  }
+  #background-img .background-img-one img {
+    width: 100% !important;
+    position: relative;
+    bottom: 11px;
+  }
+  #main-middle .main-middle-address-img .main-middle-address-location {
+    gap: 127px;
+  }
+  #main-middle .main-middle-address-img .main-middle-address-title {
+    width: 100% !important;
+    text-align: center;
+  }
+  #main-middle .main-middle-address-img .main-middle-address-signature {
+    width: 100% !important;
+    text-align: center;
+  }
+  #main-middle .main-middle-address-img .main-middle-address-description {
+    width: 100% !important;
+    text-align: center;
+  }
+  #main-middle .main-middle-address-img .main-middle-address-description h5 {
+    width: 100% !important;
+  }
+  #main-down .mian-down-maecenas {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  #main-down .mian-down-maecenas h3 {
+    width: 100% !important;
+  }
+  #main-down .main-down-nul-integ-males .main-down-nullam .main-down-nul-img {
+    width: 100% !important;
+  }
+  #main-down .main-down-nul-integ-males .main-down-nullam .main-down-nul-img img {
+    width: 30% !important;
+  }
+  #main-down .main-down-question {
+    width: 100% !important;
+  }
+  #main-down .main-down-question .main-down-question-title {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  #main-down .main-down-question .main-down-question-title h1 {
+    width: 100% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname {
+    width: 100% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname .group {
+    width: 100% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname .group input {
+    width: 94% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname .group textarea {
+    width: 94% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname .group .bar {
+    width: 100% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname button {
+    width: 45% !important;
+  }
+  #footer .footers .footer {
+    text-align: center;
+  }
+}
+@media (min-width: 760px) and (max-width: 1200px) {
+  #main-middle .main-middle-address-img .main-middle-address-location {
+    gap: 0px !important;
+  }
+  #main-middle .main-middle-address-img .main-middle-address-title {
+    width: 100% !important;
+    display: block;
+  }
+  #main-middle .main-middle-address-img .main-middle-address-signature {
+    width: 100% !important;
+    display: block;
+  }
+  #main-middle .main-middle-address-img .main-middle-address-description {
+    width: 100% !important;
+    display: block;
+  }
+  #main-middle .main-middle-address-img .main-middle-address-description h5 {
+    width: 100% !important;
+  }
+  #main-down .mian-down-maecenas {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  #main-down .mian-down-maecenas h3 {
+    width: 100% !important;
+  }
+  #main-down .main-down-nul-integ-males .main-down-nullam .main-down-nul-img {
+    width: 50% !important;
+  }
+  #main-down .main-down-nul-integ-males .main-down-nullam .main-down-nul-img img {
+    width: 40% !important;
+  }
+  #main-down .main-down-nul-integ-males .main-down-nullam p {
+    width: 50% !important;
+  }
+  #main-down .main-down-question {
+    width: 100% !important;
+  }
+  #main-down .main-down-question .main-down-question-title {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  #main-down .main-down-question .main-down-question-title h1 {
+    width: 100% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname {
+    width: 100% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname .group {
+    width: 100% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname .group input {
+    width: 95% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname .group textarea {
+    width: 95% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname .group .bar {
+    width: 95% !important;
+  }
+  #main-down .main-down-question .main-down-fullname-phone .main-down-fullname button {
+    width: 40% !important;
+  }
+}
+header #navbars {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 5;
+}
+header #navbars .navbar {
+  width: 100%;
+  height: 120px;
+}
+header #navbars .navbar ul {
+  gap: 14%;
+}
+header #navbars .navbar ul li {
+  list-style: none;
+  float: left;
+}
+header #navbars .navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
+header #navbars .navbar ul li a span {
+  color: #ca8f65;
+}
+header #navbars .navbar ul li a:hover span {
+  color: white;
+}
+header #navbars .header-logo {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+header #navbars .header-search {
+  width: 100%;
+  height: 100%;
+}
+header #navbars .header-search input {
+  width: 86%;
+  height: 28%;
+  border: none;
+}
+header #navbars .header-search a i {
+  font-size: 138%;
+  color: #ca8f65;
+  position: relative;
+  float: right;
+  top: 44%;
+}
+header #navbars .header-icons {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+header #navbars .header-icons .header-login-register {
+  width: 12%;
+  height: 55%;
+  background-color: rgb(243, 243, 243);
+  position: absolute;
+}
+header #navbars .header-icons .header-login-register .header-login {
+  text-align: left;
+  width: 100%;
+  height: 50%;
+}
+header #navbars .header-icons .header-login-register .header-login:hover {
+  background-color: white;
+}
+header #navbars .header-icons .header-login-register .header-login a {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  margin-left: 2%;
+}
+header #navbars .header-icons .header-login-register .header-register {
+  text-align: left;
+  width: 100%;
+  height: 50%;
+}
+header #navbars .header-icons .header-login-register .header-register:hover {
+  background-color: white;
+}
+header #navbars .header-icons .header-login-register .header-register a {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  margin-left: 2%;
+}
+header #navbars .header-icons a {
+  text-decoration: none;
+}
+header #navbars .header-icons a b {
+  color: #ca8f65;
+  position: relative;
+  right: 7%;
+  bottom: 18px;
+  display: inline-block;
+  width: 18px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 11px;
+  background-color: #ca8f65;
+  color: white;
+  border-radius: 100%;
+}
+header #navbars .header-icons a i {
+  font-size: 138%;
+  color: #ca8f65;
+  padding-top: 22%;
+  margin: 4%;
+}
+header #navbars .header-icons a span {
+  position: relative;
+  right: 7%;
+  bottom: 18px;
+  display: inline-block;
+  width: 18px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 11px;
+  background-color: #ca8f65;
+  color: white;
+  border-radius: 100%;
+}
+header #navbars .header-icons a span:last-child {
+  background-color: beige;
+  font-size: 110%;
+  width: 0;
+  height: 0;
+  margin-right: 10%;
+  bottom: 0px;
+  color: #ca8f65;
+}
+header #tablet-navbars .tablet-navbar {
+  width: 93%;
+  height: auto;
+  position: absolute;
+  z-index: 5;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-menu-icon {
+  width: 100%;
+  height: auto;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-menu-icon i {
+  font-size: 50px;
+  color: #ca8f65;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-menu {
+  width: 67%;
+  height: 74%;
+  background-color: #2a2a2a;
+  border-radius: 2%;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-menu hr {
+  color: #f1e9e4;
+  margin-left: -31px;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-menu ul {
+  list-style: none;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-menu ul li {
+  padding-top: 10px;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-menu ul li a {
+  text-decoration: none;
+  color: #ca8f65;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-menu ul li a span {
+  font-family: cursive;
+}
+header #tablet-navbars .tablet-navbar .header-login-register {
+  width: 24%;
+  height: 55%;
+  background-color: rgb(243, 243, 243);
+  position: absolute;
+}
+header #tablet-navbars .tablet-navbar .header-login-register .header-login {
+  text-align: left;
+  width: 100%;
+  height: 50%;
+}
+header #tablet-navbars .tablet-navbar .header-login-register .header-login:hover {
+  background-color: white;
+}
+header #tablet-navbars .tablet-navbar .header-login-register .header-login a {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  margin-left: 2%;
+}
+header #tablet-navbars .tablet-navbar .header-login-register .header-register {
+  text-align: left;
+  width: 100%;
+  height: 50%;
+}
+header #tablet-navbars .tablet-navbar .header-login-register .header-register:hover {
+  background-color: white;
+}
+header #tablet-navbars .tablet-navbar .header-login-register .header-register a {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  margin-left: 2%;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-logo {
+  width: 100%;
+  height: auto;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-icons {
+  width: 100%;
+  height: auto;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-icons a {
+  text-decoration: none;
+  color: #ca8f65;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-icons a:nth-child(3) span {
+  position: relative;
+  bottom: 12px;
+  right: 2%;
+  font-size: 25px;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-icons a:nth-child(4) span:nth-child(2) {
+  position: relative;
+  bottom: 12px;
+  right: 2%;
+  font-size: 25px;
+}
+header #tablet-navbars .tablet-navbar .tablet-navbar-icons a i {
+  width: 10%;
+  font-size: 25px;
+}
+header #tablet-navbars .tablet-navbar-search {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 5;
+  top: 7%;
+}
+header #tablet-navbars .tablet-navbar-search input {
+  margin-left: 66%;
+}
+header #phone-navbars .phone-navbars {
+  width: 100%;
+  height: auto;
+  background-color: #343333;
+  z-index: 20;
+}
+header #phone-navbars .phone-navbars .phone-navbar-logo {
+  width: 100%;
+  height: auto;
+  text-align: end;
+}
+header #phone-navbars .phone-navbars .phone-navbar-basket {
+  width: 100%;
+  height: auto;
+  text-align: end;
+}
+header #phone-navbars .phone-navbars .phone-navbar-basket a {
+  text-decoration: none;
+  color: #ca8f65;
+}
+header #phone-navbars .phone-navbars .phone-navbar-basket a span:nth-child(2) {
+  position: relative;
+  bottom: 10px;
+}
+header #phone-navbars .phone-navbars .phone-navbar-icons {
+  width: 100%;
+  height: auto;
+  text-align: end;
+}
+header #phone-navbars .phone-navbars .phone-navbar-icons i {
+  color: #ca8f65;
+  font-size: 26px;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons {
+  width: 100%;
+  height: auto;
+  background-color: #2a2a2a;
+  position: absolute;
+  border-radius: 2%;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu-icon-search {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu-icon-search i {
+  color: #ca8f65;
+  font-size: 20px;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu-login-register {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu-login-register hr {
+  color: #ca8f65;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu-login-register a {
+  text-decoration: none;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu-login-register a:nth-child(2) span {
+  position: relative;
+  bottom: 10px;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu-login-register a:nth-child(3) span:nth-child(2) {
+  position: relative;
+  bottom: 10px;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu-login-register a i {
+  color: #ca8f65;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu-login-register a span {
+  color: #ca8f65;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-login-register {
+  width: 83%;
+  height: auto;
+  background-color: whitesmoke;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-login-register a {
+  text-decoration: none;
+  color: #ca8f65;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu {
+  width: 100%;
+  height: auto;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu ul {
+  list-style: none;
+  margin-top: 12px;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu ul a {
+  text-decoration: none;
+  color: #ca8f65;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu ul a span {
+  font-family: cursive;
+}
+header #phone-navbars .phone-navbars .phone-navbar-menu-icons .phone-navbar-menu ul hr {
+  color: #ca8f65;
+  margin-left: -31px;
+}
+
+main #main-up {
+  background-color: #2a2a2a;
+}
+main #main-up .main-up-contact-name {
+  width: 100%;
+  height: 65px;
+  text-align: center;
+  margin-top: 15%;
+}
+main #main-up .main-up-contact-name h1 {
+  color: #ca8f65;
+}
+main #main-up .main-up-contact-signature {
+  width: 100%;
+  height: 65px;
+  text-align: center;
+}
+main #main-up .main-up-contact-descriptions {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #main-up .main-up-contact-descriptions .main-up-contact-description {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #main-up .main-up-contact-descriptions .main-up-contact-description p {
+  color: white;
+}
+main #background-img {
+  width: 100;
+}
+main #background-img img {
+  width: 100%;
+}
+main #main-middle .main-middle-number {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+main #main-middle .main-middle-number h1 a {
+  text-decoration: none;
+  color: #ca8f65;
+}
+main #main-middle .mamin-middle-mail {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+main #main-middle .mamin-middle-mail h1 a {
+  text-decoration: none;
+  color: #ca8f65;
+}
+main #main-middle .main-middle-address-img {
+  width: 100%;
+  height: auto;
+}
+main #main-middle .main-middle-address-img .main-middle-address-title {
+  width: 100%;
+  height: auto;
+}
+main #main-middle .main-middle-address-img .main-middle-address-title h1 {
+  color: #ca8f65;
+}
+main #main-middle .main-middle-address-img .main-middle-address-signature {
+  width: 100%;
+  height: auto;
+}
+main #main-middle .main-middle-address-img .main-middle-address-description {
+  width: 100%;
+  height: auto;
+}
+main #main-middle .main-middle-address-img .main-middle-address-description h5 {
+  width: 71%;
+  color: #ca8f65;
+}
+main #main-middle .main-middle-address-img .main-middle-address-location {
+  width: 100%;
+  height: auto;
+}
+main #main-middle .main-middle-address-img .main-middle-address-name {
+  width: 100%;
+  height: auto;
+}
+main #main-middle .main-middle-address-img .main-middle-address-name h5 {
+  color: #ca8f65;
+}
+main #main-middle .main-middle-address-img .main-middle-address {
+  width: 100%;
+  height: auto;
+}
+main #main-middle .main-middle-address-img .main-middle-address p {
+  width: 44%;
+  color: #8e8e8e;
+}
+main #main-middle .main-middle-address-img .main-middle-address-down {
+  width: 100%;
+  height: auto;
+}
+main #main-middle .main-middle-address-img .main-middle-address-down p {
+  color: #8e8e8e;
+}
+main #main-middle .main-middle-address-img .main-middle-address-img {
+  width: 100%;
+  height: auto;
+}
+main #main-middle .main-middle-address-img .main-middle-address-img img {
+  width: 100%;
+  height: auto;
+}
+main #main-down .mian-down-maecenas {
+  width: 100%;
+  height: auto;
+}
+main #main-down .mian-down-maecenas h3 {
+  width: 60%;
+  color: #ca8f65;
+  font-family: "Big Shoulders Display", Helvetica, Arial, sans-serif;
+}
+main #main-down .main-down-nul-integ-males {
+  width: 100%;
+  height: auto;
+}
+main #main-down .main-down-nul-integ-males .main-down-nullam .main-down-nul-img img {
+  position: relative;
+  left: 22%;
+}
+main #main-down .main-down-nul-integ-males .main-down-nullam .main-down-nul-img-title h5 {
+  color: white;
+}
+main #main-down .main-down-nul-integ-males .main-down-nullam .main-down-nul-img-desc p {
+  width: 85%;
+  color: #8e8e8e;
+}
+main #main-down .main-down-question {
+  width: 100%;
+  height: auto;
+  border: 1px solid #4f4f4f;
+}
+main #main-down .main-down-question .main-down-question-title {
+  width: 100%;
+  height: auto;
+}
+main #main-down .main-down-question .main-down-question-title h1 {
+  color: #ca8f65;
+  width: 50%;
+  margin-left: 5%;
+  font-family: "Big Shoulders Display", Helvetica, Arial, sans-serif;
+}
+main #main-down .main-down-question .main-down-fullname-phone {
+  width: 100%;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname {
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group {
+  position: relative;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group input,
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group textarea {
+  font-size: 14px;
+  display: block;
+  width: 552px;
+  border: none;
+  border-bottom: 1px solid #949494;
+  outline: none;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group input:focus ~ label, main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group input:valid ~ label,
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group textarea:focus ~ label,
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group textarea:valid ~ label {
+  top: -8px;
+  font-size: 10px;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group input:focus ~ .bar::before, main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group input:focus ~ .bar::after,
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group textarea:focus ~ .bar::before,
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group textarea:focus ~ .bar::after {
+  width: 50%;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group input {
+  padding: 10px 0 10px 5px;
+  background-color: #343333;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group textarea {
+  height: 20%;
+  padding: 10px 0 0 5px;
+  resize: none;
+  background-color: #343333;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group label {
+  color: #999;
+  font-size: 14px;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.4s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group .bar {
+  position: relative;
+  display: block;
+  width: 90%;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group .bar::before, main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group .bar::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: var(--beforeAndAfterBack, white);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  z-index: 1;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group .bar::before {
+  left: 45%;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group .bar::after {
+  right: 50%;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form .group .validation {
+  font-size: 10px;
+  color: red;
+  transition: 0.4s;
+  opacity: 0;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form button {
+  width: 20%;
+  height: 45px;
+  color: black;
+  border-radius: 5px;
+  border: none;
+  margin-top: 8%;
+  background-color: #ca8f65;
+  margin-bottom: 10%;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 3%;
+}
+main #main-down .main-down-question .main-down-fullname-phone .main-down-fullname form button:hover {
+  background-color: aliceblue;
+}
+main #main-map iframe {
+  width: 100%;
+  background-color: #949494 !important;
+}
+
+footer #footer .footers {
+  width: 100%;
+  height: auto;
+  background-color: #2a2a2a;
+}
+footer #footer .footers .footer-logo {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+footer #footer .footers .footer-logo img {
+  width: 100%;
+  height: 100%;
+}
+footer #footer .footers .footer .footer-title {
+  width: 100%;
+  height: 40px;
+}
+footer #footer .footers .footer .footer-title h5 {
+  color: #ca8f65;
+  margin-left: 9%;
+}
+footer #footer .footers .footer .footer-description {
+  width: 100%;
+}
+footer #footer .footers .footer .footer-description ul li {
+  list-style: none;
+}
+footer #footer .footers .footer .footer-description ul li a {
+  text-decoration: none;
+  color: #666666;
+}
+footer #footer .footers .footer .footer-description ul li a:hover {
+  color: #ca8f65;
+}
+footer #footer .footers .footer hr {
+  color: #ebebeb;
+}
+footer #footer-lines {
+  width: 100%;
+  height: 60px;
+}
+footer #footer-lines .footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(104, 104, 104);
+}
+footer #footer-lines .footer-line .footer-title span {
+  color: #8e8e8e;
+}
+footer #footer-lines .footer-line .footer-titles {
+  text-align: end;
+}
+footer #footer-lines .footer-line .footer-titles span {
+  color: #8e8e8e;
+}/*# sourceMappingURL=contact.css.map */

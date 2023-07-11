@@ -1,0 +1,2140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: #343333;
+}
+
+@media (max-width:850px){
+
+    #main-detail-products{
+        .main-detail-product{
+            width: 100%;
+            height: auto !important;
+            .priviews-informs{
+
+                .whiskey-name{
+                    width: 100% !important;
+                    height: auto;
+                    text-align: center !important;
+
+                
+                }
+
+
+                .whiskey-capacity{
+                    margin-top: 18% !important;
+
+                    button{
+                        width: 20% !important;
+                        height: 70% !important;
+                    }
+                }
+
+                .whiskey-button-cart{
+                    .whiskey-addcart{
+                        button{
+                            width: 100% !important;
+                        }
+
+                    }
+                }
+
+                .whiskey-share{
+                    width: 100%;
+                    height: auto;
+                    margin-top: 5% !important;
+                    text-align: end !important;
+
+                    span{
+                        color: #8e8e8e !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    #background-img{
+        img{
+            width: 100% !important;
+            height: auto;
+            position: relative !important;
+            bottom: 11px !important;
+        }
+    }
+
+    #main-traditions{
+        .main-tradition{
+          
+           .main-logo{
+            width: 100% !important;
+            height: auto;
+            img{
+                width: 12% !important;
+            }
+           } 
+
+           .tradition-description{
+            width: 100% !important;
+            height: auto !important;
+            br{
+                display: none;
+            }
+
+            h5{
+                color: #8e8e8e !important;
+
+            }
+            
+            
+           }
+        }
+    }
+
+    #main-middle{
+       
+        .main-middle-img{
+            
+            width: 100% !important;
+            height: auto;
+            img{
+              
+                width: 100% !important;
+                height: auto !important;
+            }
+
+        }
+    }
+
+    #background-img-comments{
+        .back-img-comment{
+            width: 100%;
+            height: auto;
+
+            img{
+                width: 100%;
+                position: relative;
+                top: 55px !important;
+            }
+        }
+    }
+
+    #main-comment{
+        .comments{
+            .comments-name{
+                button{
+                    width: 30% !important;
+                }
+            }
+        }
+    }
+
+    #blogs-advertising{
+        .advertisings{
+            .advertising-icons{
+                .shipping{
+                    margin-top: 30px !important;
+                }
+
+                .shipping-name{
+                    h4{
+                        font-size: 15px !important;
+                    }
+                }
+
+                .shipping-description{
+                    span{
+                        font-size: 15px !important;
+
+                    }
+                }
+            }
+        }
+    }
+
+    #background-img-three{
+        .back-imgs{
+            img{
+                position: relative;
+                top: 10px;
+            }
+        }
+    }
+
+    #footer{
+        .footers{
+    
+            .footer {
+                text-align: center;
+            }
+    
+        }
+    
+    }
+
+}
+
+@media (min-width:760px) and (max-width:1200px){
+
+    #main-detail-products{
+        .main-detail-product{
+            width: 100%;
+            height: auto !important;
+
+            .main-detail-products-img{
+                width: 100% !important;
+                height: auto !important;
+                text-align: center !important;
+
+                img{
+                    width: 70% !important;
+                }
+            }
+            .priviews-informs{
+                width: 100%;
+                height: auto;
+
+                .whiskey-name{
+                    width: 100% !important;
+                    height: auto;
+                    text-align: center !important;
+
+                    h1{
+                        text-align: center !important;
+                    }
+
+                
+                }
+
+
+                .whiskey-capacity{
+                    margin-top: 3% !important;
+
+                    button{
+                        width: 20% !important;
+                        height: 100% !important;
+                    }
+                }
+
+                .whiskey-button-cart{
+                    margin-top: 14px !important;
+                    .whiskey-addcart{
+                        button{
+                            width: 100% !important;
+                        }
+
+                    }
+
+                    .whiskey-iconheart{
+                        width: 100% !important;
+                        height: 60% !important;
+                        margin-top: 0% !important;
+                        margin-left: 16% !important;
+
+                    }
+
+
+                   
+                }
+
+                .whiskey-share{
+                    width: 100%;
+                    height: auto;
+                    margin-top: 2% !important;
+                    text-align: end !important;
+
+                    span{
+                        color: #8e8e8e !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+
+header {
+    #navbars {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        z-index: 5;
+
+
+
+
+        .navbar {
+            width: 100%;
+            height: 120px;
+
+            @media screen and (max-width:821px) {}
+
+
+            ul {
+                gap: 14%;
+
+
+
+                li {
+                    list-style: none;
+                    float: left;
+
+
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+
+
+
+
+
+
+
+
+                        span {
+
+                            color: #ca8f65;
+
+
+
+
+
+
+                        }
+
+                        &:hover span {
+                            color: white;
+                        }
+
+
+
+                    }
+                }
+            }
+
+        }
+
+
+        .header-logo {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+
+
+        }
+
+        .header-search {
+            width: 100%;
+            height: 100%;
+
+
+            input {
+                width: 86%;
+                height: 28%;
+                border: none;
+            }
+
+            a {
+
+                i {
+                    font-size: 138%;
+                    color: #ca8f65;
+                    position: relative;
+                    float: right;
+                    top: 44%;
+
+
+                }
+            }
+
+
+
+
+
+
+
+
+        }
+
+        .header-icons {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+            .header-login-register {
+                width: 12%;
+                height: 55%;
+                background-color: rgb(243, 243, 243);
+                position: absolute;
+
+
+
+
+                .header-login {
+                    text-align: left;
+                    width: 100%;
+                    height: 50%;
+
+                    &:hover {
+                        background-color: white;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: rgb(26, 26, 26);
+                        margin-left: 2%;
+
+                    }
+                }
+
+
+                .header-register {
+
+                    text-align: left;
+                    width: 100%;
+                    height: 50%;
+
+                    &:hover {
+                        background-color: white;
+                    }
+
+
+                    a {
+                        text-decoration: none;
+                        color: rgb(26, 26, 26);
+                        margin-left: 2%;
+
+                    }
+
+                }
+
+
+
+            }
+
+
+
+
+
+            a {
+                text-decoration: none;
+
+
+                b {
+                    color: #ca8f65;
+                    position: relative;
+                    right: 7%;
+                    bottom: 18px;
+                    display: inline-block;
+                    width: 18px;
+                    line-height: 18px;
+                    text-align: center;
+                    font-size: 11px;
+                    background-color: #ca8f65;
+                    color: white;
+                    border-radius: 100%;
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+                i {
+                    font-size: 138%;
+                    color: #ca8f65;
+                    padding-top: 22%;
+                    margin: 4%;
+
+                }
+
+
+                span {
+
+                    position: relative;
+                    right: 7%;
+                    bottom: 18px;
+                    display: inline-block;
+                    width: 18px;
+                    line-height: 18px;
+                    text-align: center;
+                    font-size: 11px;
+                    background-color: #ca8f65;
+                    color: white;
+                    border-radius: 100%;
+
+                    &:last-child {
+                        background-color: beige;
+                        font-size: 110%;
+                        width: 0;
+                        height: 0;
+                        margin-right: 10%;
+                        bottom: 0px;
+                        color: #ca8f65;
+
+
+                    }
+
+
+
+                }
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+    }
+
+    #tablet-navbars {
+
+
+        .tablet-navbar {
+            width: 93%;
+            height: auto;
+            position: absolute;
+            z-index: 5;
+
+            .tablet-navbar-menu-icon {
+                width: 100%;
+                height: auto;
+
+                i {
+                    font-size: 50px;
+                    color: #ca8f65;
+                }
+
+
+
+
+
+            }
+
+
+
+            .tablet-navbar-menu {
+                width: 67%;
+                height: 74%;
+                background-color: #2a2a2a;
+                border-radius: 2%;
+
+                hr {
+                    color: #f1e9e4;
+                    margin-left: -31px;
+                }
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        padding-top: 10px;
+
+
+
+
+                        a {
+                            text-decoration: none;
+                            color: #ca8f65;
+
+                            span {
+                                font-family: cursive;
+
+                            }
+
+
+
+
+
+                        }
+
+
+                    }
+                }
+            }
+
+            .header-login-register {
+                width: 24%;
+                height: 55%;
+                background-color: rgb(243, 243, 243);
+                position: absolute;
+
+
+
+
+                .header-login {
+                    text-align: left;
+                    width: 100%;
+                    height: 50%;
+
+                    &:hover {
+                        background-color: white;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: rgb(26, 26, 26);
+                        margin-left: 2%;
+
+                    }
+                }
+
+
+                .header-register {
+
+                    text-align: left;
+                    width: 100%;
+                    height: 50%;
+
+                    &:hover {
+                        background-color: white;
+                    }
+
+
+                    a {
+                        text-decoration: none;
+                        color: rgb(26, 26, 26);
+                        margin-left: 2%;
+
+                    }
+
+                }
+
+
+
+            }
+
+
+
+
+            .tablet-navbar-logo {
+                width: 100%;
+                height: auto;
+
+
+            }
+
+
+
+            .tablet-navbar-icons {
+                width: 100%;
+                height: auto;
+
+
+
+                a {
+
+                    text-decoration: none;
+                    color: #ca8f65;
+
+                    &:nth-child(3) {
+                        span {
+
+                            position: relative;
+                            bottom: 12px;
+                            right: 2%;
+                            font-size: 25px;
+
+                        }
+                    }
+
+
+                    &:nth-child(4) {
+
+                        span {
+
+                            &:nth-child(2) {
+                                position: relative;
+                                bottom: 12px;
+                                right: 2%;
+                                font-size: 25px;
+
+
+
+
+                            }
+
+
+                        }
+
+
+                    }
+
+                    i {
+                        width: 10%;
+                        font-size: 25px;
+
+
+
+
+                    }
+
+                }
+            }
+
+
+
+
+        }
+
+        .tablet-navbar-search {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            z-index: 5;
+            top: 7%;
+
+            input {
+                margin-left: 66%;
+            }
+
+
+
+        }
+
+
+    }
+
+    #phone-navbars {
+
+        .phone-navbars {
+            width: 100%;
+            height: auto;
+            background-color: #343333;
+            z-index: 20;
+
+
+
+            .phone-navbar-logo {
+                width: 100%;
+                height: auto;
+                text-align: end;
+            }
+
+            .phone-navbar-basket {
+                width: 100%;
+                height: auto;
+                text-align: end;
+
+                a {
+                    text-decoration: none;
+                    color: #ca8f65;
+
+                    span {
+
+
+
+                        &:nth-child(2) {
+
+                            position: relative;
+                            bottom: 10px;
+
+
+
+
+                        }
+
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+                }
+
+            }
+
+
+            .phone-navbar-icons {
+                width: 100%;
+                height: auto;
+                text-align: end;
+
+                i {
+                    color: #ca8f65;
+                    font-size: 26px;
+                }
+            }
+
+            .phone-navbar-menu-icons {
+                width: 100%;
+                height: auto;
+                background-color: #2a2a2a;
+                position: absolute;
+                border-radius: 2%;
+
+                .phone-navbar-menu-icon-search {
+                    width: 100%;
+                    height: auto;
+                    text-align: center;
+
+
+
+                    i {
+                        color: #ca8f65;
+                        font-size: 20px;
+
+
+
+
+                    }
+
+                }
+
+
+                .phone-navbar-menu-login-register {
+                    width: 100%;
+                    height: auto;
+
+                    text-align: center;
+
+                    hr {
+                        color: #ca8f65;
+                    }
+
+
+
+                    a {
+
+                        text-decoration: none;
+
+                        &:nth-child(2) {
+
+                            span {
+
+                                position: relative;
+                                bottom: 10px;
+                            }
+
+                        }
+
+
+                        &:nth-child(3) {
+
+
+                            span {
+
+                                &:nth-child(2) {
+                                    position: relative;
+                                    bottom: 10px;
+
+                                }
+
+
+                            }
+
+                        }
+
+                        i {
+                            color: #ca8f65;
+                        }
+
+                        span {
+                            color: #ca8f65;
+
+
+                        }
+
+
+                    }
+                }
+
+                .phone-login-register {
+                    width: 83%;
+                    height: auto;
+                    background-color: whitesmoke;
+
+                    a {
+                        text-decoration: none;
+                        color: #ca8f65;
+
+                    }
+
+
+                }
+
+                .phone-navbar-menu {
+                    width: 100%;
+                    height: auto;
+
+                    ul {
+                        list-style: none;
+                        margin-top: 12px;
+
+                        a {
+                            text-decoration: none;
+                            color: #ca8f65;
+
+                            span {
+                                font-family: cursive;
+                            }
+
+                        }
+
+                        hr {
+                            color: #ca8f65;
+                            margin-left: -31px;
+                        }
+
+
+                    }
+
+                }
+
+
+            }
+
+
+        }
+    }
+}
+
+main{
+    #main-up {
+        background-color: #2a2a2a;
+
+        .main-up-contact-name {
+            width: 100%;
+            height: 65px;
+            text-align: center;
+            margin-top: 15%;
+
+            h1 {
+                color: #ca8f65;
+
+            }
+
+        }
+
+   
+        .main-up-contact-titles {
+            width: 100%;
+            height: 120px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            .main-up-contact-title {
+                width: 50%;
+                height: auto;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2%;
+
+                a{
+                    text-decoration: none;
+
+                    span {
+                        color: #ca8f65;
+
+                        &:hover{
+                            color: white;
+                        }
+                        
+                    }
+
+                }
+
+                hr{
+                    color: #ca8f65;
+                }
+
+                span {
+                    color: #7a716a;
+                    
+                }
+
+
+
+               
+
+            }
+
+        }
+
+
+
+
+
+
+    }
+
+    #main-detail-products{
+        background-color: #2a2a2a;
+
+        .main-detail-product{
+            width: 100%;
+            height: auto;
+
+            .main-detail-products-img{
+                width: 100%;
+                height: auto;
+
+                img{
+                    width: 90%;
+                    height: auto;
+                }
+
+
+                
+              
+
+            }
+
+
+            .priviews-informs {
+                width: 100%;
+                height: 100%;
+
+
+                .whiskey-name {
+                    width: 100%;
+                    height: 14%;
+
+
+                    h1 {
+                        color: #ca8f65;
+                        text-align: left;
+                    }
+
+
+
+                }
+
+                .priviewWhiskey-price {
+                    width: 100%;
+                    height: 10%;
+
+
+                    h4 {
+                        color: #ca8f65;
+                    }
+
+
+
+                }
+
+                .whiskey-info {
+                    width: 89%;
+                    height: 20%;
+
+
+                    span {
+                        color: #8e8e8e;
+                    }
+                }
+
+                .whiskey-capacity {
+                    width: 100%;
+                    height: 10%;
+
+
+                    span {
+                        color: #f9eeee;
+                        font-size: 22px;
+                    }
+
+
+                    button {
+
+                        width: 10%;
+                        height: 50%;
+                        border: none;
+                        background-color: #303030;
+
+
+                        &:hover {
+                            background-color: #8e8e8e;
+
+                        }
+
+
+                        a {
+                            text-decoration: none;
+                            color: #6c6969;
+
+
+                        }
+
+                    }
+
+
+
+
+                }
+
+
+                .whiskey-price {
+                    width: 100%;
+                    height: 10%;
+
+
+
+                    span {
+                        font-size: 25px;
+                        font-weight: 650;
+                        color: #ca8f65;
+
+
+                    }
+
+
+                }
+
+                .whiskey-button-cart {
+                    width: 100%;
+                    height: 8%;
+
+
+                    .whiskey-buttons {
+                        width: 100%;
+                        height: 100%;
+                        border: 1px;
+
+
+
+                        button {
+                            width: 30%;
+                            height: 100%;
+                            background-color: #303030;
+                            border: none;
+
+                            &:hover {
+                                background-color: #444444;
+                            }
+
+                            a {
+
+                                i {
+                                    color: white;
+                                }
+                            }
+
+                        }
+
+                        input {
+                            width: 30%;
+                            height: 100%;
+                            border: none;
+                            background-color: #303030;
+                        }
+
+
+                    }
+
+
+                    .whiskey-addcart {
+                        width: 100%;
+                        height: 100%;
+                        background-color: #ca8f65;
+
+
+                        button {
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            background-color: #ca8f65;
+
+                            &:hover {
+                                background-color: #ebebeb;
+                                transition: 1s;
+                            }
+
+                            a {
+                                text-decoration: none;
+                                color: black;
+
+                            }
+                        }
+
+
+
+                    }
+
+                    .whiskey-iconheart {
+                        width: 100%;
+                        height: 60%;
+
+                        margin-top: 6%;
+                        margin-left: 8%;
+
+                        a {
+                            text-decoration: none;
+
+                            i {
+                                color: #ca8f65;
+                                font-size: 25px;
+
+                                &:hover {
+                                    color: #f9eeee;
+                                }
+
+
+
+                            }
+                        }
+                    }
+
+
+
+                }
+
+
+
+                .whiskey-share {
+                    width: 100%;
+                    height: auto;
+                    text-align: center;
+                    
+
+
+                    span {
+                        color: #f1e9e4;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #ca8f65;
+
+                        i {
+                            color: #ca8f65;
+                            font-size: large;
+
+                            &:hover {
+                                color: rgb(116, 116, 183);
+                            }
+                        }
+                    }
+
+                }
+
+
+
+
+
+
+
+            }
+            
+        }
+
+        
+
+    }
+
+
+
+    #background-img {
+        width: 100;
+
+        img {
+            width: 100%;
+        }
+
+    }
+
+
+    #main-traditions {
+        .main-tradition {
+            width: 100%;
+            height: auto;
+       
+
+
+            .main-logo {
+                text-align: center;
+                width: 100%;
+                height: 32%;
+
+                img {
+                    width: 3%;
+                    margin-top: 5%;
+
+
+                }
+
+                h1 {
+                    color: #ca8f65;
+
+                }
+
+
+
+
+            }
+
+            .main-line {
+                width: 100%;
+                height: 10%;
+                text-align: center;
+
+                img {
+                    margin-top: 2%;
+                }
+
+            }
+
+            .tradition-description {
+                width: 100%;
+                height: 12%;
+                text-align: center;
+
+                h5 {
+                    color: white;
+
+                }
+            }
+
+            .main-signature {
+                width: 100%;
+                height: 12%;
+                text-align: center;
+
+            }
+
+
+          
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+    }
+
+
+    #main-middle{
+        .main-middle-img{
+            width: 100%;
+            height: auto;
+
+            img{
+                width: 100%;
+
+
+            }
+
+        }
+
+        .middle-title-logo-desc{
+            width:100%;
+            height: 93%;
+            background-color: #2a2a2a;
+            .main-middle-title{
+                width: 100%;
+                height: auto;
+                text-align: center;
+                padding-top: 20%;
+                justify-content: center;
+                display: flex;
+    
+    
+                h1{
+                    color: #ca8f65;
+                    width: 75%;
+                   
+                    
+                }
+    
+            }
+    
+            .main-middle-logo{
+                width: 100%;
+                height: auto;
+                text-align: center;
+    
+               
+            }
+    
+            .main-middle-desc{
+                width: 100%;
+                height: auto;
+                text-align: center;
+                justify-content: center;
+                display: flex;
+            
+    
+                p{
+                    width: 80%;
+                    color: #8e8e8e;
+                    
+                }
+            }
+
+        }
+
+       
+
+    }
+
+    #blogs-advertising {
+        .advertisings {
+            width: 100%;
+            height: auto;
+
+            .advertising-icons {
+                width: 100%;
+                height: 25%;
+
+
+                .shipping {
+                    width: 100%;
+                    height: auto;
+
+                    text-align: center;
+
+                    img {
+                        &:hover {
+                            margin-top: -10px;
+                            transition: 0.6s;
+                        }
+                    }
+
+
+
+                }
+
+                .shipping-name {
+                    width: 100%;
+                    height: auto;
+                    text-align: center;
+
+
+                    h4 {
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 0;
+                            margin: 0 auto;
+                            height: 2px;
+                            top: -15px;
+                            position: relative;
+                        }
+
+                        color: white;
+                    }
+                }
+
+                .shipping-description {
+                    width: 100%;
+                    height: auto;
+
+                    text-align: center;
+
+                    span {
+                        color: #8e8e8e;
+                        ;
+                    }
+                }
+
+
+            }
+
+            
+
+
+        }
+    }
+
+    #main-products {
+        .main-product {
+            width: 100%;
+            height: auto;
+            background-color: #343333;
+
+
+            .product-priviews-detail {
+                width: 62%;
+                height: 74%;
+                background-color: #303030;
+                position: absolute;
+                right: 18%;
+              
+
+
+
+
+                .priviews-img {
+                    width: 100%;
+                    height: 100%;
+
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+
+
+
+
+
+                .priviews-informs {
+                    width: 100%;
+                    height: 100%;
+
+
+                    .whiskey-name {
+                        width: 100%;
+                        height: 14%;
+
+
+                        h1 {
+                            color: #ca8f65;
+                            text-align: left;
+                        }
+
+
+                        span {
+
+                            position: relative;
+                            left: 38%;
+                            transition: all 0.3s ease-in-out;
+
+                            i {
+                                color: #f9eeee;
+                                cursor: pointer;
+
+                            }
+                        }
+
+                    }
+
+                    .priviewWhiskey-price {
+                        width: 100%;
+                        height: 10%;
+
+
+                        h4 {
+                            color: #ca8f65;
+                        }
+
+
+
+                    }
+
+                    .whiskey-info {
+                        width: 89%;
+                        height: 20%;
+
+
+                        span {
+                            color: #8e8e8e;
+                        }
+                    }
+
+                    .whiskey-capacity {
+                        width: 100%;
+                        height: 10%;
+
+
+                        span {
+                            color: #f9eeee;
+                            font-size: 22px;
+                        }
+
+
+                        button {
+
+                            width: 10%;
+                            height: 50%;
+                            border: none;
+                            background-color: #303030;
+
+
+                            &:hover {
+                                background-color: #8e8e8e;
+
+                            }
+
+
+                            a {
+                                text-decoration: none;
+                                color: #6c6969;
+
+
+                            }
+
+                        }
+
+
+
+
+                    }
+
+
+                    .whiskey-price {
+                        width: 100%;
+                        height: 10%;
+
+
+
+                        span {
+                            font-size: 25px;
+                            font-weight: 650;
+                            color: #ca8f65;
+
+
+                        }
+
+
+                    }
+
+                    .whiskey-button-cart {
+                        width: 100%;
+                        height: 8%;
+
+
+                        .whiskey-buttons {
+                            width: 100%;
+                            height: 100%;
+                            border: 1px;
+
+
+
+                            button {
+                                width: 30%;
+                                height: 100%;
+                                background-color: #303030;
+                                border: none;
+
+                                &:hover {
+                                    background-color: #444444;
+                                }
+
+                                a {
+
+                                    i {
+                                        color: white;
+                                    }
+                                }
+
+                            }
+
+                            input {
+                                width: 30%;
+                                height: 100%;
+                                border: none;
+                                background-color: #303030;
+                            }
+
+
+                        }
+
+
+                        .whiskey-addcart {
+                            width: 100%;
+                            height: 100%;
+                            background-color: #ca8f65;
+
+
+                            button {
+                                width: 100%;
+                                height: 100%;
+                                border: none;
+                                background-color: #ca8f65;
+
+                                &:hover {
+                                    background-color: #ebebeb;
+                                    transition: 1s;
+                                }
+
+                                a {
+                                    text-decoration: none;
+                                    color: black;
+
+                                }
+                            }
+
+
+
+                        }
+
+                        .whiskey-iconheart {
+                            width: 100%;
+                            height: 60%;
+
+                            margin-top: 6%;
+                            margin-left: 8%;
+
+                            a {
+                                text-decoration: none;
+
+                                i {
+                                    color: #ca8f65;
+                                    font-size: 25px;
+
+                                    &:hover {
+                                        color: #f9eeee;
+                                    }
+
+
+
+                                }
+                            }
+                        }
+
+
+
+                    }
+
+
+
+                    .whiskey-categories {
+                        width: 100%;
+                        height: 10%;
+
+
+                        span {
+                            color: #f1e9e4;
+                        }
+
+                        a {
+                            text-decoration: none;
+
+                            span {
+                                color: #ca8f65;
+
+                                &:hover {
+                                    color: white;
+                                }
+                            }
+                        }
+
+                    }
+
+
+
+
+
+
+
+                }
+
+
+
+            }
+
+            .related-products{
+                width: 100%;
+                height: auto;
+
+                h1{
+                    color: #ca8f65;
+                }
+            }
+
+
+            .products-whiskeys {
+                width: 100%;
+                height: auto;
+
+
+                .whiskeys {
+                    width: 100%;
+                    height: 500px;
+
+
+                    &:hover {
+                        .whiskey-icons {
+                            a {
+                                text-decoration: none;
+
+                                i {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    .whiskey-icons {
+                        width: 30px;
+                        height: 96px;
+                        position: absolute;
+                        margin-left: 25%;
+                        margin-top: 3%;
+                        gap: 10px;
+                        gap: 5;
+                        display: grid;
+
+
+                        i {
+                            font-size: 20px;
+                            color: white;
+                            display: none;
+
+                            &:hover {
+                                color: #ca8f65;
+                                transition: 0.2s;
+                            }
+                        }
+
+
+
+
+                    }
+
+                    .whiskey {
+                        width: 100%;
+                        height: 80%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+
+
+                    }
+
+                    .whiskey-name {
+                        width: 100%;
+                        height: 20%;
+
+                        text-align: center;
+
+                        a {
+                            text-decoration: none;
+                            color: whitesmoke;
+                            font-size: 21px;
+                        }
+
+                        span {
+                            color: #ca8f65;
+                        }
+
+
+                    }
+
+
+
+
+                }
+
+
+
+
+            }
+
+           
+
+
+           
+
+
+
+
+
+
+
+        }
+    }
+
+    #background-img-comments{
+        .back-img-comment{
+            width: 100%;
+            height: auto;
+
+            img{
+                width: 100%;
+                position: relative;
+                top: 49px;
+            }
+        }
+    }
+
+    #comments{
+        background-color: #2a2a2a;
+
+        .comment-titles{
+            width: 100%;
+            height: auto;
+            text-align: center;
+            border: #ca8f65;
+          
+
+            h3{
+                color: #ca8f65;
+            }
+            
+            hr{
+                color: #ca8f65;
+                
+            }
+        }
+
+
+        .comment{
+            width: 100%;
+            height: 170px;
+           border: 1px solid #ca8f65;
+          
+            p{
+                color:whitesmoke;
+
+            }
+
+            span{
+                color:#8e8e8e;
+            }
+        }
+
+        .cooment-down{
+            width: 100%;
+            height: 50px;
+        }
+    }
+
+    #main-comment{
+        .comments{
+            width: 100%;
+            height: auto;
+
+            .comments-title{
+                width: 100%;
+                height: auto;
+                h4{
+                    color: #ca8f65;
+                }
+            }
+
+            .comments-name{
+                input{
+                    color: white;
+                    width: 100%;
+                    height: 60px;
+                    outline: none;
+                    padding-left: 15px;
+                    background-color: #303030;
+                }
+
+                button{
+                    width: 10%;
+                    background-color: #ca8f65;
+                    height: 40px;
+                    border: none;
+                    color: white;
+
+                    &:hover{
+                        background-color: rgb(107, 96, 96);
+                   
+                        transition: 2s;
+                    }
+
+                }
+
+                
+
+            }
+
+            .message-area{
+                color: white;
+                textarea{
+                    width: 100%;
+                    outline: none;
+                    padding-left: 15px;
+                    padding-top: 10px;
+                    background-color: #303030;
+                    color: white;
+                }
+            }
+
+
+       
+        }
+    }
+
+    #background-img-three{
+        .back-imgs{
+            width: 100%;
+            height: auto;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+
+
+    
+
+
+
+}
+
+
+footer {
+    #footer {
+        .footers {
+
+            width: 100%;
+            height: auto;
+            background-color: #2a2a2a;
+
+            .footer-logo {
+                width: 100%;
+                height: 100px;
+                text-align: center;
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+
+            }
+
+            .footer {
+                .footer-title {
+                    width: 100%;
+                    height: 40px;
+
+
+                    h5 {
+                        color: #ca8f65;
+                        margin-left: 9%;
+                    }
+
+                }
+
+                .footer-description {
+                    width: 100%;
+
+
+
+                    ul {
+
+
+
+
+                        li {
+                            list-style: none;
+
+                            a {
+                                text-decoration: none;
+                                color: #666666;
+
+                                &:hover {
+                                    color: #ca8f65;
+                                }
+
+                            }
+                        }
+
+                       
+                    }
+
+
+
+                }
+
+
+                hr {
+                    color: #ebebeb;
+                }
+
+
+
+            }
+              
+
+
+            
+
+
+
+
+
+
+
+
+
+        }
+
+    }
+
+    #footer-lines{
+        width: 100%;
+        height: 60px;
+        .footer-line{
+            width: 100%;
+            height: 1px;
+            background-color: rgb(104, 104, 104);
+
+
+            .footer-title{
+                span{
+                    color: #8e8e8e;
+                }
+            }
+
+            .footer-titles{
+                text-align: end;
+                span{
+                    color:#8e8e8e;
+                }
+            }
+        }
+    }
+
+
+
+}

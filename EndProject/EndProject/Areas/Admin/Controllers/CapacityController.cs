@@ -1,11 +1,15 @@
 ﻿using EndProject.Areas.Admin.ViewModels.Capacity;
+using EndProject.Helpers.Enums;
 using EndProject.Models;
 using EndProject.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Drawing;
 
 namespace EndProject.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "SuperAdmin, Admin")]
+
     [Area("Admin")]
     public class CapacityController : Controller
     {

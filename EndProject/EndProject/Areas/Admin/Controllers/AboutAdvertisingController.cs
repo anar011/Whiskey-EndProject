@@ -1,13 +1,16 @@
 ﻿using EndProject.Areas.Admin.ViewModels.AboutAdvertising;
 using EndProject.Areas.Admin.ViewModels.Slider;
 using EndProject.Helpers;
+using EndProject.Helpers.Enums;
 using EndProject.Models;
 using EndProject.Services;
 using EndProject.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EndProject.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "SuperAdmin, Admin")]
     [Area("Admin")]
     public class AboutAdvertisingController : Controller
     {

@@ -91,7 +91,7 @@ namespace EndProject.Controllers
                     .Include(b => b.AppUser)
                     .Include(b => b.BasketItems)
                     .ThenInclude(i => i.ProductCapacity)
-                    .FirstOrDefault(b => b.AppUserID == user.Id && b.IsOrdered != 0);
+                    .FirstOrDefault(b => b.AppUserID == user.Id && b.IsOrdered == Status.Default);
                 if (userActiveBasket is not null)
                 {
                     userActiveBasket.BasketItems.Remove(item);

@@ -1,0 +1,44 @@
+#search {
+  padding: 100px;
+}
+#search .whiskeys {
+  width: 100%;
+  height: 500px;
+}
+#search .whiskeys:hover .whiskey-icons a {
+  text-decoration: none;
+}
+#search .whiskeys:hover .whiskey-icons a i {
+  display: block;
+}
+#search .whiskeys .whiskey-icons {
+  width: 30px;
+  height: 96px;
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 3%;
+  gap: 10px;
+  gap: 5;
+  display: grid;
+}
+#search .whiskeys .whiskey-icons i {
+  font-size: 20px;
+  color: white;
+  display: none;
+}
+#search .whiskeys .whiskey-icons i:hover {
+  color: #ca8f65;
+  transition: 0.2s;
+}
+#search .whiskeys .whiskey img {
+  width: 250px;
+  height: 250px;
+}
+#search .whiskeys .whiskey-name a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 21px;
+}
+#search .whiskeys .whiskey-name span {
+  color: #ca8f65;
+}/*# sourceMappingURL=search.css.map */

@@ -2,6 +2,7 @@
 using EndProject.Models;
 using EndProject.Services.Interfaces;
 using EndProject.ViewModels;
+using EndProject.ViewModels.Contact;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -108,6 +109,18 @@ namespace EndProject.Services
 
 
             return items;
+        }
+
+        public List<Order> GetOrderItems()
+        {
+            List<Order> order = _context.Orders.Include(o => o.OrderItems).Include(o => o.AppUser).ToList();
+            return order;
+        }
+
+        public List<Contact> GetContactUs()
+        {
+            List<Contact> contacts = _context.Contacts.ToList();
+            return contacts;
         }
     }
 }

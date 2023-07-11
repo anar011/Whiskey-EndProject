@@ -35,7 +35,7 @@ namespace EndProject.Services
 
         public async Task<IEnumerable<Product>> GetAllAsync()
         {
-            return await _context.Products.ToListAsync();
+            return await _context.Products.Include(x=>x.ProductCapacities).ToListAsync();
         }
 
 
@@ -161,6 +161,15 @@ namespace EndProject.Services
                  .Where(pc => pc.Category.Id == id)
                  .Select(p => p.Product)
                  .CountAsync();
+        }
+
+        public async Task<int> GetProductsCountByCapAsync(int? id)
+        {
+            return await _context.ProductCapacities
+        .Include(p => p.Product).Include(x=>x.Capacity)
+        .Where(pc => pc.Capacity.Id == id)
+        .Select(p => p.Product)
+        .CountAsync();
         }
 
         public async Task<IEnumerable<Product>> GetRelatedProducts()

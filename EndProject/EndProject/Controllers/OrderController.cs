@@ -1,5 +1,6 @@
 ﻿using EndProject.Data;
 using EndProject.Models;
+using EndProject.Services.Interfaces;
 using EndProject.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,13 @@ namespace EndProject.Controllers
     {
         private readonly AppDbContext _context;
         private readonly UserManager<AppUser> _userManager;
+    
 
         public OrderController(AppDbContext context, UserManager<AppUser> userManager)
         {
             _context = context;
             _userManager = userManager;
+           
         }
 
         public async Task<IActionResult> Index()

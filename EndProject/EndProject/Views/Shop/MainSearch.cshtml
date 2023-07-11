@@ -3,48 +3,122 @@
     ViewData["Title"] = "Search";
 }
 
-<div class="container">
+<section id="search">
+    <div class="container">
+        <div class="row">
+            @foreach (var product in Model)
+            {
+                <div class="col-lg-4 col-sm-12 col-md-6">
+                    <div class="whiskeys">
+                        <div class="whiskey">
+                            <a asp-controller="shop" asp-action="ProductDetail" asp-route-id="@product.Id"><img src="~/assets/img/@product.Image" alt=""></a>
+                        </div>
+                        <div class="whiskey-name">
+                            <a href="">@product.Name</a>
 
-    @if (Model.Count() == 0)
-    {
-        <h1 class="d-flex justify-content-center">Product not found</h1>
-    }
-
-
-    @foreach (var product in Model)
-    {
-        <div class="col-lg-4 col-sm-12 col-md-6">
-            <div class="whiskeys">
-                <div class="whiskey-icons ">
-                    <a asp-controller="shop" asp-action="ProductDetail" asp-route-id="@product.Id">
-
-                        <i class="fa-solid fa-paperclip"></i>
-                    </a>
-                    <a asp-controller="wishlist" asp-action="AddWishlist" asp-route-id="@product.Id"><i class="fa-regular fa-heart"></i></a>
-                    <a href=""><i class="fa-solid fa-square-plus"></i></a>
-                </div>
+                            <br>
+                            <span><span>$</span>@product.ProductCapacities.Last().Price-@product.ProductCapacities.First().Price </span>
 
 
-                <div class="whiskey">
-                    <a asp-controller="shop" asp-action="ProductDetail" asp-route-id="@product.Id"><img src="~/assets/img/@product.Image" alt=""></a>
-                </div>
-                <div class="whiskey-name">
-                    <a href="">@product.Name</a>
 
-                    <br>
-                    <span><span>$</span>@product.ProductCapacities.Last().Price-@product.ProductCapacities.First().Price </span>
-                 
 
+                        </div>
+
+
+                    </div>
 
 
                 </div>
+                <!-- // BeginProduct Modal // -->
+
+                <div class="product-priviews-detail d-flex d-none">
+                    <div class="col-6">
+                        <div class="priviews-img">
+                            <img src="~/assets/img/@product.Image" alt="">
+                        </div>
+
+                    </div>
+                    <div class="col-6">
+                        <div class="priviews-informs mt-5">
+                            <div class="whiskey-name d-flex">
+                                <h1>@product.Name</h1>
+                                <span><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                            <div class="priviewWhiskey-price">
+                                <h4>$@product.ProductCapacities.Last().Price-$@product.ProductCapacities.First().Price</h4>
+                            </div>
+
+                            <div class="whiskey-info">
+                                <span>
+                                    Phasellus ornare magna quis neque ut venenatis consequat. Morbi facilisis
+                                    nunc, ac erat velit odio fermentum wisi, mollis lobortis. Maecenas in
+                                    posuere dui. Morbi urna quis arcu.
+                                </span>
+                            </div>
+
+                            <div class="whiskey-capacity mt-4">
+                                <span>Capacity</span>
+                                <button><a href="">1l</a></button>
+                                <button><a href="">700ml</a></button>
+                                <button><a href="">500ml</a></button>
+
+                            </div>
+
+                            <div class="whiskey-price">
+                                <span class="d-none">$<span>60.00</span></span>
+                                <span class="d-none">$<span>45.00</span></span>
+                                <span class="d-none">$<span>35.00</span></span>
+                            </div>
+
+                            <div class="whiskey-button-cart d-flex">
+                                <div class="col-4">
+                                    <div class="whiskey-buttons  d-flex">
+                                        <button><a href=""><i class="fa-solid fa-minus"></i></a></button>
+                                        <input type="text">
+                                        <button><a href=""><i class="fa-solid fa-plus"></i></a></button>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-4">
+                                    <div class="whiskey-addcart ">
+                                        <button><a href="">Add to cart</a></button>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-4">
+                                    <div class="whiskey-iconheart">
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+
+                                    </div>
+                                </div>
 
 
-            </div>
 
 
+
+                            </div>
+
+                            <div class="whiskey-categories mt-4">
+                                <span>Categories:</span>
+                                <a href=""><span> Blended,</span></a>
+                                <a href=""><span> Bourbon</span></a>
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- //End Product Modal // -->
+            }
         </div>
-    }
-
-
-</div>
+    </div>
+</section>

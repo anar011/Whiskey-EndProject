@@ -1,4 +1,10 @@
-﻿d
+﻿@using EndProject.Helpers.Enums;
+@inject EndProject.Services.LayoutService layoutService
+@{
+    List<Order> orders = layoutService.GetOrderItems();
+    List<Contact> contacts = layoutService.GetContactUs();
+
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +39,8 @@
     <link rel="stylesheet" href="~/admin/assets/css/perfect-scrollbar.css" />
     <!-- custom css -->
     <link rel="stylesheet" href="~/admin/assets/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -53,9 +61,13 @@
                     <div class="sidebar_user_info">
                         <div class="icon_setting"></div>
                         <div class="user_profle_side">
-                            <div class="user_img"><img class="img-responsive" src="~/admin/assets/layout_img/user_img.jpg" alt="#" /></div>
+                            <div class="user_img"><img class="img-responsive" src="~/assets/img/0d5cd48a-f1e2-4d41-850b-bb0b3bac3363home-blog2.webp" alt="#" /></div>
                             <div class="user_info">
-                                <h6>John David</h6>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <h6>@User.Identity.Name</h6>
+                                }
+                              
                                 <p><span class="online_animation"></span> Online</p>
                             </div>
                         </div>
@@ -144,11 +156,7 @@
                                 </ul>
                             </li>
                             <li><a href="price.html"><i class="fa fa-briefcase blue1_color"></i> <span>Pricing Tables</span></a></li>
-                            <li>
-                                <a href="contact.html">
-                                    <i class="fa fa-paper-plane red_color"></i> <span>Contact</span>
-                                </a>
-                            </li>
+          
 
                            
 
@@ -173,7 +181,10 @@
                             </li>
                             <li><a href="map.html"><i class="fa fa-map purple_color2"></i> <span>Map</span></a></li>
                             <li><a href="charts.html"><i class="fa fa-bar-chart-o green_color"></i> <span>Charts</span></a></li>
-                            <li><a href="settings.html"><i class="fa fa-cog yellow_color"></i> <span>Settings</span></a></li>
+                                @if (User.IsInRole(Roles.SuperAdmin.ToString()))
+                                {
+                                <li><a asp-area="admin" asp-controller="AdminRegister" asp-action="Register"><i class="fa fa-cog yellow_color"></i> <span>Add New Admin</span></a></li>
+                                }
                         </ul>
                     </div>
 
@@ -196,20 +207,36 @@
                             <div class="right_topbar">
                                 <div class="icon_info">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
+                                    <li><a asp-area="admin" asp-controller="order" asp-action="index"><i class="fa fa-bell-o"></i><span class="badge">@orders.Where(x=>x.Status==EndProject.Helpers.Enums.Status.Pending).Count()</span></a></li>
                                         <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>
+                                    <li><a asp-area="admin" asp-controller="contact" asp-action="index"><i class="fa fa-envelope-o"></i><span class="badge">@contacts.Where(x=>x.IsReply==false).Count()</span></a></li>
                                     </ul>
                                     <ul class="user_profile_dd">
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
                                         <li>
-                                            <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/admin/assets/layout_img/user_img.jpg" alt="#" /><span class="name_user">John David</span></a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                                <img class="img-responsive rounded-circle" src="~/assets/img/0d5cd48a-f1e2-4d41-850b-bb0b3bac3363home-blog2.webp" alt="#" />
+                                                <span class="name_user">@User.Identity.Name</span>
+                                            </a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="profile.html">My Profile</a>
-                                                <a class="dropdown-item" href="settings.html">Settings</a>
-                                                <a class="dropdown-item" href="help.html">Help</a>
-                                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                                <a class="dropdown-item" asp-area="admin" asp-controller="Adminlogin" asp-action="logout">
+                                                    <span>Log Out</span> <i class="fa fa-sign-out"></i>
+                                                </a>
+                                          
                                             </div>
                                         </li>
+                                        @if (User.IsInRole(Roles.SuperAdmin.ToString()))
+                                        {
+                                            <div class="dropdown-menu">
+                                                <a asp-area="admin" asp-controller="AdminRegister" asp-action="Register"><i class="fa fa-cog yellow_color"></i> <span>Add New Admin</span></a>
+
+                                            </div>
+                                           
+                                        }
+                                    }
+
+                                
                                     </ul>
                                 </div>
                             </div>
@@ -254,6 +281,8 @@
     <script src="~/admin/assets/js/custom.js"></script>
     <script src="~/admin/assets/js/chart_custom_style1.js"></script>
     @await RenderSectionAsync("Script",required:false)
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 </body>
 </html>
 

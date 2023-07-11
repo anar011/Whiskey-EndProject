@@ -48,11 +48,15 @@
 
                 <div class="col-3">
                     <div class="header-search">
-                   
-                            <input class="mt-5 d-none input-search" placeholder="Search" type="text">
-         
+                       <form method="get" asp-action="MainSearch" asp-controller="shop">
+                            <input class="mt-5 d-none input-search" name="search" placeholder="Search" type="text">
+                           
+                            <a class="href_admin" href=""><i style="position: relative; top:54px;" class="fa-solid fa-magnifying-glass"></i></a>
+                            <button class="search-search d-none"  style="background-color:transparent;  color:#ca8f65; width:100px; " type="submit">Search</button>
+                           
                         
-                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                       </form>
+                        
                     </div>
                 </div>
 

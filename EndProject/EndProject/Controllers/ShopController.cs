@@ -38,7 +38,7 @@ namespace EndProject.Controllers
             _context = context;
             _userManager = userManager;
         }
-        public async Task<IActionResult> Index(int page = 1, int take = 6, int? categoryId = null)
+        public async Task<IActionResult> Index(int page = 1, int take = 6, int? categoryId = null, int? capacityId = null)
         {
             List<Product> datas = await _productService.GetPaginatedDatasAsync(page, take, categoryId);
             List<ProductVM> mappedDatas = GetDatas(datas);
@@ -48,9 +48,12 @@ namespace EndProject.Controllers
 
             if (categoryId != null)
             {
-                pageCount = await GetPageCountAsync(take, categoryId);
+                pageCount = await GetPageCountAsync(take, categoryId, capacityId);
             }
-         
+            if (capacityId != null)
+            {
+                pageCount = await GetPageCountAsync(take, categoryId, capacityId);
+            }
 
             Paginate<ProductVM> paginatedDatas = new(mappedDatas, page, pageCount);
 
@@ -60,19 +63,26 @@ namespace EndProject.Controllers
                 Categories = await _categoryService.GetAllAsync(),
                 PaginateDatas = paginatedDatas
             };
+         
             return View(model);
         }
 
 
-        private async Task<int> GetPageCountAsync(int take, int? catId)
+        private async Task<int> GetPageCountAsync(int take, int? catId,int? capid)
         {
             int prodCount = 0;
             if (catId is not null)
             {
                 prodCount = await _productService.GetProductsCountByCategoryAsync(catId);
             }
-        
-     
+            if (capid is not null)
+            {
+                prodCount = await _productService.GetProductsCountByCapAsync(capid);
+            }
+            if (capid == null)
+            {
+                prodCount = await _productService.GetCountAsync();
+            }
             if (catId == null )
             {
                 prodCount = await _productService.GetCountAsync();
@@ -100,14 +110,14 @@ namespace EndProject.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 95)
+        public async Task<IActionResult> GetProductsByCategory(int? id,int? id2, int page = 1, int take = 95)
         {
             if (id is null) return BadRequest();
             ViewBag.catId = id;
 
             var products = await _productService.GetProductsByCategoryIdAsync(id, page, take);
 
-            int pageCount = await GetPageCountAsync(take, (int)id);
+            int pageCount = await GetPageCountAsync(take, (int)id, (int)id2);
 
             Paginate<ProductVM> model = new(products, page, pageCount);
 
@@ -175,7 +185,12 @@ namespace EndProject.Controllers
         }
 
 
-     
+        public IActionResult MainSearch(string search)
+        {
+            List<Product> products=_context.Products.Include(x=>x.ProductCapacities).Where(x => x.Name.Contains(search)).ToList();
+
+            return View(products);
+        }
 
     }
 }

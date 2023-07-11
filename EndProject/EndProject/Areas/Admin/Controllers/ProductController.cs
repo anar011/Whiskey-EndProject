@@ -2,9 +2,11 @@
 using EndProject.Areas.Admin.ViewModels.Slider;
 using EndProject.Data;
 using EndProject.Helpers;
+using EndProject.Helpers.Enums;
 using EndProject.Models;
 using EndProject.Services.Interfaces;
 using EndProject.ViewModels.Product;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +15,8 @@ using System.Drawing;
 
 namespace EndProject.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "SuperAdmin, Admin")]
+
     [Area("Admin")]
     public class ProductController : Controller
     {

@@ -11,6 +11,7 @@ namespace EndProject.Services.Interfaces
         Task<List<Product>> GetFullDataAsync();
         Task<Product> GetFullDataByIdAsync(int? id);
         Task<int> GetCountAsync();
+        Task<int> GetProductsCountByCapAsync(int? id);
         Task<List<Product>> GetPaginatedDatasAsync(int page, int take, int? categoryId);
         Task<List<ProductVM>> GetProductsByCategoryIdAsync(int? id, int page, int take);
         Task<IEnumerable<ProductVM>> GetDatasAsync();

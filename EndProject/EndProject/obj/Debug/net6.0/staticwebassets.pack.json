@@ -1477,6 +1477,10 @@
       "PackagePath": "staticwebassets\\admin\\assets\\style.css"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\css\\login.css",
+      "PackagePath": "staticwebassets\\assets\\css\\login.css"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\img\\0d5cd48a-f1e2-4d41-850b-bb0b3bac3363home-blog2.webp",
       "PackagePath": "staticwebassets\\assets\\img\\0d5cd48a-f1e2-4d41-850b-bb0b3bac3363home-blog2.webp"
     },
@@ -2039,6 +2043,18 @@
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\scss\\register.scss",
       "PackagePath": "staticwebassets\\assets\\scss\\register.scss"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\scss\\search.css",
+      "PackagePath": "staticwebassets\\assets\\scss\\search.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\scss\\search.css.map",
+      "PackagePath": "staticwebassets\\assets\\scss\\search.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\scss\\search.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\search.scss"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\EndProjects\\EndProject\\EndProject\\wwwroot\\assets\\scss\\wishlist.css",

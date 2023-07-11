@@ -1,0 +1,75 @@
+#search{
+    padding: 100px;
+    .whiskeys {
+        width: 100%;
+        height: 500px;
+    
+    
+        &:hover {
+            .whiskey-icons {
+                a {
+                    text-decoration: none;
+    
+                    i {
+                        display: block;
+                    }
+                }
+            }
+        }
+    
+        .whiskey-icons {
+            width: 30px;
+            height: 96px;
+            position: absolute;
+            margin-left: 25%;
+            margin-top: 3%;
+            gap: 10px;
+            gap: 5;
+            display: grid;
+    
+    
+            i {
+                font-size: 20px;
+                color: white;
+                display: none;
+    
+                &:hover {
+                    color: #ca8f65;
+                    transition: 0.2s;
+                }
+            }
+    
+    
+    
+    
+        }
+    
+        .whiskey {
+            img {
+                width: 250px;
+                height: 250px;
+            }
+    
+    
+    
+        }
+    
+        .whiskey-name {
+            a {
+                text-decoration: none;
+                color: whitesmoke;
+                font-size: 21px;
+            }
+    
+            span {
+                color: #ca8f65;
+            }
+    
+    
+        }
+    
+    
+    
+    
+    }
+}

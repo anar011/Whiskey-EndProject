@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using EndProject.Helpers.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace EndProject.ViewModels.Account
 {

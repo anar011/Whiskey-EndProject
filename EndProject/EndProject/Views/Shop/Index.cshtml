@@ -53,10 +53,12 @@
                         {
                             sumCategoryProductss += (int)item.ProductCategories?.Count();
                         }
-                        <div class="products-category-all categories d-flex">
-                            <span class="all-product">All</span>
-                            <p>(@sumCategoryProductss)</p>
-                        </div>
+                        <form asp-controller="shop" asp-action="index" asp-route-categoryId=" ">
+                            <div class="products-category-all categories d-flex product-category">
+                                <button style="margin:0;padding:0;display:inherit;border:none;background:transparent;color: #ca8f65;" class="category">All</button>
+                                <p>(@sumCategoryProductss)</p>
+                            </div>
+                        </form>
                         @foreach (var item in Model.Categories)
                         {
                             <form asp-controller="shop" asp-action="index" asp-route-categoryId="@item.Id">
@@ -84,30 +86,35 @@
                             <p>Capacity</p>
                         </div>
 
-                  
-        
-
-                        <div class="products-category-all categories d-flex">
-                            <span>1</span>
-                            <p>(L)</p>
-
-                        </div>
 
 
-                        <div class="products-category-whiskey categories d-flex">
-                            <span>700</span>
-                            <p>(L)</p>
-                        </div>
+                        <form asp-controller="shop" asp-action="index" asp-route-capacityId="1">
+                            <div class="products-category-all categories d-flex">
+                                <button style="margin:0;padding:0;display:inherit;border:none;background:transparent;color: #ca8f65;" class="category">1</button>
+                                <p>(L)</p>
+                            </div>
+                        </form>
+                        <form asp-controller="shop" asp-action="index" asp-route-capacityId="2">
+                            <div class="products-category-all categories d-flex">
+                                <button style="margin:0;padding:0;display:inherit;border:none;background:transparent;color: #ca8f65;" class="category">700</button>
+                                <p>(ML)</p>
+                            </div>
+                        </form>
+                        <form asp-controller="shop" asp-action="index" asp-route-capacityId="3">
+                            <div class="products-category-all categories d-flex">
+                                <button style="margin:0;padding:0;display:inherit;border:none;background:transparent;color: #ca8f65;" class="category">500</button>
+                                <p>(ML)</p>
+                            </div>
+                        </form>
+                        <form asp-controller="shop" asp-action="index" asp-route-capacityId="4">
+                            <div class="products-category-all categories d-flex">
+                                <button style="margin:0;padding:0;display:inherit;border:none;background:transparent;color: #ca8f65;" class="category">300</button>
+                                <p>(ML)</p>
+                            </div>
+                        </form>
+                     
 
-                        <div class="products-category-premium categories d-flex">
-                            <span>500</span>
-                            <p>(L)</p>
-                        </div>
-
-                        <div class="products-category-bourbon categories d-flex">
-                            <span>300</span>
-                            <p>(L)</p>
-                        </div>
+                     
 
 
 

@@ -1,10 +1,14 @@
 ﻿using EndProject.Data;
+using EndProject.Helpers.Enums;
 using EndProject.Models;
 using EndProject.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EndProject.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "SuperAdmin, Admin")]
+
     [Area("Admin")]
 
     public class SectionHeaderController : Controller

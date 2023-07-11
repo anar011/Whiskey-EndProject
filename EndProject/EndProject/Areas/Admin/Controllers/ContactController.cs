@@ -1,12 +1,19 @@
 ﻿using EndProject.Data;
 using EndProject.Helpers;
+using EndProject.Helpers.Enums;
 using EndProject.Models;
 using EndProject.Services;
 using EndProject.Services.Interfaces;
+using EndProject.ViewModels.Contact;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Mail;
+using System.Net;
 
 namespace EndProject.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "SuperAdmin, Admin")]
+
     [Area("Admin")]
     public class ContactController : Controller
     {
@@ -44,7 +51,31 @@ namespace EndProject.Areas.Admin.Controllers
             return View(dbContact);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Detail(int id, string replace)
+        {
+            if (id == 0) return NotFound();
+            Contact contact = _context.Contacts.FirstOrDefault(x => x.Id == id);
+            if (contact is null) return NotFound();
+            MailMessage message = new MailMessage();
+            message.From = new MailAddress("whiskeys1234@gmail.com", "Whiskey");
+            message.To.Add(new MailAddress(contact.Email));
+            message.Subject = "Whiskey Support";
+            message.Body = string.Empty;
+            message.Body = $"{replace}";
 
+            SmtpClient smtpClient = new SmtpClient();
+            smtpClient.Host = "smtp.gmail.com";
+            smtpClient.Port = 587;
+            smtpClient.EnableSsl = true;
+            smtpClient.UseDefaultCredentials = false;
+            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtpClient.Credentials = new NetworkCredential("whiskeys1234@gmail.com", "ypcewhlqtxhfgiwj");
+            smtpClient.Send(message);
+            contact.IsReply = true;
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
 
 
         [HttpPost]

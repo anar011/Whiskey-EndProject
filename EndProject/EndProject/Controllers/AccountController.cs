@@ -67,7 +67,7 @@ namespace EndProject.Controllers
             }
 
 
-            await _userManager.AddToRoleAsync(newUser, Roles.SuperAdmin.ToString());
+            await _userManager.AddToRoleAsync(newUser, Roles.Member.ToString());
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
 
